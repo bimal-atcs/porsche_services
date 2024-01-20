@@ -1,0 +1,48 @@
+// media orientation
+@mixin media-view($view) {
+    @media screen and (orientation: $view) {
+        @content;
+    }
+}
+
+// media up width
+@mixin media-up($min) {
+    @media screen and (min-width: $min) {
+        @content;
+    }
+}
+
+// media up width orientation
+@mixin media-up-view($min, $view) {
+    @media screen and (min-width: $min) and (orientation: $view) {
+        @content;
+    }
+}
+
+// media down width
+@mixin media-down($max) {
+    @media screen and (max-width: ($max - 1)) {
+        @content;
+    }
+}
+
+// media down width orientation
+@mixin media-down-view($min, $view) {
+    @media screen and (max-width: ($max - 1)) and (orientation: $view) {
+        @content;
+    }
+}
+
+// media between min to max width
+@mixin media-between($min, $max) {
+    @media screen and (min-width: $min) and (max-width: ($max - 1)) {
+        @content;
+    }
+}
+
+// media between min to max width orientation
+@mixin media-between-view($min, $max, $view) {
+    @media screen and (min-width: $min) and (max-width: ($max - 1)) and (orientation: $view) {
+        @content;
+    }
+}

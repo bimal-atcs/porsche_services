@@ -1,0 +1,30 @@
+// buttons
+.button {
+    border-radius: 4px;
+    padding: 15px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-primary);
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.65;
+    }
+
+
+    &.primary {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-color: var(--color-primary);
+    }
+
+    &.outline {
+        background-color: var(--color-white);
+        border-color: var(--color-primary);
+    }
+}

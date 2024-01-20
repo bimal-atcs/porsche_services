@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-weight: normal;
+    
+    font-size: var(--base-font-size);
+    font-family: var(--base-font-family);
+    line-height: var(--base-line-height);
+
+    color: var(--base-color);
+    background-color: var(--base-color-bg);
+}
+
+body, input, textarea, select, button {
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+:focus {
+    border: 0;
+    outline: 0;
+}
