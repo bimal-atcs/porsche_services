@@ -40,38 +40,6 @@
   font-style: italic;
   font-display: swap;
 }
-:root {
-  --color-primary: #010205;
-  --color-white: #fff;
-  --color-black: #000;
-  --color-grey-low: #d8d8db;
-  --color-grey-medium: #6b6d70;
-  --color-grey-high: #535457;
-  --h1-font-size: 68px;
-  --h1-line-height: 1.2;
-  --h2-font-size: 50px;
-  --h2-line-height: 1.24;
-  --h3-font-size: 38px;
-  --h3-line-height: 1.28;
-  --h4-font-size: 28px;
-  --h4-line-height: 1.35;
-  --h5-font-size: 22px;
-  --h5-line-height: 1.36;
-  --h6-font-size: 16px;
-  --h6-line-height: 1.5;
-  --base-color-bg: #eeeff2;
-  --base-color: var(--color-primary);
-  --base-font-family: "Porsche Next";
-  --base-font-size: 16px;
-  --base-line-height: 1.5;
-  --screen-xs: 768px;
-  --screen-sm: 1024px;
-  --screen-md: 1280px;
-  --screen-lg: 1440px;
-  --screen-xl: 1560px;
-  --screen-xxl: 1920px;
-}
-
 *,
 *::before,
 *::after {
@@ -86,11 +54,11 @@ html {
 body {
   margin: 0;
   font-weight: normal;
-  font-size: var(--base-font-size);
-  font-family: var(--base-font-family);
-  line-height: var(--base-line-height);
-  color: var(--base-color);
-  background-color: var(--base-color-bg);
+  font-size: 16px;
+  font-family: "Porsche Next";
+  line-height: 1.5;
+  color: #010205;
+  background-color: #eeeff2;
 }
 
 body, input, textarea, select, button {
@@ -138,33 +106,33 @@ h6, .heading-6 {
 }
 
 h1, .heading-1 {
-  font-size: var(--h1-font-size);
-  line-height: var(--h1-line-height);
+  font-size: 68px;
+  line-height: 1.2;
 }
 
 h2, .heading-2 {
-  font-size: var(--h2-font-size);
-  line-height: var(--h2-line-height);
+  font-size: 50px;
+  line-height: 1.24;
 }
 
 h3, .heading-3 {
-  font-size: var(--h3-font-size);
-  line-height: var(--h3-line-height);
+  font-size: 38px;
+  line-height: 1.28;
 }
 
 h4, .heading-4 {
-  font-size: var(--h4-font-size);
-  line-height: var(--h4-line-height);
+  font-size: 28px;
+  line-height: 1.35;
 }
 
 h5, .heading-5 {
-  font-size: var(--h5-font-size);
-  line-height: var(--h5-line-height);
+  font-size: 22px;
+  line-height: 1.36;
 }
 
 h6, .heading-6 {
-  font-size: var(--h6-font-size);
-  line-height: var(--h6-line-height);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 p {
@@ -176,7 +144,7 @@ p {
   padding: 15px 26px;
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #010205;
   border: 2px solid transparent;
   display: flex;
   align-items: center;
@@ -188,13 +156,13 @@ p {
   opacity: 0.65;
 }
 .button.primary {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: #fff;
+  background-color: #010205;
+  border-color: #010205;
 }
 .button.outline {
-  background-color: var(--color-white);
-  border-color: var(--color-primary);
+  background-color: #fff;
+  border-color: #010205;
 }
 
 /*

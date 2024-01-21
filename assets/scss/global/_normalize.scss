@@ -1,3 +1,6 @@
+// imported config
+@use "../config" as *;
+
 *,
 *::before,
 *::after {
@@ -13,12 +16,12 @@ body {
     margin: 0;
     font-weight: normal;
     
-    font-size: var(--base-font-size);
-    font-family: var(--base-font-family);
-    line-height: var(--base-line-height);
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: $base-line-height;
 
-    color: var(--base-color);
-    background-color: var(--base-color-bg);
+    color: $base-color;
+    background-color: $base-color-bg;
 }
 
 body, input, textarea, select, button {

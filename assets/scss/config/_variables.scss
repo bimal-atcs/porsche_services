@@ -1,0 +1,54 @@
+// screen breakpoints
+$screen-xs: 768px;
+$screen-sm: 1180px;
+$screen-md: 1440px;
+$screen-lg: 1560px;
+$screen-xl: 1920px;
+
+
+// theme and colors
+$color-primary: #010205;
+$color-error: #bb302c;
+$color-disabled: #949598;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-low: #d8d8db;
+$color-grey-medium: #6b6d70;
+$color-grey-high: #535457;
+
+
+// heading
+$h1-font-size: 68px;
+$h1-line-height: 1.2;
+
+$h2-font-size: 50px;
+$h2-line-height: 1.24;
+
+$h3-font-size: 38px;
+$h3-line-height: 1.28;
+
+$h4-font-size: 28px;
+$h4-line-height: 1.35;
+
+$h5-font-size: 22px;
+$h5-line-height: 1.36;
+
+$h6-font-size: 16px;
+$h6-line-height: 1.5;
+
+
+// base
+$base-color-bg: #eeeff2;
+$base-color: $color-primary;
+$base-font-family: "Porsche Next";
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+
+// transition
+$transition: 0.3s linear;
+
+// spacing
+$space-xs: 16px;

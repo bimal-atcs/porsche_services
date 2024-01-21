@@ -1,105 +1,268 @@
 .depart {
   position: relative;
-  height: 100vh;
   overflow: hidden;
+  min-height: 600px;
+  height: 100vh;
+}
+@media screen and (max-width: 1179px) {
+  .depart {
+    padding-top: 80px;
+    display: grid;
+    grid-template-rows: 1fr 80px;
+  }
 }
 
 .depart-header,
 .depart-footer {
   line-height: 1;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.depart-header {
-  top: 0;
   height: 80px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: #fff;
+}
+@media screen and (min-width: 1180px) {
+  .depart-header,
+  .depart-footer {
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: auto;
+    background-color: transparent;
+  }
 }
 
-.depart-footer {
-  bottom: 48px;
+@media screen and (max-width: 1179px) {
+  .depart-header {
+    position: fixed;
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .depart-header {
+    top: 0;
+  }
+}
+.depart-header img {
+  filter: brightness(0);
+}
+@media screen and (min-width: 1180px) {
+  .depart-header img {
+    filter: none;
+  }
 }
 
-.depart-body {
-  height: 100%;
+@media screen and (min-width: 1180px) {
+  .depart-footer {
+    bottom: 48px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .depart-body {
+    height: 100%;
+  }
 }
 
 .depart-items {
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.depart-item {
-  display: flex;
+  display: grid;
   position: relative;
-  width: 48%;
 }
-.depart-item::before {
-  content: "";
-  position: absolute;
-}
-
-.depart-item-left {
-  justify-content: flex-start;
-}
-
-.depart-item-right {
-  justify-content: flex-end;
+@media screen and (min-width: 1180px) {
+  .depart-items {
+    gap: 0 3vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .depart-figure {
-  width: 100vw;
-  mask-size: 100vh;
-  mask-repeat: no-repeat;
-  mask-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.depart-figure > img {
+@media screen and (min-width: 1180px) {
+  .depart-figure {
+    mask-size: cover;
+    mask-repeat: no-repeat;
+  }
+}
+.depart-figure::before {
+  content: "";
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure::before {
+    height: 20%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .depart-figure::before {
+    transition: 0.3s linear;
+    transition-property: height;
+  }
+}
+.depart-figure .depart-figure-mobile {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
+  display: block;
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure .depart-figure-mobile {
+    display: none;
+  }
+}
+.depart-figure .depart-figure-desktop {
+  display: none;
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure .depart-figure-desktop {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .depart-figure .depart-figure-desktop {
+    transform: scale(1);
+    transition: 0.3s linear;
+    transition-property: transform;
+  }
 }
 
-.depart-figure-left {
-  mask-position: 100% 55%;
-  mask-image: url("../../assets/images/department/depart-left.png");
+@media screen and (min-width: 1180px) {
+  .depart-figure-left {
+    mask-position: center right;
+    mask-image: url("../../assets/images/department/depart-left.png");
+  }
 }
-.depart-figure-left > img {
-  object-position: center right;
-  transform: scale(1.5) translate(16%, 0);
+@media screen and (min-width: 1180px) {
+  .depart-figure-left::before {
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure-left .depart-figure-desktop {
+    object-position: center right;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure-left .depart-link {
+    top: 25%;
+    transform: translate(0, -50%);
+    left: 10%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .depart-figure-left .depart-link {
+    left: 20%;
+  }
 }
 
-.depart-figure-right {
-  mask-position: 0 65%;
-  mask-image: url("../../assets/images/department/depart-right.png");
+@media screen and (min-width: 1180px) {
+  .depart-figure-right {
+    mask-position: center left;
+    mask-image: url("../../assets/images/department/depart-right.png");
+  }
 }
-.depart-figure-right > img {
-  object-position: center left;
-  transform: scale(2.2) translate(-4%, 0);
+@media screen and (min-width: 1180px) {
+  .depart-figure-right::before {
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure-right .depart-figure-desktop {
+    object-position: center left;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .depart-figure-right .depart-link {
+    top: 66%;
+    transform: translate(0, -50%);
+    left: 16%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .depart-figure-right .depart-link {
+    top: 68%;
+    left: 12%;
+  }
 }
 
-.depart-content {
-  inset: 0;
+.depart-figure--hover::before {
+  height: 70%;
+}
+.depart-figure--hover .depart-figure-desktop {
+  transform: scale(1.01);
+}
+
+.depart-link {
+  z-index: 1;
+  opacity: 1;
+  padding-right: 58px;
+  width: 315px;
   position: absolute;
-  display: flex;
-  justify-content: center;
+  color: #fff;
+}
+@media screen and (max-width: 1179px) {
+  .depart-link {
+    bottom: 30px;
+    left: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .depart-link {
+    transition: 0.3s linear;
+    transition-property: opacity;
+  }
+}
+.depart-link p {
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+.depart-link h2 {
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+.depart-link h5 {
+  font-weight: normal;
+}
+.depart-link img {
+  position: absolute;
+  max-width: 48px;
+  right: 0;
+  top: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .depart-link img {
+    transition: 0.3s linear;
+    transition-property: right;
+  }
 }
 
-.depart-content-link {
-  left: -100px;
-  min-width: 315px;
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  color: var(--color-white);
+.depart-link--hover img {
+  right: -8px;
 }
-.depart-content-link p {
-  opacity: 0.4;
+
+.depart-link--opacity {
+  opacity: 0.6;
 }

@@ -1,3 +1,6 @@
+// imported config
+@use "../config" as *;
+
 // headings
 h1, .heading-1,
 h2, .heading-2,
@@ -9,33 +12,33 @@ h6, .heading-6 {
 }
 
 h1, .heading-1 {
-    font-size: var(--h1-font-size);
-    line-height: var(--h1-line-height);
+    font-size: $h1-font-size;
+    line-height: $h1-line-height;
 }
 
 h2, .heading-2 {
-    font-size: var(--h2-font-size);
-    line-height: var(--h2-line-height);
+    font-size: $h2-font-size;
+    line-height: $h2-line-height;
 }
 
 h3, .heading-3 {
-    font-size: var(--h3-font-size);
-    line-height: var(--h3-line-height);
+    font-size: $h3-font-size;
+    line-height: $h3-line-height;
 }
 
 h4, .heading-4 {
-    font-size: var(--h4-font-size);
-    line-height: var(--h4-line-height);
+    font-size: $h4-font-size;
+    line-height: $h4-line-height;
 }
 
 h5, .heading-5 {
-    font-size: var(--h5-font-size);
-    line-height: var(--h5-line-height);
+    font-size: $h5-font-size;
+    line-height: $h5-line-height;
 }
 
 h6, .heading-6 {
-    font-size: var(--h6-font-size);
-    line-height: var(--h6-line-height);
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
 }
 
 
