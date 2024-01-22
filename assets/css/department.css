@@ -1,21 +1,26 @@
-.depart {
+.depart-page {
   position: relative;
   overflow: hidden;
-  min-height: 600px;
+  min-height: 640px;
   height: 100vh;
 }
-@media screen and (max-width: 1179px) {
-  .depart {
+@media screen and (max-width: 1099px) {
+  .depart-page {
     padding-top: 80px;
     display: grid;
     grid-template-rows: 1fr 80px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .depart-page {
+    min-height: 760px;
   }
 }
 
 .depart-header,
 .depart-footer {
   line-height: 1;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 80px;
   display: grid;
@@ -23,7 +28,7 @@
   justify-items: center;
   background-color: #fff;
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-header,
   .depart-footer {
     left: 50%;
@@ -34,13 +39,13 @@
   }
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1099px) {
   .depart-header {
     position: fixed;
     z-index: 3;
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-header {
     top: 0;
   }
@@ -48,20 +53,20 @@
 .depart-header img {
   filter: brightness(0);
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-header img {
     filter: none;
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-footer {
     bottom: 48px;
     height: auto;
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-body {
     height: 100%;
   }
@@ -72,7 +77,7 @@
   display: grid;
   position: relative;
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-items {
     gap: 0 3vw;
     grid-template-columns: repeat(2, 1fr);
@@ -84,163 +89,176 @@
   height: 100%;
   position: relative;
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-figure {
     mask-size: cover;
     mask-repeat: no-repeat;
   }
 }
-.depart-figure::before {
-  content: "";
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #000;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
-}
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1280px) {
   .depart-figure::before {
-    height: 20%;
+    content: "";
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
   }
 }
-@media screen and (min-width: 1440px) {
-  .depart-figure::before {
-    transition: 0.3s linear;
-    transition-property: height;
-  }
-}
-.depart-figure .depart-figure-mobile {
+
+.depart-figure-image {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  display: block;
 }
-@media screen and (min-width: 1180px) {
-  .depart-figure .depart-figure-mobile {
-    display: none;
-  }
-}
-.depart-figure .depart-figure-desktop {
-  display: none;
-}
-@media screen and (min-width: 1180px) {
-  .depart-figure .depart-figure-desktop {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    display: block;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .depart-figure .depart-figure-desktop {
+@media screen and (min-width: 1280px) {
+  .depart-figure-image {
     transform: scale(1);
     transition: 0.3s linear;
     transition-property: transform;
   }
 }
 
-@media screen and (min-width: 1180px) {
+.depart-gradient {
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7399334734) 0%, rgba(255, 255, 255, 0) 75%);
+}
+@media screen and (min-width: 1280px) {
+  .depart-gradient {
+    z-index: 3;
+    height: 20%;
+    transition: 0.3s linear;
+    transition-property: height;
+  }
+}
+
+@media screen and (min-width: 1100px) {
   .depart-figure-left {
     mask-position: center right;
     mask-image: url("../../assets/images/department/depart-left.png");
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1280px) {
   .depart-figure-left::before {
     top: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
-@media screen and (min-width: 1180px) {
-  .depart-figure-left .depart-figure-desktop {
-    object-position: center right;
+@media screen and (min-width: 1100px) {
+  .depart-figure-left .depart-gradient {
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4850315126) 0%, rgba(255, 255, 255, 0) 75%);
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
+  .depart-figure-left .depart-figure-image {
+    object-position: 70% center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .depart-figure-left .depart-figure-image {
+    object-position: 80% center;
+  }
+}
+@media screen and (min-width: 1560px) {
+  .depart-figure-left .depart-figure-image {
+    object-position: right center;
+  }
+}
+@media screen and (min-width: 1100px) {
   .depart-figure-left .depart-link {
     top: 25%;
     transform: translate(0, -50%);
     left: 10%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .depart-figure-left .depart-link {
     left: 20%;
   }
 }
 
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1100px) {
   .depart-figure-right {
     mask-position: center left;
     mask-image: url("../../assets/images/department/depart-right.png");
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1280px) {
   .depart-figure-right::before {
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4850315126) 0%, rgba(255, 255, 255, 0) 75%);
+  }
+}
+@media screen and (min-width: 1100px) {
+  .depart-figure-right .depart-gradient {
     bottom: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
-@media screen and (min-width: 1180px) {
-  .depart-figure-right .depart-figure-desktop {
-    object-position: center left;
+@media screen and (min-width: 1100px) {
+  .depart-figure-right .depart-figure-image {
+    object-position: 30% center;
   }
 }
-@media screen and (min-width: 1180px) {
+@media screen and (min-width: 1560px) {
+  .depart-figure-right .depart-figure-image {
+    object-position: 35% center;
+  }
+}
+@media screen and (min-width: 1100px) {
   .depart-figure-right .depart-link {
-    top: 66%;
+    top: 70%;
     transform: translate(0, -50%);
     left: 16%;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .depart-figure-right .depart-link {
-    top: 68%;
-    left: 12%;
+    left: 14%;
   }
 }
-
-.depart-figure--hover::before {
-  height: 70%;
-}
-.depart-figure--hover .depart-figure-desktop {
-  transform: scale(1.01);
+@media screen and (min-width: 1560px) {
+  .depart-figure-right .depart-link {
+    left: 10%;
+  }
 }
 
 .depart-link {
   z-index: 1;
   opacity: 1;
-  padding-right: 58px;
   width: 315px;
+  padding-right: 58px;
   position: absolute;
   color: #fff;
 }
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1099px) {
   .depart-link {
-    bottom: 30px;
-    left: 30px;
+    bottom: 0;
+    left: 0;
+    padding: 0 58px 30px 30px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .depart-link {
     transition: 0.3s linear;
     transition-property: opacity;
   }
 }
 .depart-link p {
-  opacity: 0.4;
+  opacity: 0.5;
   text-transform: uppercase;
 }
 .depart-link h2 {
-  font-weight: normal;
   margin-bottom: 16px;
 }
 .depart-link h5 {
@@ -252,17 +270,14 @@
   right: 0;
   top: 24px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .depart-link img {
     transition: 0.3s linear;
     transition-property: right;
   }
 }
-
-.depart-link--hover img {
-  right: -8px;
-}
-
-.depart-link--opacity {
-  opacity: 0.6;
+@media screen and (min-width: 1280px) {
+  .depart-link:hover img {
+    right: -8px;
+  }
 }

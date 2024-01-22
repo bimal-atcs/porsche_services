@@ -1,53 +1,27 @@
 @font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-Bold.woff2") format("woff2"),
-         url("../fonts/PorscheNext-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-BoldItalic.woff2") format("woff2"),
-         url("../fonts/PorscheNext-BoldItalic.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-Regular.woff2") format("woff2"),
-         url("../fonts/PorscheNext-Regular.woff") format("woff");
+    font-family: 'Porsche Next TT';
+    src: url('../fonts/PorscheNextTT-Regular.woff2') format('woff2'),
+        url('../fonts/PorscheNextTT-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-Italic.woff2") format("woff2"),
-         url("../fonts/PorscheNext-Italic.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-Thin.woff2") format("woff2"),
-         url("../fonts/PorscheNext-Thin.woff") format("woff");
+    font-family: 'Porsche Next TT';
+    src: url('../fonts/PorscheNextTT-Thin.woff2') format('woff2'),
+        url('../fonts/PorscheNextTT-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Porsche Next";
-    src: url("../fonts/PorscheNext-ThinItalic.woff2") format("woff2"),
-         url("../fonts/PorscheNext-ThinItalic.woff") format("woff");
-    font-weight: 100;
-    font-style: italic;
+    font-family: 'Porsche Next TT';
+    src: url('../fonts/PorscheNextTT-Bold.woff2') format('woff2'),
+        url('../fonts/PorscheNextTT-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
     font-display: swap;
 }
+

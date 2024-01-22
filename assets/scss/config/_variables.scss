@@ -1,9 +1,10 @@
 // screen breakpoints
 $screen-xs: 768px;
-$screen-sm: 1180px;
-$screen-md: 1440px;
-$screen-lg: 1560px;
-$screen-xl: 1920px;
+$screen-sm: 1100px;
+$screen-md: 1280px;
+$screen-lg: 1440px;
+$screen-xl: 1560px;
+$screen-xxl: 1920px;
 
 
 // theme and colors
@@ -42,7 +43,7 @@ $h6-line-height: 1.5;
 // base
 $base-color-bg: #eeeff2;
 $base-color: $color-primary;
-$base-font-family: "Porsche Next";
+$base-font-family: 'Porsche Next TT';
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
