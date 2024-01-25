@@ -1,0 +1,212 @@
+// imported config
+@use "config" as *;
+
+
+// complement services
+.complement-block {
+    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include media-up($screen-xs) {
+        padding-top: $spacing-row;
+        padding-bottom: $spacing-row;
+    }
+}
+
+// ----------------
+.complement {
+    position: relative;
+}
+
+// ----------------
+.complement-header {
+    margin-bottom: $spacing-sm-low;
+    padding-right: 88px;
+}
+
+
+// ----------------
+.complement-slider {
+
+    // slick
+    .slick-list {
+
+        @include media-down($screen-xxl + 1) {
+            width: calc(100% + 640px);
+            padding-right: 640px;
+        }
+
+        @include media-down($screen-md) {
+            width: calc(100% + 512px);
+            padding-right: 512px;
+        }
+
+        @include media-down($screen-xs) {
+            width: calc(100% + $spacing-sm-low);
+            padding-right: 0;
+        }
+    }
+
+    .slick-track {
+        gap: $spacing-sm-low;
+    }
+
+    .slick-prev,
+    .slick-next {
+        top: -48px;
+        width: 32px;
+        height: 32px;
+        transform: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: $global-hover-radius;
+
+        &::before {
+            display: none;
+        }
+
+        @include media-up($screen-md) {
+            top: -51px;
+            transition: $transition;
+            transition-property: background-color;
+
+            &:hover {
+                background-color: $global-hover-bg;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: auto;
+        right: 40px;
+        background-image: url('../images/icons/icon-arrow-left.svg');
+    }
+
+    .slick-next {
+        right: 0;
+        background-image: url('../images/icons/icon-arrow-right.svg');
+    }
+
+    .slick-dots li {
+        padding: 0;
+        margin: 0 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+        background-color: $color-grey-mid;
+
+        &.slick-active {
+            width: 20px;
+            background-color: $color-primary;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+
+
+// ----------------
+.complement-card {
+    height: 300px;
+    padding: 32px;
+    padding-top: 118px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-color: $color-white;
+    border: 1px solid $color-grey-low;
+    border-radius: $global-radius;
+
+    @include media-up($screen-md) {
+        &:hover {
+
+            .complement-card-header-icon {
+                left: 5px;
+            }
+        }
+    }
+}
+
+.complement-card-icon {
+    top: 48px;
+    left: 32px;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+}
+
+.complement-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+    margin-bottom: 6px;
+}
+
+.complement-card-header-icon {
+    top: -4px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: $global-radius;
+
+    @include media-up($screen-xs) {
+        top: -2px;
+    }
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color, left;
+
+        &:hover {
+            background-color: $global-hover-bg;
+        }
+    }
+
+    img {
+        left: 0;
+        max-height: 24px;
+        position: relative;
+    }
+}
+
+.complement-card-text {
+    color: $color-grey-high;
+}
+
+.complement-link {
+    padding-top: 20px;
+    text-align: center;
+
+    @include media-up($screen-sm) {
+        top: 4px;
+        right: 118px;
+        padding-top: 0;
+        position: absolute;
+    }
+
+    @include media-up($screen-md) {
+        top: 7px;
+    }
+
+    a {
+        font-weight: 600;
+        padding: $global-hover-padding;
+        border-radius: $global-hover-radius;
+
+        @include media-up($screen-md) {
+            transition: $transition;
+            transition-property: background-color;
+
+            &:hover {
+                background-color: $global-hover-bg;
+            }
+        }
+    }
+}

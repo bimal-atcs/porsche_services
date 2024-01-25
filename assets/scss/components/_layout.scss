@@ -1,0 +1,26 @@
+// imported config
+@use "../config" as *;
+
+
+// wrapper/container
+.wrapper {
+    padding: 0 30px;
+    margin: 0 auto;
+    position: relative;
+
+    @include media-up($screen-md) {
+        max-width: 1240px;
+    }
+
+    @include media-up($screen-lg) {
+        max-width: 1340px;
+    }
+
+    @include media-up($screen-xl) {
+        max-width: 1460px;
+    }
+
+    @include media-up($screen-xxl) {
+        max-width: 1820px;
+    }
+}

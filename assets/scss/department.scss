@@ -85,8 +85,11 @@
     position: relative;
     
     @include media-up($screen-sm) {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    @include media-up($screen-md) {
         gap: 0 3vw;
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -276,7 +279,7 @@
     }
 
     h2 {
-        margin-bottom: $space-xs;
+        margin-bottom: $spacing-sm-low;
     }
 
     h5 {

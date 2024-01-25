@@ -1,11 +1,10 @@
 // screen breakpoints
 $screen-xs: 768px;
-$screen-sm: 1100px;
+$screen-sm: 1024px;
 $screen-md: 1280px;
 $screen-lg: 1440px;
 $screen-xl: 1560px;
 $screen-xxl: 1920px;
-
 
 // theme and colors
 $color-primary: #010205;
@@ -16,29 +15,72 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-grey-low: #d8d8db;
-$color-grey-medium: #6b6d70;
+$color-grey-mid: #6b6d70;
 $color-grey-high: #535457;
 
+// global
+$global-radius: 8px;
+$global-hover-bg: #e2e3e6;
+$global-hover-radius: 5px;
+$global-hover-padding: 3px 5px;
+
+// spacing
+$spacing-xs: 4px;
+$spacing-xs-low: 6px;
+$spacing-xs-mid: 8px;
+$spacing-xs-high: 10px;
+
+$spacing-sm: 14px;
+$spacing-sm-low: 16px;
+$spacing-sm-mid: 18px;
+$spacing-sm-high: 20px;
+
+$spacing-md: 24px;
+$spacing-md-low: 26px;
+$spacing-md-mid: 28px;
+$spacing-md-high: 30px;
+
+$spacing-lg: 34px;
+$spacing-lg-low: 36px;
+$spacing-lg-mid: 38px;
+$spacing-lg-high: 40px;
+
+$spacing-xl: 44px;
+$spacing-xl-low: 46px;
+$spacing-xl-mid: 48px;
+$spacing-xl-high: 50px;
+
+// components space
+$spacing-row: 124px;
+
+// transition
+$transition: 0.3s linear;
 
 // heading
-$h1-font-size: 68px;
+$h1-font-size-desk: 68px;
 $h1-line-height: 1.2;
 
-$h2-font-size: 50px;
+$h2-font-size-desk: 50px;
+$h2-font-size-tab: 36px;
+$h2-font-size-mob: 28px;
 $h2-line-height: 1.24;
 
-$h3-font-size: 38px;
+$h3-font-size-desk: 38px;
+$h3-font-size-tab: 30px;
+$h3-font-size-mob: 24px;
 $h3-line-height: 1.28;
 
-$h4-font-size: 28px;
+$h4-font-size-desk: 28px;
+$h4-font-size-tab: 24px;
+$h4-font-size-mob: 22px;
 $h4-line-height: 1.35;
 
-$h5-font-size: 22px;
+$h5-font-size-desk: 22px;
+$h5-font-size-mob: 20px;
 $h5-line-height: 1.36;
 
-$h6-font-size: 16px;
+$h6-font-size-desk: 16px;
 $h6-line-height: 1.5;
-
 
 // base
 $base-color-bg: #eeeff2;
@@ -47,9 +89,3 @@ $base-font-family: 'Porsche Next TT';
 $base-font-size: 16px;
 $base-line-height: 1.5;
 
-
-// transition
-$transition: 0.3s linear;
-
-// spacing
-$space-xs: 16px;

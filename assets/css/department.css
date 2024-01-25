@@ -4,14 +4,14 @@
   min-height: 640px;
   height: 100vh;
 }
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1023px) {
   .depart-page {
     padding-top: 80px;
     display: grid;
     grid-template-rows: 1fr 80px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-page {
     min-height: 760px;
   }
@@ -28,7 +28,7 @@
   justify-items: center;
   background-color: #fff;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-header,
   .depart-footer {
     left: 50%;
@@ -39,13 +39,13 @@
   }
 }
 
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1023px) {
   .depart-header {
     position: fixed;
     z-index: 3;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-header {
     top: 0;
   }
@@ -53,20 +53,20 @@
 .depart-header img {
   filter: brightness(0);
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-header img {
     filter: none;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-footer {
     bottom: 48px;
     height: auto;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-body {
     height: 100%;
   }
@@ -77,10 +77,14 @@
   display: grid;
   position: relative;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
+  .depart-items {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media screen and (min-width: 1280px) {
   .depart-items {
     gap: 0 3vw;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -89,7 +93,7 @@
   height: 100%;
   position: relative;
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure {
     mask-size: cover;
     mask-repeat: no-repeat;
@@ -141,7 +145,7 @@
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-left {
     mask-position: center right;
     mask-image: url("../../assets/images/department/depart-left.png");
@@ -153,13 +157,13 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-left .depart-gradient {
     top: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.4850315126) 0%, rgba(255, 255, 255, 0) 75%);
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-left .depart-figure-image {
     object-position: 70% center;
   }
@@ -174,7 +178,7 @@
     object-position: right center;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-left .depart-link {
     top: 25%;
     transform: translate(0, -50%);
@@ -187,7 +191,7 @@
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-right {
     mask-position: center left;
     mask-image: url("../../assets/images/department/depart-right.png");
@@ -199,13 +203,13 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4850315126) 0%, rgba(255, 255, 255, 0) 75%);
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-right .depart-gradient {
     bottom: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7539390756) 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-right .depart-figure-image {
     object-position: 30% center;
   }
@@ -215,7 +219,7 @@
     object-position: 35% center;
   }
 }
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1024px) {
   .depart-figure-right .depart-link {
     top: 70%;
     transform: translate(0, -50%);
@@ -241,7 +245,7 @@
   position: absolute;
   color: #fff;
 }
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1023px) {
   .depart-link {
     bottom: 0;
     left: 0;
