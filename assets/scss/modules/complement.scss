@@ -1,5 +1,5 @@
 // imported config
-@use "config" as *;
+@use "../config" as *;
 
 
 // complement services
@@ -80,12 +80,12 @@
     .slick-prev {
         left: auto;
         right: 40px;
-        background-image: url('../images/icons/icon-arrow-left.svg');
+        background-image: url('../../images/icons/icon-arrow-left.svg');
     }
 
     .slick-next {
         right: 0;
-        background-image: url('../images/icons/icon-arrow-right.svg');
+        background-image: url('../../images/icons/icon-arrow-right.svg');
     }
 
     .slick-dots li {

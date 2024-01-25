@@ -69,11 +69,11 @@
 .complement-slider .slick-prev {
   left: auto;
   right: 40px;
-  background-image: url("../images/icons/icon-arrow-left.svg");
+  background-image: url("../../images/icons/icon-arrow-left.svg");
 }
 .complement-slider .slick-next {
   right: 0;
-  background-image: url("../images/icons/icon-arrow-right.svg");
+  background-image: url("../../images/icons/icon-arrow-right.svg");
 }
 .complement-slider .slick-dots li {
   padding: 0;

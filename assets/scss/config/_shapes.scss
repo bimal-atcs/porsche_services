@@ -1,0 +1,15 @@
+// shapes size
+// circle
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    overflow: hidden;
+}
+
+// rounded
+@mixin rounded($size, $radius) {
+    width: $size;
+    height: $size;
+    border-radius: $radius;
+}

@@ -1,0 +1,21 @@
+// imported config
+@use "../config" as *;
+
+.avatar {
+    position: relative;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: $global-hover-bg-light;
+    border: 1px solid rgba($color-black, 0.2);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+    }
+}

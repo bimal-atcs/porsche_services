@@ -3,22 +3,26 @@
 
 // buttons
 .button {
+    cursor: pointer;
     border-radius: 4px;
-    padding: 15px 26px;
+    padding: 0 16px;
+    min-height: 54px;
     font-size: 16px;
+    line-height: 1;
     font-weight: 600;
+    letter-spacing: 0.2px;
+    position: relative;
     color: $color-primary;
-    border: 2px solid transparent;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    transition: opacity 0.2s;
+    border: 2px solid transparent;
 
-    &:hover {
-        opacity: 0.65;
+
+    &.block {
+        display: flex;
     }
-
 
     &.primary {
         color: $color-white;
@@ -26,8 +30,36 @@
         border-color: $color-primary;
     }
 
-    &.outline {
+    &.primary-outline {
         background-color: $color-white;
         border-color: $color-primary;
+    }
+
+    &.secondary {
+        color: $color-white;
+        background-color: $color-disabled;
+        border-color: $color-disabled;
+    }
+
+    &.secondary-outline {
+        background-color: $color-white;
+        border-color: $color-grey-mid;
+    }
+
+    &.white {
+        background-color: $color-white;
+        border-color: $color-white;
+    }
+
+    &.white-outline {
+        background-color: transparent;
+        border-color: $color-white;
+    }
+
+    &.icon {
+        padding: 0;
+        min-height: auto;
+        width: 54px;
+        height: 54px;
     }
 }

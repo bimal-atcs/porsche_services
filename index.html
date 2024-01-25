@@ -8,18 +8,100 @@
 
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/next.css">
-    <link rel="stylesheet" href="assets/css/complement.css">
+    <link rel="stylesheet" href="assets/css/modules/header.css">
+    <link rel="stylesheet" href="assets/css/modules/footer.css">
+    <link rel="stylesheet" href="assets/css/modules/next.css">
+    <link rel="stylesheet" href="assets/css/modules/complement.css">
+    <link rel="stylesheet" href="assets/css/modules/window.css">
 
     <style>
         .wrap-bg {
             background-color: tomato;
         }
+
+        body {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <header class="page-header"></header>
+    <header class="page-header header header-home header-sticky">
+        <div class="wrapper">
+            <div class="header-navbar">
+                <ul class="header-navbar-links">
+                    <li>
+                        <a href="javascript:;">
+                            <span>My SCP</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>Service Process</span>
+                            <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>Job Roles</span>
+                            <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>Related Topics</span>
+                            <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="header-navbar-brand">
+                    <a href="javascript:;">
+                        <img src="assets/images/global/logo-porsche-dark.png" alt="">
+                    </a>
+                </div>
+
+                <ul class="header-navbar-nav">
+                    <li>
+                        <div class="header-navbar-icon">
+                            <img src="assets/images/icons/icon-search-gray.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header-navbar-icon">
+                            <img src="assets/images/icons/icon-bell-gray.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header-navbar-icon">
+                            <img src="assets/images/icons/icon-diagram-gray.svg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header-navbar-icon">
+                            <img src="assets/images/icons/icon-kado-gray.svg" alt="">
+                            <span>Kado</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header-navbar-setting">
+                            <div class="header-navbar-profile">
+                                <div class="header-navbar-avatar">
+                                    <!-- <img src="assets/images/rectangle-3@2x.png" alt=""> -->
+                                </div>
+                                <div class="header-navbar-text">
+                                    <h6>eliaswagner</h6>
+                                    <p>3 Job roles</p>
+                                </div>
+                            </div>
+                            <div class="header-navbar-arrow">
+                                <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
     
     <div class="page-body">
         <div class="wrapper">
@@ -30,6 +112,27 @@
                 <h5>Charging solutions</h5>
                 <h6>View all complementary services</h6>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis blanditiis omnis tempore eveniet. Cumque explicabo provident incidunt earum, voluptates asperiores? Nesciunt at quibusdam quaerat natus dolorem totam quae atque mollitia?</p>
+            </div>
+
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+                <a class="button" href="javascript;;">
+                    View Service Core Process
+                </a>
+                <a class="button primary" href="javascript;;">
+                    View Service Core Process
+                </a>
+                <a class="button primary-outline" href="javascript;;">
+                    View Service Core Process
+                </a>
+                <a class="button secondary" href="javascript;;">
+                    View Service Core Process
+                </a>
+                <a class="button secondary-outline" href="javascript;;">
+                    View Service Core Process
+                </a>
+                <a class="button white-outline icon" href="javascript;;">
+                    <img src="assets/images/icons/icon-close-white.svg" alt="">
+                </a>
             </div>
         </div>
         
@@ -206,6 +309,116 @@
             </a>
         </div>
     </footer>
+
+    <div class="window" style="display: ;">
+        <div class="window-blur"></div>
+        <div class="drawer">
+            <div class="drawer-close button white-outline icon">
+                <img src="assets/images/icons/icon-close-white.svg" alt="">
+            </div>
+            <div class="drawer-content">
+                <div class="drawer-header">
+                    <div class="profile">
+                        <div class="profile-header">
+                            <div class="profile-header-avatar avatar">
+                                <img src="assets/images/users/avatar.png" alt="">
+                            </div>
+                            <div class="profile-header-title">
+                                <h5>eliaswagner</h5>
+                            </div>
+                        </div>
+                        <div class="profile-role">
+                            <div class="profile-role-header">
+                                <p>MY Job roles</p>
+                            </div>
+                            <div class="profile-role-labels labels">
+                                <span class="label primary">
+                                    Service Consultant
+                                </span>
+                                <span class="label">
+                                    Service Consultant
+                                </span>
+                                <span class="label">
+                                    Sales Manager (<span>D</span>)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="drawer-body">
+                    <ul class="drawer-items">
+                        <li class="drawer-item">
+                            <a href="javascript:;" class="drawer-link">
+                                <div class="drawer-link-icon">
+                                    <img src="assets/images/icons/icon-user.svg" alt="">
+                                </div>
+                                <div class="drawer-link-text">
+                                    <h5>Profile settings</h5>
+                                </div>
+                            </a>
+                            <a href="javascript:;" class="drawer-link-icon">
+                                <img src="assets/images/icons/icon-external.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="drawer-item">
+                            <a href="javascript:;" class="drawer-link">
+                                <div class="drawer-link-icon">
+                                    <img src="assets/images/icons/icon-compare.svg" alt="">
+                                </div>
+                                <div class="drawer-link-text">
+                                    <h5>Change instance</h5>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="drawer-item">
+                            <a href="javascript:;" class="drawer-link">
+                                <div class="drawer-link-icon">
+                                    <img src="assets/images/icons/icon-question-outline.svg" alt="">
+                                </div>
+                                <div class="drawer-link-text">
+                                    <h5>Documentation</h5>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="drawer-item">
+                            <a href="javascript:;" class="drawer-link">
+                                <div class="drawer-link-icon">
+                                    <img src="assets/images/icons/icon-email.svg" alt="">
+                                </div>
+                                <div class="drawer-link-text">
+                                    <h5>Send feedback</h5>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="drawer-items">
+                        <li class="drawer-item">
+                            <a href="javascript:;" class="drawer-link">
+                                <div class="drawer-link-icon">
+                                    <img src="assets/images/icons/icon-logout.svg" alt="">
+                                </div>
+                                <div class="drawer-link-text">
+                                    <h5>Log out</h5>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="drawer-footer">
+                    <div class="drawer-footer-label">
+                        <p>Department:</p>
+                    </div>
+                    <div class="drawer-footer-button button block secondary-outline">
+                        <p>After Sales Service Next</p>
+                        <span>Switch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="assets/js/jquery3.7.1.js"></script>

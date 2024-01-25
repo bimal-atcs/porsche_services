@@ -1,0 +1,47 @@
+// imported config
+@use "../config" as *;
+
+// profile
+.profile {
+    padding-bottom: 24px;
+    position: relative;
+}
+
+// ----------------
+.profile-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: $spacing-sm-low;
+    margin-bottom: $spacing-sm-low;
+}
+
+.profile-header-title {
+    text-transform: capitalize;
+}
+
+.profile-header-avatar {
+    @include circle(48px);
+}
+
+// ----------------
+.profile-role {
+    padding: $spacing-xs-mid 0;
+}
+
+.profile-role-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-disabled;
+    text-transform: uppercase;
+    margin-bottom: $spacing-xs-mid;
+}
+
+// profile secondary
+.profile-secondary .profile-header {
+    align-items: start;
+}
+
+.profile-secondary .profile-role-labels {
+    margin-top: $spacing-xs-mid;
+}
