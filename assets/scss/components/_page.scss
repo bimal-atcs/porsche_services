@@ -1,0 +1,23 @@
+// imported config
+@use "../config" as *;
+
+// page structure
+.page-body {
+
+    // page scroll on
+    &.page-scroll-on {
+        height: 100%;
+    }
+    
+    // page scroll off
+    &.page-scroll-off {
+
+        > .scroll-content {
+            overflow-y: hidden;
+        }
+
+        > .scroll-element {
+            display: none !important;
+        }
+    }
+}

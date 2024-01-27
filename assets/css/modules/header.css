@@ -5,7 +5,7 @@
   color: #535457;
   font-weight: 600;
   width: 100%;
-  position: relative;
+  position: fixed;
   background-color: #fff;
   border-bottom: 1px solid #d8d8db;
 }
@@ -14,10 +14,6 @@
   border-bottom: 0;
   backdrop-filter: blur(48px);
   background: linear-gradient(180deg, rgba(238, 239, 242, 0.1), rgba(238, 239, 242, 0) 88.54%);
-}
-
-.header-sticky {
-  position: sticky;
 }
 
 .header-navbar {

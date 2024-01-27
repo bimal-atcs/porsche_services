@@ -9,7 +9,7 @@
     color: $color-grey-high;
     font-weight: 600;
     width: 100%;
-    position: relative;
+    position: fixed;
     background-color: $color-white;
     border-bottom: 1px solid $color-grey-low;
 }
@@ -23,11 +23,6 @@
         rgba(238, 239, 242, 0.1),
         rgba(238, 239, 242, 0) 88.54%
     );
-}
-
-// ----------------x
-.header-sticky {
-    position: sticky;
 }
 
 

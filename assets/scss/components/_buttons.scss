@@ -5,7 +5,7 @@
 .button {
     cursor: pointer;
     border-radius: 4px;
-    padding: 0 16px;
+    padding: 12px 16px;
     min-height: 54px;
     font-size: 16px;
     line-height: 1;
@@ -43,7 +43,7 @@
 
     &.secondary-outline {
         background-color: $color-white;
-        border-color: $color-grey-mid;
+        border-color: $color-disabled;
     }
 
     &.white {

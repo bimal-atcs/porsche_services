@@ -27,7 +27,7 @@
 }
 
 // media down width orientation
-@mixin media-down-view($min, $view) {
+@mixin media-down-view($max, $view) {
     @media screen and (max-width: ($max - 1)) and (orientation: $view) {
         @content;
     }

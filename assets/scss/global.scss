@@ -3,12 +3,15 @@
 @use "root/fonts";
 @use "root/normalize";
 // components
+@use "components/page";
 @use "components/layout";
 @use "components/typography";
 @use "components/buttons";
 @use "components/avatar";
 @use "components/labels";
 @use "components/profile";
+@use "components/instance";
+@use "components/window";
 @use "components/drawer";
 
 

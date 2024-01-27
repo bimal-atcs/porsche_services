@@ -6,27 +6,27 @@
 
     <title>Porche Services</title>
 
-    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/modules/header.css">
     <link rel="stylesheet" href="assets/css/modules/footer.css">
     <link rel="stylesheet" href="assets/css/modules/next.css">
     <link rel="stylesheet" href="assets/css/modules/complement.css">
-    <link rel="stylesheet" href="assets/css/modules/window.css">
 
     <style>
         .wrap-bg {
             background-color: tomato;
         }
-
-        body {
-            overflow: hidden;
+    
+        .footer {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <header class="page-header header header-home header-sticky">
-        <div class="wrapper">
+    <header class="page-header header header-home">
+        <div class="layout">
             <div class="header-navbar">
                 <ul class="header-navbar-links">
                     <li>
@@ -83,10 +83,9 @@
                         </div>
                     </li>
                     <li>
-                        <div class="header-navbar-setting">
+                        <div id="profile-drawer" class="header-navbar-setting">
                             <div class="header-navbar-profile">
                                 <div class="header-navbar-avatar">
-                                    <!-- <img src="assets/images/rectangle-3@2x.png" alt=""> -->
                                 </div>
                                 <div class="header-navbar-text">
                                     <h6>eliaswagner</h6>
@@ -103,8 +102,8 @@
         </div>
     </header>
     
-    <div class="page-body">
-        <div class="wrapper">
+    <div class="page-body page-scroll-on scrollbar-dynamic">
+        <div class="layout">
             <div class="wrap-bg">
                 <h2>Tailored Customer Service</h2>
                 <h3>Achieve high performance</h3>
@@ -138,7 +137,7 @@
         
         <div class="next-block">
             <div class="next">
-                <div class="wrapper">
+                <div class="layout">
                     <div class="next-header">
                         <h2>Service NEXT plus</h2>
                         <h2>Tailored Customer Service</h2>
@@ -189,7 +188,7 @@
 
         <div class="complement-block">
             <div class="complement">
-                <div class="wrapper">
+                <div class="layout">
                     <div class="complement-header">
                         <h4>Complementary services</h4>
                     </div>
@@ -310,10 +309,10 @@
         </div>
     </footer>
 
-    <div class="window" style="display: ;">
+    <div id="profile-drawer-window" class="window window-close">
         <div class="window-blur"></div>
-        <div class="drawer">
-            <div class="drawer-close button white-outline icon">
+        <div class="drawer drawer-close scrollbar-dynamic">
+            <div class="drawer-close-button button white-outline icon">
                 <img src="assets/images/icons/icon-close-white.svg" alt="">
             </div>
             <div class="drawer-content">
@@ -420,9 +419,121 @@
         </div>
     </div>
 
+    <div id="change-instance-window" class="window window-close">
+        <div class="window-blur"></div>
+        <div class="window-dialog">
+            <div class="window-content">
+                <div class="window-scroll scrollbar-dynamic">
+                    <div class="window-header window-header-secondary">
+                        <h4>Change instance</h4>
+                        <div class="window-header-close">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="instance">
+                            <div class="instance-header">
+                                <p>Current instance</p>
+                            </div>
+                            <div class="instance-body">
+                                <div class="instance-links instance-external-links">
+                                    <a href="javascript:;" class="instance-button button secondary-outline block">
+                                        <p>Global Service NEXT Instance</p>
+                                    </a>
+                                    <a class="instance-link" href="javascript:;">
+                                        <p>Open backend</p>
+                                        <img src="assets/images/icons/icon-external.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="instance">
+                            <div class="instance-header">
+                                <p>All other instances</p>
+                            </div>
+                            <div class="instance-body">
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Porsche Center Dortmund</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Porsche Center Stuttgart</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="instance-links instance-external-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Porsche Center Frankfurt</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                    <a class="instance-link" href="javascript:;">
+                                        <p>Open backend</p>
+                                        <img src="assets/images/icons/icon-external.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Porsche Center Frankfurt</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Porsche Center Dusseldorf</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="switch-department-window" class="window window-close">
+        <div class="window-blur"></div>
+        <div class="window-dialog">
+            <div class="window-content">
+                <div class="window-scroll scrollbar-dynamic">
+                    <div class="window-header window-header-secondary">
+                        <h4>Switch department</h4>
+                        <div class="window-header-close">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="instance">
+                            <div class="instance-body">
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button secondary block">
+                                        <p>After Sales Service Next</p>
+                                        <span>(<em>Currently viewing</em>)</span>
+                                    </a>
+                                </div>
+                                <div class="instance-links">
+                                    <a href="javascript:;" class="instance-button button primary block">
+                                        <p>Sales Service Next</p>
+                                        <img src="assets/images/icons/icon-arrow-head-right-white.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="assets/js/jquery3.7.1.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
     <script src="assets/js/slick.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/window.js"></script>
     <script src="assets/js/next-slider.js"></script>
     <script src="assets/js/complement-slider.js"></script>
 </body>

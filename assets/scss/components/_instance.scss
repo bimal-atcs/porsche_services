@@ -1,0 +1,161 @@
+// imported config
+@use "../config" as *;
+
+// instance
+.instance {
+    margin-bottom: $spacing-md;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+// ----------------
+.instance-header {
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: $color-disabled;
+}
+
+// ----------------
+.instance-body {
+    display: grid;
+    gap: $spacing-sm-low;
+}
+
+// ----------------
+.instance-links {
+    position: relative;
+}
+
+// ----------------
+.instance-button {
+    justify-content: flex-start;
+
+    p {
+        flex: 1 0 0;
+        padding-right: 15px;
+    }
+
+    em {
+        font-style: normal;
+    }
+}
+
+.instance-button.secondary {
+
+    @include media-down-view($screen-xs, portrait) {
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+            padding-right: 0;
+        }
+    }
+}
+
+// ----------------
+.instance-link {
+    right: 10px;
+    top: 50%;
+    font-weight: 600;
+    display: flex;
+    gap: 0 4px;
+    padding: 4px 8px;
+    align-items: center;
+    position: absolute;
+    background-color: $global-hover-bg-light;
+    border-radius: $global-hover-radius;
+    transform: translate(0, -50%);
+
+    @include media-down-view($screen-xs, portrait) {
+        right: auto;
+        top: auto;
+        left: 16px;
+        bottom: 15px;
+        transform: none;
+    }
+    
+    @include media-up($screen-md) {
+        background-color: transparent;
+        transition: $transition;
+        transition-property: background-color, opacity;
+
+        &:hover {
+            background-color: $global-hover-bg-light;
+        }
+    }
+}
+
+// ----------------
+.instance-external-links {
+
+    @include media-down-view($screen-xs, portrait) {
+
+        .instance-button {
+            padding-bottom: 56px;
+        }
+    }
+}
+
+.instance-external-links .secondary-outline {
+    justify-content: flex-start;
+
+    p {
+        padding-right: 150px;
+    }
+
+    @include media-down-view($screen-xs, portrait) {
+        p {
+            padding-right: 0;
+        }
+    }
+}
+
+.instance-external-links .primary {
+
+    p {
+        padding-right: 160px;
+
+        @include media-down-view($screen-xs, portrait) {
+            padding-right: 15px;
+        }
+    }
+
+    ~ .instance-link {
+        right: 50px;
+        color: $color-white;
+        background-color: rgba($color-white, 0.12);
+
+        img {
+            filter: invert(1);
+        }
+
+        @include media-down-view($screen-xs, portrait) {
+            right: auto;
+        }
+    }
+    
+    @include media-up($screen-md) {
+        p {
+            padding-right: 160px;
+        }
+        
+        ~ .instance-link {
+            opacity: 0;
+
+            &:hover {
+                opacity: 1;
+                background-color: rgba($color-white, 0.25);
+            }
+        }
+        
+        &:hover {
+
+            ~ .instance-link {
+                opacity: 1;
+            }
+        }
+    }
+}

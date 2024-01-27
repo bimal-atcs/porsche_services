@@ -112,10 +112,9 @@
 .complement-card {
     height: 300px;
     padding: 32px;
-    padding-top: 118px;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     background-color: $color-white;
     border: 1px solid $color-grey-low;
     border-radius: $global-radius;
@@ -131,18 +130,28 @@
 }
 
 .complement-card-icon {
-    top: 48px;
-    left: 32px;
     width: 54px;
     height: 54px;
-    position: absolute;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.complement-card-body {
+    margin-top: auto;
 }
 
 .complement-card-header {
     display: flex;
-    justify-content: space-between;
     gap: 0 20px;
+    justify-content: space-between;
     margin-bottom: 6px;
+
+    h5 {
+        flex: 1 0 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
 .complement-card-header-icon {
@@ -178,6 +187,16 @@
 
 .complement-card-text {
     color: $color-grey-high;
+
+    p {
+        display: block;
+        display: -webkit-box;
+        max-height: $base-font-size * $base-line-height * 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .complement-link {

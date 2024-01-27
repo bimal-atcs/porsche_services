@@ -24,6 +24,13 @@ body {
     background-color: $base-color-bg;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+
 body, input, textarea, select, button {
     -moz-font-feature-settings: 'kern';
     -webkit-font-smoothing: antialiased;
