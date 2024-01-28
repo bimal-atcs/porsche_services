@@ -1,60 +1,55 @@
 // imported config
-@use "../config" as *;
+@use "config" as *;
 
 
-// before login department page
+// department page
 .depart-page {
     position: relative;
     overflow: hidden;
     height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 
-    @include media-down($screen-sm) {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+    @include media-up-view($screen-sm, landscape) {
+        grid-template-rows: auto;
     }
 }
 
 .depart-header,
 .depart-footer {
     line-height: 1;
-    z-index: 3;
-    width: 100%;
+    z-index: 9;
     height: 60px;
     display: grid;
     align-items: center;
     justify-items: center;
-    background-color: $color-white;
 
     @include media-up($screen-xs) {
         height: 80px;
     }
 
-    @include media-up($screen-sm) {
+    @include media-up-view($screen-sm, landscape) {
+        height: auto;
         left: 50%;
         transform: translate(-50%, 0);
         position: absolute;
-        width: auto;
-        background-color: transparent;
     }
 }
 
 // ----------------
 .depart-header {
-    
-    @include media-up($screen-sm) {
-        top: 0;
-    }
+    background-color: $color-white;
 
+    @include media-up-view($screen-sm, landscape) {
+        top: 30px;
+        background-color: transparent;
+    }
+    
     img {
         max-width: 180px;
-        filter: brightness(0);
 
         @include media-up($screen-xs) {
             max-width: 100%;
-        }
-
-        @include media-up($screen-sm) {
-            filter: none;
         }
     }
 }
@@ -62,33 +57,24 @@
 // ----------------
 .depart-footer {
     
-    @include media-up($screen-sm) {
+    @include media-up-view($screen-sm, landscape) {
         bottom: 48px;
         height: auto;
     }
 }
 
 // ----------------
-.depart-body {
-    
-    @include media-up($screen-sm) {
-        height: 100%;
-    }
-}
-
-// ----------------
 .depart-items {
-    min-height: 640px;
     height: 100%;
     display: grid;
-    position: relative;
-    
-    @include media-up($screen-sm) {
-        min-height: 700px;
-        grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr 1fr;
+
+    @include media-up-view($screen-sm, landscape) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
     }
 
-    @include media-up($screen-md) {
+    @include media-up-view($screen-md, landscape) {
         gap: 0 3vw;
     }
 }
@@ -96,16 +82,18 @@
 
 // ----------------
 .depart-figure {
-    width: 100%;
     height: 100%;
     position: relative;
 
-    @include media-up($screen-sm) {
-        mask-size: cover;
-        mask-repeat: no-repeat;
+    @include media-view(landscape) {
+        min-height: 300px;
     }
 
-    @include media-up($screen-md) {
+    @include media-up-view($screen-sm, landscape) {
+        min-height: 700px;
+        mask-size: cover;
+        mask-repeat: no-repeat;
+
         &::before {
             content: '';
             z-index: 1;
@@ -116,6 +104,14 @@
             background-color: $color-black;
         }
     }
+
+    @include media-up-view($screen-md, landscape) {
+        min-height: 800px;
+    }
+
+    @include media-up-view($screen-lg, landscape) {
+        min-height: 900px;
+    }
 }
 
 .depart-figure-image {
@@ -125,16 +121,11 @@
     height: 100%;
     object-fit: cover;
     position: absolute;
-
-    @include media-up($screen-md) {
-        transform: scale(1);
-        transition: $transition;
-        transition-property: transform;
-    }
 }
 
 .depart-gradient {
     z-index: 1;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -142,9 +133,13 @@
     background-color: $color-black;
     background: linear-gradient(0deg, rgba(0,0,0,0.7399334733893557) 0%, rgba(255,255,255,0) 75%);
     
-    @include media-up($screen-md) {
+    @include media-up-view($screen-sm, landscape) {
+        top: auto;
         z-index: 3;
-        height: 20%;
+        height: 10%;
+    }
+
+    @include media-up-view($screen-md, landscape) {
         transition: $transition;
         transition-property: height;
     }
@@ -152,12 +147,12 @@
 
 .depart-figure-left {
 
-    @include media-up($screen-sm) {
+    @include media-up-view($screen-sm, landscape) {
         mask-position: center right;
-        mask-image: url("../../../assets/images/department/depart-left.png");
+        mask-image: url("../../assets/images/department/depart-left.png");
     }
 
-    @include media-up($screen-md) {
+    @include media-up-view($screen-sm, landscape) {
         &::before {
             top: 0;
             background: linear-gradient(180deg, rgba(0,0,0,0.7539390756302521) 0%, rgba(255,255,255,0) 100%);
@@ -166,49 +161,47 @@
 
     .depart-gradient {
 
-        @include media-up($screen-sm) {
-            top: 0;
+        @include media-up-view($screen-sm, landscape) {
             background: linear-gradient(180deg, rgba(0,0,0,0.48503151260504207) 0%, rgba(255,255,255,0) 75%);
         }
     }
 
     .depart-figure-image {
 
-        @include media-up($screen-sm) {
-            object-position: 70% center;
+        @include media-up-view($screen-sm, landscape) {
+            object-position: 75% center;
         }
 
-        @include media-up($screen-md) {
+        @include media-up-view($screen-md, landscape) {
+            object-position: 90% center;
+        }
+        
+        @include media-up-view($screen-lg, landscape) {
             object-position: 80% center;
         }
 
-        @include media-up($screen-xl) {
+        @include media-up-view($screen-xxl, landscape) {
             object-position: right center;
         }
     }
 
     .depart-link {
 
-        @include media-up($screen-sm) {
-            top: 25%;
-            transform: translate(0, -50%);
-            left: 10%;
-        }
-
-        @include media-up($screen-md) {
-            left: 20%;
+        @include media-up-view($screen-sm, landscape) {
+            top: 130px;
+            left: 60px;
         }
     }
 }
 
 .depart-figure-right {
 
-    @include media-up($screen-sm) {
+    @include media-up-view($screen-sm, landscape) {
         mask-position: center left;
-        mask-image: url("../../../assets/images/department/depart-right.png");
+        mask-image: url("../../assets/images/department/depart-right.png");
     }
 
-    @include media-up($screen-md) {
+    @include media-up-view($screen-sm, landscape) {
         &::before {
             bottom: 0;
             background: linear-gradient(0deg, rgba(0,0,0,0.48503151260504207) 0%, rgba(255,255,255,0) 75%);
@@ -217,7 +210,7 @@
 
     .depart-gradient {
 
-        @include media-up($screen-sm) {
+        @include media-up-view($screen-sm, landscape) {
             bottom: 0;
             background: linear-gradient(0deg, rgba(0,0,0,0.7539390756302521) 0%, rgba(255,255,255,0) 100%);
         }
@@ -225,29 +218,28 @@
 
     .depart-figure-image {
 
-        @include media-up($screen-sm) {
+        @include media-up-view($screen-sm, landscape) {
             object-position: 30% center;
         }
 
-        @include media-up($screen-xl) {
-            object-position: 35% center;
+        @include media-up-view($screen-md, landscape) {
+            object-position: 38% center;
+        }
+        
+        @include media-up-view($screen-lg, landscape) {
+            object-position: 32% center;
+        }
+
+        @include media-up-view($screen-xxl, landscape) {
+            object-position: 40% center;
         }
     }
 
     .depart-link {
 
-        @include media-up($screen-sm) {
-            top: 70%;
-            transform: translate(0, -50%);
-            left: 16%;
-        }
-
-        @include media-up($screen-md) {
-            left: 14%;
-        }
-
-        @include media-up($screen-xl) {
-            left: 10%;
+        @include media-up-view($screen-sm, landscape) {
+            left: 60px;
+            top: 58%;
         }
     }
 }
@@ -256,21 +248,17 @@
 // ----------------
 .depart-link {
     z-index: 1;
-    opacity: 1;
     width: 315px;
     padding-right: 58px;
     position: absolute;
     color: $color-white;
-    
-    @include media-down($screen-sm) {
-        bottom: 0;
-        left: 0;
-        padding: 0 58px 30px 30px;
-    }
+    bottom: 0;
+    left: 0;
+    padding: 30px 40px 30px 30px;
 
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: opacity;
+    @include media-up-view($screen-sm, landscape) {
+        z-index: 2;
+        bottom: auto;
     }
 
     p {
@@ -288,11 +276,17 @@
 
     img {
         position: absolute;
-        max-width: 48px;
+        max-width: 38px;
         right: 0;
-        top: 24px;
+        top: 52px;
 
-        @include media-up($screen-md) {
+        @include media-up-view($screen-sm, landscape) {
+            top: 56px;
+        }
+
+        @include media-up-view($screen-md, landscape) {
+            top: 60px;
+            max-width: 48px;
             transition: $transition;
             transition-property: right;
         }
@@ -300,7 +294,7 @@
 
     &:hover {
 
-        @include media-up($screen-md) {
+        @include media-up-view($screen-md, landscape) {
 
             img {
                 right: -8px;

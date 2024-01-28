@@ -13,7 +13,7 @@ function departOnHoverLink() {
         // on hover left
         $('.depart-figure-left .depart-link').mouseenter(function() {
             $(".depart-figure-right .depart-gradient").css({
-                'height': '70%'
+                'height': '80%'
             });
         }).mouseleave(function () {
             $(".depart-figure-right .depart-gradient").removeAttr("style");
@@ -22,7 +22,7 @@ function departOnHoverLink() {
         // on hover right
         $('.depart-figure-right .depart-link').mouseenter(function() {
             $(".depart-figure-left .depart-gradient").css({
-                'height': '70%'
+                'height': '80%'
             });
         }).mouseleave(function () {
             $(".depart-figure-left .depart-gradient").removeAttr("style");
