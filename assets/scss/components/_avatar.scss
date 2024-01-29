@@ -2,6 +2,7 @@
 @use "../config" as *;
 
 .avatar {
+    @include circle(48px);
     position: relative;
     line-height: 1;
     display: flex;

@@ -1,0 +1,53 @@
+// imported config
+@use "../config" as *;
+
+
+// profile users
+.profile-users-header {
+    color: $color-grey-high;
+    margin-bottom: $spacing-sm-low;
+
+    h4 {
+        font-weight: normal;
+    }
+}
+
+.profile-users-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.profile-users-avatars {
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.profile-users-avatar {
+    @include circle(56px);
+    margin-right: -12px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color-bg;
+
+    @for $i from 1 through 9 {
+        $num: 9 - $i;
+        &:nth-child(#{$i}) {
+            z-index: $num;
+        }
+    }
+}
+
+.profile-users-actions {
+
+    .button {
+        width: calc(100% + 10px);
+    }
+}
+
+.profile-users-more {
+    margin-top: 15px;
+    color: $color-grey-mid;
+}

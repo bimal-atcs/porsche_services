@@ -1,0 +1,73 @@
+// imported config
+@use "../config" as *;
+
+
+// ----------------
+.profile-card {
+    max-width: 400px;
+}
+
+
+// ----------------
+.profile-card-header {
+    text-align: center;
+    color: $color-grey-high;
+    margin-bottom: $spacing-md;
+
+    h4 {
+        font-weight: normal;
+    }
+}
+
+
+// ----------------
+.profile-card-body {
+    overflow: hidden;
+    border-radius: $global-radius;
+    background-color: $color-white;
+    box-shadow: 0 4px 16px 0 rgba($color-black, 0.16);
+}
+
+
+// ----------------
+.profile-card-frame {
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+}
+
+// ----------------
+.profile-card-content {
+    margin-top: -30px;
+
+    .profile-header {
+        align-items: start;
+    }
+
+    .profile-header-title {
+        margin-top: 22px;
+    }
+}
+
+
+// ----------------
+.profile-card-actions {
+    display: flex;
+    gap: $spacing-sm-low;
+    padding: $spacing-sm-low;
+    border-top: 1px solid #EEEFF2;
+    background-color: $color-white;
+
+    .grow {
+        flex: 1;
+    }
+}

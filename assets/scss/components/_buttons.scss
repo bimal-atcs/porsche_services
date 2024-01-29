@@ -19,6 +19,11 @@
     text-transform: capitalize;
     border: 2px solid transparent;
 
+    img {
+        margin-top: -2px;
+        margin-right: 8px;
+    }
+
 
     &.block {
         display: flex;
@@ -61,5 +66,9 @@
         min-height: auto;
         width: 54px;
         height: 54px;
+
+        img {
+            margin: 0;
+        }
     }
 }

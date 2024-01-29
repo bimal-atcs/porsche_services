@@ -1,0 +1,76 @@
+.core {
+  padding-bottom: 88px;
+  z-index: 0;
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+
+.core-background img {
+  width: 2280px;
+  height: 1040px;
+  top: -22px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  object-fit: cover;
+  position: absolute;
+}
+
+.core-header {
+  margin-bottom: 60px;
+  max-width: 720px;
+  text-align: center;
+  display: inline-block;
+}
+.core-header h2 {
+  margin-bottom: 10px;
+}
+.core-header h5 {
+  font-weight: normal;
+}
+
+.core-figure {
+  position: relative;
+}
+.core-figure img {
+  max-height: 500px;
+  display: inline-block;
+}
+
+.core-brand {
+  text-align: center;
+}
+
+.core-items {
+  display: flex;
+}
+
+.core-item-left {
+  left: -62px;
+  position: relative;
+}
+
+.core-item-right {
+  left: 152px;
+  position: relative;
+}
+
+.core-vector-line {
+  text-align: center;
+}
+
+.core-vector-line-left {
+  margin-bottom: -15px;
+}
+.core-vector-line-left img {
+  left: 195px;
+  position: relative;
+}
+
+.core-vector-line-right {
+  margin-bottom: -15px;
+}
+.core-vector-line-right img {
+  left: -115px;
+  position: relative;
+}

@@ -3,8 +3,13 @@
 
 // profile
 .profile {
-    padding-bottom: 24px;
     position: relative;
+    padding: $spacing-sm-low;
+    padding-bottom: 0;
+
+    &.padding-none {
+        padding: 0;
+    }
 }
 
 // ----------------
@@ -16,17 +21,26 @@
     margin-bottom: $spacing-sm-low;
 }
 
-.profile-header-title {
-    text-transform: capitalize;
+.profile-header-user-border {
+    @include circle(56px);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
 }
 
 .profile-header-avatar {
-    @include circle(48px);
+    @include circle(50px);
+}
+
+.profile-header-title {
+    text-transform: capitalize;
 }
 
 // ----------------
 .profile-role {
     padding: $spacing-xs-mid 0;
+    margin-bottom: $spacing-sm-low;
 }
 
 .profile-role-header {

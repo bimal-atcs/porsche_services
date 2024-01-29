@@ -13,7 +13,12 @@ h6, .heading-6 {
 }
 
 h1, .heading-1 {
+    font-size: $h1-font-size-mob;
     line-height: $h1-line-height;
+
+    @include media-up($screen-xs) {
+        font-size: $h1-font-size-tab;
+    }
 
     @include media-up($screen-md) {
         font-size: $h1-font-size-desk;
