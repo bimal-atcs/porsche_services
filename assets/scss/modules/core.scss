@@ -2,44 +2,50 @@
 @use "../config" as *;
 
 // service core process
+.core-block {
+    overflow: hidden;
+}
+
 .core {
-    padding-bottom: 88px;
+    padding-bottom: 0;
     z-index: 0;
-    position: relative;
-    display: grid;
-    justify-items: center;
+
+    @include media-up($screen-sm) {
+        padding-bottom: 88px;
+    }
 }
 
 // ----------------
 .core-background {
-
-    img {
-        width: 2280px;
-        height: 1040px;
-        top: -22px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        object-fit: cover;
-        position: absolute;
-    }
 }
 
 
 // ----------------
 .core-header {
     margin-bottom: 60px;
+    display: grid;
+    justify-items: center;
+}
+
+.core-header-content {
     max-width: 720px;
     text-align: center;
-    display: inline-block;
 
     h2 {
         margin-bottom: 10px;
     }
-
+    
     h5 {
         font-weight: normal;
+        color: $color-grey-mid;
     }
 }
+
+
+// ----------------
+.core-body {
+}
+
 
 // ----------------
 .core-figure {
@@ -54,24 +60,97 @@
 
 // ----------------
 .core-brand {
+    margin-bottom: 10px;
     text-align: center;
+
+    img {
+        max-height: 50px;
+
+        @include media-up($screen-xs) {
+            max-height: 100%;
+        }
+    }
+
 }
 
 // ----------------
 .core-items {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-up($screen-sm) {
+        margin-top: 0;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 // ----------------
 .core-item-left {
-    left: -62px;
+    left: 0;
     position: relative;
+
+    @include media-up($screen-sm) {
+        left: -108px;
+    }
+    
+    @include media-up($screen-md) {
+        left: -62px;
+    }
+
+    .core-vector-line {
+        overflow: hidden;
+        margin-bottom: -40px;
+        
+        @include media-up($screen-xs) {
+            display: block;
+            margin-bottom: -50px;
+        }
+        
+        @include media-up($screen-sm) {
+            display: none;
+        }
+
+        img {
+            transform: rotate(180deg);
+            margin-top: -150px;
+
+            @include media-up($screen-xs) {
+                margin-top: -115px;
+            }
+        }
+    }
 }
 
 // ----------------
 .core-item-right {
-    left: 152px;
+    left: 0;
     position: relative;
+
+    @include media-up($screen-sm) {
+        left: 97px;
+    }
+    
+    @include media-up($screen-md) {
+        left: 152px;
+    }
+
+    .core-vector-line {
+        overflow: hidden;
+
+        @include media-up($screen-xs) {
+            display: block;
+        }
+        
+        @include media-up($screen-sm) {
+            display: none;
+        }
+
+        img {
+            margin-top: -190px;
+        }
+    }
 }
 
 // ----------------
@@ -81,20 +160,47 @@
 
 // ----------------
 .core-vector-line-left {
-    margin-bottom: -15px;
+    display: none;
+
+    @include media-up($screen-sm) {
+        display: block;
+    }
 
     img {
-        left: 195px;
+        left: 161px;
         position: relative;
+
+        @include media-up($screen-md) {
+            left: 195px;
+        }
     }
 }
 
 // ----------------
 .core-vector-line-right {
+    display: none;
     margin-bottom: -15px;
 
-    img {
-        left: -115px;
-        position: relative;
+    @include media-up($screen-sm) {
+        display: block;
     }
+
+    img {
+        left: 0;
+        position: relative;
+        
+        @include media-up($screen-sm) {
+            left: -140px;
+        }
+
+        @include media-up($screen-md) {
+            left: -115px;
+        }
+    }
+}
+
+// ----------------
+.core-footer {
+    display: grid;
+    justify-items: center;
 }

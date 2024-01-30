@@ -123,8 +123,67 @@
   position: absolute;
 }
 
-.depart-gradient {
+.depart-link {
   z-index: 1;
+  width: 315px;
+  padding-right: 58px;
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 30px 40px 30px 30px;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .depart-link {
+    bottom: auto;
+  }
+}
+@media screen and (min-width: 1280px) and (orientation: landscape) {
+  .depart-link {
+    opacity: 1;
+    transition: 0.3s ease;
+    transition-property: opacity;
+  }
+}
+.depart-link p {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.depart-link h2 {
+  margin-bottom: 16px;
+}
+.depart-link h5 {
+  font-weight: normal;
+}
+.depart-link img {
+  position: absolute;
+  max-width: 38px;
+  right: 0;
+  top: 52px;
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .depart-link img {
+    top: 56px;
+  }
+}
+@media screen and (min-width: 1280px) and (orientation: landscape) {
+  .depart-link img {
+    top: 60px;
+    max-width: 48px;
+    transition: 0.3s ease;
+    transition-property: right;
+  }
+}
+@media screen and (min-width: 1280px) and (orientation: landscape) {
+  .depart-link:hover img {
+    right: -8px;
+  }
+  .depart-link:hover ~ .depart-gradient {
+    height: 60%;
+  }
+}
+
+.depart-gradient {
   top: 0;
   left: 0;
   width: 100%;
@@ -136,7 +195,6 @@
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   .depart-gradient {
     top: auto;
-    z-index: 3;
     height: 10%;
   }
 }
@@ -233,56 +291,5 @@
   .depart-figure-right .depart-link {
     left: 60px;
     top: 58%;
-  }
-}
-
-.depart-link {
-  z-index: 1;
-  width: 315px;
-  padding-right: 58px;
-  position: absolute;
-  color: #fff;
-  bottom: 0;
-  left: 0;
-  padding: 30px 40px 30px 30px;
-}
-@media screen and (min-width: 1024px) and (orientation: landscape) {
-  .depart-link {
-    z-index: 2;
-    bottom: auto;
-  }
-}
-.depart-link p {
-  opacity: 0.5;
-  text-transform: uppercase;
-}
-.depart-link h2 {
-  margin-bottom: 16px;
-}
-.depart-link h5 {
-  font-weight: normal;
-}
-.depart-link img {
-  position: absolute;
-  max-width: 38px;
-  right: 0;
-  top: 52px;
-}
-@media screen and (min-width: 1024px) and (orientation: landscape) {
-  .depart-link img {
-    top: 56px;
-  }
-}
-@media screen and (min-width: 1280px) and (orientation: landscape) {
-  .depart-link img {
-    top: 60px;
-    max-width: 48px;
-    transition: 0.3s ease;
-    transition-property: right;
-  }
-}
-@media screen and (min-width: 1280px) and (orientation: landscape) {
-  .depart-link:hover img {
-    right: -8px;
   }
 }

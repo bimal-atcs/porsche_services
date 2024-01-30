@@ -123,8 +123,74 @@
     position: absolute;
 }
 
-.depart-gradient {
+// ----------------
+.depart-link {
     z-index: 1;
+    width: 315px;
+    padding-right: 58px;
+    position: absolute;
+    color: $color-white;
+    bottom: 0;
+    left: 0;
+    padding: 30px 40px 30px 30px;
+
+    @include media-up-view($screen-sm, landscape) {
+        bottom: auto;
+    }
+
+    @include media-up-view($screen-md, landscape) {
+        opacity: 1;
+        transition: $transition;
+        transition-property: opacity;
+    }
+
+    p {
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin-bottom: $spacing-sm-low;
+    }
+
+    h5 {
+        font-weight: normal;
+    }
+
+    img {
+        position: absolute;
+        max-width: 38px;
+        right: 0;
+        top: 52px;
+
+        @include media-up-view($screen-sm, landscape) {
+            top: 56px;
+        }
+
+        @include media-up-view($screen-md, landscape) {
+            top: 60px;
+            max-width: 48px;
+            transition: $transition;
+            transition-property: right;
+        }
+    }
+
+    &:hover {
+
+        @include media-up-view($screen-md, landscape) {
+
+            img {
+                right: -8px;
+            }
+
+            ~ .depart-gradient {
+                height: 60%;
+            }
+        }
+    }
+}
+
+.depart-gradient {
     top: 0;
     left: 0;
     width: 100%;
@@ -135,7 +201,6 @@
     
     @include media-up-view($screen-sm, landscape) {
         top: auto;
-        z-index: 3;
         height: 10%;
     }
 
@@ -240,65 +305,6 @@
         @include media-up-view($screen-sm, landscape) {
             left: 60px;
             top: 58%;
-        }
-    }
-}
-
-
-// ----------------
-.depart-link {
-    z-index: 1;
-    width: 315px;
-    padding-right: 58px;
-    position: absolute;
-    color: $color-white;
-    bottom: 0;
-    left: 0;
-    padding: 30px 40px 30px 30px;
-
-    @include media-up-view($screen-sm, landscape) {
-        z-index: 2;
-        bottom: auto;
-    }
-
-    p {
-        opacity: 0.5;
-        text-transform: uppercase;
-    }
-
-    h2 {
-        margin-bottom: $spacing-sm-low;
-    }
-
-    h5 {
-        font-weight: normal;
-    }
-
-    img {
-        position: absolute;
-        max-width: 38px;
-        right: 0;
-        top: 52px;
-
-        @include media-up-view($screen-sm, landscape) {
-            top: 56px;
-        }
-
-        @include media-up-view($screen-md, landscape) {
-            top: 60px;
-            max-width: 48px;
-            transition: $transition;
-            transition-property: right;
-        }
-    }
-
-    &:hover {
-
-        @include media-up-view($screen-md, landscape) {
-
-            img {
-                right: -8px;
-            }
         }
     }
 }

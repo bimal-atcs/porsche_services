@@ -6,6 +6,11 @@
 .profile-users-header {
     color: $color-grey-high;
     margin-bottom: $spacing-sm-low;
+    text-align: center;
+
+    @include media-up($screen-sm) {
+        text-align: left;
+    }
 
     h4 {
         font-weight: normal;
@@ -13,20 +18,37 @@
 }
 
 .profile-users-group {
+    gap: 10px;
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    position: relative;
     margin-bottom: 32px;
+
+    @include media-up($screen-sm) {
+        gap: 15px;
+    }
+
+    @include media-up($screen-md) {
+        gap: 20px;
+    }
 }
 
 .profile-users-avatars {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 60px;
+
+    @include media-view(landscape) {
+        margin-bottom: 32px;
+    }
+
+    @include media-up($screen-xs) {
+        margin-bottom: 32px;
+    }
 }
 
 .profile-users-avatar {
     @include circle(56px);
-    margin-right: -12px;
+    margin-right: -10px;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -38,16 +60,66 @@
             z-index: $num;
         }
     }
+    
+    @for $i from 6 through 9 {
+        &:nth-child(#{$i}) {
+            display: none;
+        }
+    }
+    
+    @include media-up($screen-md) {
+        margin-right: -12px;
+
+        @for $i from 6 through 9 {
+            &:nth-child(#{$i}) {
+                display: block;
+            }
+        }
+    }
 }
 
 .profile-users-actions {
 
     .button {
-        width: calc(100% + 10px);
+        
+        @include media-view(landscape) {
+            width: calc(100% + 70px);
+        }
+
+        @include media-up($screen-xs) {
+            width: calc(100% + 75px);
+        }
+
+        @include media-up($screen-sm) {
+            width: calc(100% + 80px);
+        }
+
+        @include media-up($screen-md) {
+            width: calc(100% + 5px);
+        }
     }
 }
 
 .profile-users-more {
-    margin-top: 15px;
     color: $color-grey-mid;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, 0);
+    
+    @include media-view(landscape) {
+        margin-top: 15px;
+        left: 0;
+        top: 0;
+        transform: none;
+        position: relative;
+    }
+    
+    @include media-up($screen-xs) {
+        margin-top: 15px;
+        left: 0;
+        top: 0;
+        transform: none;
+        position: relative;
+    }
 }

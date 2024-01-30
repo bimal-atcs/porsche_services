@@ -12,35 +12,24 @@ function departOnHoverLink() {
     if ($(window).width() >= 1280) {
         // on hover left
         $('.depart-figure-left .depart-link').mouseenter(function() {
-            $(".depart-figure-right .depart-gradient").css({
-                'height': '80%'
+            $(".depart-figure-right .depart-link").css({
+                'opacity': '0.65'
             });
         }).mouseleave(function () {
-            $(".depart-figure-right .depart-gradient").removeAttr("style");
+            $(".depart-figure-right .depart-link").removeAttr("style");
         });
 
         // on hover right
         $('.depart-figure-right .depart-link').mouseenter(function() {
-            $(".depart-figure-left .depart-gradient").css({
-                'height': '80%'
+            $(".depart-figure-left .depart-link").css({
+                'opacity': '0.65'
             });
         }).mouseleave(function () {
-            $(".depart-figure-left .depart-gradient").removeAttr("style");
+            $(".depart-figure-left .depart-link").removeAttr("style");
         });
     }
     else {
-        // on hover left
-        $('.depart-figure-left .depart-link').mouseenter(function() {
-            $(".depart-figure-right .depart-gradient").removeAttr("style");
-        }).mouseleave(function () {
-            $(".depart-figure-right .depart-gradient").removeAttr("style");
-        });
-
-        // on hover right
-        $('.depart-figure-right .depart-link').mouseenter(function() {
-            $(".depart-figure-left .depart-gradient").removeAttr("style");
-        }).mouseleave(function () {
-            $(".depart-figure-left .depart-gradient").removeAttr("style");
-        });
+        $(".depart-figure-right .depart-link").removeAttr("style");
+        $(".depart-figure-left .depart-link").removeAttr("style");
     }
 }

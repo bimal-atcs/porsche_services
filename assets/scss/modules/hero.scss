@@ -3,34 +3,36 @@
 
 // hero
 .hero-block {
-    padding-bottom: 60px;
+    padding-bottom: 68px;
     position: relative;
+    height: 500px;
 
+    @include media-up($screen-xs) {
+        height: 600px;
+    }
+    
     @include media-up($screen-md) {
-        padding-bottom: 120px;
+        height: 760px;
+        padding-bottom: 104px;
+    }
+
+    @include media-up($screen-lg) {
+        height: 900px;
+    }
+
+    .layout {
+        height: 100%;
     }
 }
 
 .hero {
-    padding: 30px 0;
+    height: 100%;
     position: relative;
-    min-height: 500px;
-
     display: grid;
     align-items: end;
-
-    @include media-up($screen-xs) {
-        min-height: 600px;
-    }
-
+    
     @include media-up($screen-md) {
-        min-height: 630px;
         align-items: start;
-    }
-
-    @include media-up($screen-lg) {
-        min-height: 770px;
-        padding: 0;
     }
 }
 
@@ -54,22 +56,15 @@
     // dots
     .slick-dots {
         margin-top: 0;
-        bottom: 20px;
+        bottom: 30px;
         position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
 
-        @include media-up($screen-xs) {
-            width: auto;
-            bottom: 30px;
-            right: 30px;
-        }
-
         @include media-up($screen-md) {
-            bottom: 80px;
-            right: 80px;
+            bottom: 48px;
         }
 
         li {
@@ -83,6 +78,12 @@
                 width: 120px;
                 opacity: 0.6;
                 background-color: $color-primary;
+
+                button {
+                    animation-name: width;
+                    animation-duration: 3.5s;
+                    animation-timing-function: linear;
+                }
             }
 
             button {
@@ -97,6 +98,16 @@
                 }
             }
         }
+    }
+}
+
+@keyframes width {
+    from {
+        width: 8px;
+    }
+
+    to {
+        width: 100%;
     }
 }
 
@@ -125,11 +136,16 @@
 
     @include media-up($screen-md) {
         margin-top: 130px;
-        margin-left: 75px;
+        margin-left: 40px;
         max-width: 580px;
         padding: 0;
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(0);
         background-color: transparent;
+    }
+
+    @include media-up($screen-lg) {
+        margin-top: 170px;
+        margin-left: 60px;
     }
 }
 
@@ -156,6 +172,11 @@
 .hero-card-actions {
     display: grid;
     gap: $spacing-sm-low;
+
+    @include media-view(landscape) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     @include media-up($screen-xs) {
         display: flex;

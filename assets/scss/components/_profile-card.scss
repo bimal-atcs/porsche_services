@@ -19,7 +19,6 @@
     }
 }
 
-
 // ----------------
 .profile-card-body {
     overflow: hidden;
@@ -66,6 +65,14 @@
     padding: $spacing-sm-low;
     border-top: 1px solid #EEEFF2;
     background-color: $color-white;
+
+    @include media-view(portrait) {
+        flex-direction: column;
+    }
+    
+    @include media-up($screen-xs) {
+        flex-direction: row;
+    }
 
     .grow {
         flex: 1;

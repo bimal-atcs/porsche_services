@@ -1,4 +1,8 @@
 // global file is common for all pages
+// NOTE:
+// 1. for desktop above md = 1280, transition applied
+// 2. @media hover could be used
+
 // root
 @use "root/fonts";
 @use "root/normalize";
@@ -12,6 +16,7 @@
 @use "components/profile";
 @use "components/profile-card";
 @use "components/profile-users";
+@use "components/polygrid";
 @use "components/instance";
 @use "components/window";
 @use "components/drawer";
