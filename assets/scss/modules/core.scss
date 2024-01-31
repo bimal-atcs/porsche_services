@@ -16,11 +16,6 @@
 }
 
 // ----------------
-.core-background {
-}
-
-
-// ----------------
 .core-header {
     margin-bottom: 60px;
     display: grid;
@@ -40,12 +35,6 @@
         color: $color-grey-mid;
     }
 }
-
-
-// ----------------
-.core-body {
-}
-
 
 // ----------------
 .core-figure {
@@ -100,7 +89,7 @@
     }
 
     .core-vector-line {
-        overflow: hidden;
+        height: auto;
         margin-bottom: -40px;
         
         @include media-up($screen-xs) {
@@ -137,7 +126,7 @@
     }
 
     .core-vector-line {
-        overflow: hidden;
+        height: auto;
 
         @include media-up($screen-xs) {
             display: block;
@@ -156,6 +145,12 @@
 // ----------------
 .core-vector-line {
     text-align: center;
+    overflow: hidden;
+    height: 100px;
+
+    @include media-up($screen-sm) {
+        height: auto;
+    }
 }
 
 // ----------------
@@ -203,4 +198,6 @@
 .core-footer {
     display: grid;
     justify-items: center;
+    z-index: 1;
+    position: relative;
 }

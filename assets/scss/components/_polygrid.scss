@@ -7,44 +7,68 @@
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
-    min-height: 375px;
     display: grid;
     position: relative;
     align-items: center;
+
+    @include media-up($screen-md) {
+        min-height: 375px;
+    }
 }
 
 .polygrid-background {
+    z-index: 0;
     position: absolute;
     top: -230px;
     left: 50%;
+    display: none;
     transform: translate(-50%, 0);
 
     img {
         max-width: 2280px;
         max-height: 1040px;
     }
-}
-
-.polygrid-content {
-    padding-left: 30px;
-    position: relative;
-    overflow-x: auto;
 
     @include media-up($screen-md) {
-        padding-left: 0;
-        overflow-x: unset;
+        display: block;
     }
 }
 
+.polygrid-content {
+    position: relative;
+    display: grid;
+}
+
+.polygrid-content-heading {
+    padding: 0 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    @include media-up($screen-md) {
+        display: none;
+    }
+}
+
+
+// ----------------
 .polygrid-items {
     display: grid;
+    gap: 20px;
     grid-template-columns: repeat(auto-fill, 300px);
     grid-auto-flow: column;
     grid-auto-columns: 300px;
+    padding: 0 30px 30px;
     overflow-x: auto;
 
     @include media-up($screen-md) {
-        overflow-x: unset;
+        gap: 0;
+        padding: 0 30px 30px;
+        overflow-x: visible;
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(7, 180px);
@@ -63,12 +87,13 @@
     }
 }
 
+
+// ----------------
 .polygrid-item-figure {
     position: relative;
     display: flex;
     align-items: flex-start;
     border-radius: 8px;
-    height: 200px;
     overflow: hidden;
 
     @include media-up($screen-md) {
@@ -85,25 +110,18 @@
 
         h5 {
             z-index: 1;
-            padding: 0 35px;
             text-align: center;
         }
     }
-
-    img {
-        position: absolute;
-    }
 }
 
+
+// ----------------
 .polygrid-items-red {
     counter-reset: count;
-    gap: 20px;
-    padding-right: 30px;
 
     @include media-up($screen-md) {
-        gap: 0;
         margin-left: -20px;
-        padding-right: 0;
     }
 
     .polygrid-item {
@@ -116,9 +134,9 @@
     }
 
     .polygrid-item-figure {
+        height: 200px;
         counter-increment: count;
-        background: rgb(181,47,43);
-        background: linear-gradient(45deg, rgba(181,47,43,1) 0%, rgba(142,12,8,1) 100%);
+        background-color: $color-error;
 
         &::before {
             content: counter(count) ".";
@@ -133,7 +151,8 @@
         }
 
         @include media-up($screen-md) {
-            background: transparent;
+            height: 174px;
+            background-color: transparent;
             mask-image: url("../../assets/images/core/hexa-red.png");
 
             &::before {
@@ -153,29 +172,38 @@
     }
 
     h5 {
+        padding: 15px 45px 15px 15px;
         color: $color-white;
-    }
-
-    .polygrid-item-red-icon {
-        display: none;
 
         @include media-up($screen-md) {
-            display: block;
-        }
-    }
-
-    .polygrid-item-red-arrow {
-        display: block;
-        bottom: 10px;
-        right: 10px;
-        max-width: 30px;
-
-        @include media-up($screen-md) {
-            display: none;
+            padding: 0 35px;
         }
     }
 }
 
+.polygrid-item-red-icon {
+    display: none;
+    position: absolute;
+
+    @include media-up($screen-md) {
+        display: block;
+    }
+}
+
+.polygrid-item-red-arrow {
+    top: 14px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+
+    @include media-up($screen-md) {
+        display: none;
+    }
+}
+
+
+// ----------------
 .polygrid-items-white {
 
     @include media-up($screen-md) {
@@ -228,13 +256,18 @@
     }
 
     .polygrid-item-figure {
+        height: 120px;
+        background-color: rgba($color-white, 0.7);
+        border: 2px solid rgba($color-black, 0.1);
 
         @include media-up($screen-md) {
+            height: 174px;
+            border: none;
+            background-color: transparent;
             mask-image: url("../../assets/images/core/hexa-white.png");
         }
 
         @include media-up($screen-md) {
-
             &:hover {
 
                 .polygrid-item-white-icon {
@@ -245,16 +278,53 @@
         }
     }
 
-    .polygrid-item-white-icon {
-        display: none;
+    h5 {
+        padding: 15px 50px 15px 15px;
 
         @include media-up($screen-md) {
-            display: block;
+            padding: 0 35px;
         }
     }
+}
 
-    .polygrid-item-white-sign {
-        left: 0;
+.polygrid-item-white-icon {
+    display: none;
+    position: absolute;
+
+    @include media-up($screen-md) {
+        display: block;
+    }
+}
+
+.polygrid-item-white-sign {
+    left: 0;
+    opacity: 0.4;
+    bottom: -10px;
+    position: absolute;
+    max-width: 100px;
+
+    @include media-up($screen-md) {
+        opacity: 1;
         bottom: 0;
+        max-width: 100%;
+    }
+}
+
+.polygrid-item-white-arrow {
+    @include circle(30px);
+    top: 14px;
+    right: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color-primary, 1);
+
+    img {
+        max-width: 24px;
+    }
+
+    @include media-up($screen-md) {
+        display: none;
     }
 }

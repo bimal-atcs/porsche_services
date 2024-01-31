@@ -79,7 +79,7 @@
   }
 }
 .core-item-left .core-vector-line {
-  overflow: hidden;
+  height: auto;
   margin-bottom: -40px;
 }
 @media screen and (min-width: 768px) {
@@ -118,7 +118,7 @@
   }
 }
 .core-item-right .core-vector-line {
-  overflow: hidden;
+  height: auto;
 }
 @media screen and (min-width: 768px) {
   .core-item-right .core-vector-line {
@@ -136,6 +136,13 @@
 
 .core-vector-line {
   text-align: center;
+  overflow: hidden;
+  height: 100px;
+}
+@media screen and (min-width: 1024px) {
+  .core-vector-line {
+    height: auto;
+  }
 }
 
 .core-vector-line-left {
@@ -183,4 +190,6 @@
 .core-footer {
   display: grid;
   justify-items: center;
+  z-index: 1;
+  position: relative;
 }

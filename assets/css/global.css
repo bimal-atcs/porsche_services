@@ -608,45 +608,68 @@ p {
   width: 100vw;
   left: 50%;
   margin-left: -50vw;
-  min-height: 375px;
   display: grid;
   position: relative;
   align-items: center;
 }
+@media screen and (min-width: 1280px) {
+  .polygrid {
+    min-height: 375px;
+  }
+}
 
 .polygrid-background {
+  z-index: 0;
   position: absolute;
   top: -230px;
   left: 50%;
+  display: none;
   transform: translate(-50%, 0);
 }
 .polygrid-background img {
   max-width: 2280px;
   max-height: 1040px;
 }
+@media screen and (min-width: 1280px) {
+  .polygrid-background {
+    display: block;
+  }
+}
 
 .polygrid-content {
-  padding-left: 30px;
   position: relative;
-  overflow-x: auto;
+  display: grid;
+}
+
+.polygrid-content-heading {
+  padding: 0 30px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.polygrid-content-heading:first-of-type {
+  margin-top: 0;
 }
 @media screen and (min-width: 1280px) {
-  .polygrid-content {
-    padding-left: 0;
-    overflow-x: unset;
+  .polygrid-content-heading {
+    display: none;
   }
 }
 
 .polygrid-items {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(auto-fill, 300px);
   grid-auto-flow: column;
   grid-auto-columns: 300px;
+  padding: 0 30px 30px;
   overflow-x: auto;
 }
 @media screen and (min-width: 1280px) {
   .polygrid-items {
-    overflow-x: unset;
+    gap: 0;
+    padding: 0 30px 30px;
+    overflow-x: visible;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(7, 180px);
@@ -671,7 +694,6 @@ p {
   display: flex;
   align-items: flex-start;
   border-radius: 8px;
-  height: 200px;
   overflow: hidden;
 }
 @media screen and (min-width: 1280px) {
@@ -689,24 +711,16 @@ p {
   }
   .polygrid-item-figure h5 {
     z-index: 1;
-    padding: 0 35px;
     text-align: center;
   }
-}
-.polygrid-item-figure img {
-  position: absolute;
 }
 
 .polygrid-items-red {
   counter-reset: count;
-  gap: 20px;
-  padding-right: 30px;
 }
 @media screen and (min-width: 1280px) {
   .polygrid-items-red {
-    gap: 0;
     margin-left: -20px;
-    padding-right: 0;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -715,9 +729,9 @@ p {
   }
 }
 .polygrid-items-red .polygrid-item-figure {
+  height: 200px;
   counter-increment: count;
-  background: rgb(181, 47, 43);
-  background: linear-gradient(45deg, rgb(181, 47, 43) 0%, rgb(142, 12, 8) 100%);
+  background-color: #bb302c;
 }
 .polygrid-items-red .polygrid-item-figure::before {
   content: counter(count) ".";
@@ -732,7 +746,8 @@ p {
 }
 @media screen and (min-width: 1280px) {
   .polygrid-items-red .polygrid-item-figure {
-    background: transparent;
+    height: 174px;
+    background-color: transparent;
     mask-image: url("../../assets/images/core/hexa-red.png");
   }
   .polygrid-items-red .polygrid-item-figure::before {
@@ -745,24 +760,34 @@ p {
   }
 }
 .polygrid-items-red h5 {
+  padding: 15px 45px 15px 15px;
   color: #fff;
 }
-.polygrid-items-red .polygrid-item-red-icon {
+@media screen and (min-width: 1280px) {
+  .polygrid-items-red h5 {
+    padding: 0 35px;
+  }
+}
+
+.polygrid-item-red-icon {
   display: none;
+  position: absolute;
 }
 @media screen and (min-width: 1280px) {
-  .polygrid-items-red .polygrid-item-red-icon {
+  .polygrid-item-red-icon {
     display: block;
   }
 }
-.polygrid-items-red .polygrid-item-red-arrow {
-  display: block;
-  bottom: 10px;
+
+.polygrid-item-red-arrow {
+  top: 14px;
   right: 10px;
-  max-width: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
 }
 @media screen and (min-width: 1280px) {
-  .polygrid-items-red .polygrid-item-red-arrow {
+  .polygrid-item-red-arrow {
     display: none;
   }
 }
@@ -808,8 +833,16 @@ p {
     grid-column: 7/8;
   }
 }
+.polygrid-items-white .polygrid-item-figure {
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
 @media screen and (min-width: 1280px) {
   .polygrid-items-white .polygrid-item-figure {
+    height: 174px;
+    border: none;
+    background-color: transparent;
     mask-image: url("../../assets/images/core/hexa-white.png");
   }
 }
@@ -819,17 +852,60 @@ p {
     transform: rotate(-120deg);
   }
 }
-.polygrid-items-white .polygrid-item-white-icon {
-  display: none;
+.polygrid-items-white h5 {
+  padding: 15px 50px 15px 15px;
 }
 @media screen and (min-width: 1280px) {
-  .polygrid-items-white .polygrid-item-white-icon {
+  .polygrid-items-white h5 {
+    padding: 0 35px;
+  }
+}
+
+.polygrid-item-white-icon {
+  display: none;
+  position: absolute;
+}
+@media screen and (min-width: 1280px) {
+  .polygrid-item-white-icon {
     display: block;
   }
 }
-.polygrid-items-white .polygrid-item-white-sign {
+
+.polygrid-item-white-sign {
   left: 0;
-  bottom: 0;
+  opacity: 0.4;
+  bottom: -10px;
+  position: absolute;
+  max-width: 100px;
+}
+@media screen and (min-width: 1280px) {
+  .polygrid-item-white-sign {
+    opacity: 1;
+    bottom: 0;
+    max-width: 100%;
+  }
+}
+
+.polygrid-item-white-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  top: 14px;
+  right: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #010205;
+}
+.polygrid-item-white-arrow img {
+  max-width: 24px;
+}
+@media screen and (min-width: 1280px) {
+  .polygrid-item-white-arrow {
+    display: none;
+  }
 }
 
 .instance {
