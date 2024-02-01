@@ -3,6 +3,7 @@
 
 .avatar {
     @include circle(48px);
+    overflow: hidden;
     position: relative;
     line-height: 1;
     display: flex;

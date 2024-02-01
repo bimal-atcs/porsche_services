@@ -74,11 +74,8 @@ h5, .heading-5 {
 }
 
 h6, .heading-6 {
+    font-size: $h6-font-size;
     line-height: $h6-line-height;
-
-    @include media-up($screen-md) {
-        font-size: $h6-font-size-desk;
-    }
 }
 
 

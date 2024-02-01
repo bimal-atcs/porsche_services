@@ -1,7 +1,7 @@
 // global file is common for all pages
 // NOTE:
-// 1. for desktop above md = 1280, transition applied
-// 2. @media hover could be used
+// 1. for desktop above md (1280px) hover applied
+// 2. @media hover could be used instead
 
 // root
 @use "root/fonts";
@@ -12,6 +12,7 @@
 @use "components/typography";
 @use "components/buttons";
 @use "components/avatar";
+@use "components/mega-menu";
 @use "components/labels";
 @use "components/profile";
 @use "components/profile-card";

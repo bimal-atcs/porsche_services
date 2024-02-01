@@ -81,7 +81,7 @@
 
                 button {
                     animation-name: width;
-                    animation-duration: 3.5s;
+                    animation-duration: 7.7s;
                     animation-timing-function: linear;
                 }
             }
@@ -136,7 +136,6 @@
 
     @include media-up($screen-md) {
         margin-top: 130px;
-        margin-left: 40px;
         max-width: 580px;
         padding: 0;
         backdrop-filter: blur(0);

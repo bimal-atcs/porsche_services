@@ -1,0 +1,14 @@
+// NOTE: we could use @media hover
+@use "variables" as *;
+@use "media" as *;
+
+
+@mixin hover-bg {
+    border-radius: $global-hover-radius;
+    transition: $transition;
+    transition-property: background-color;
+
+    &:hover {
+        background-color: $global-hover-bg-light;
+    }
+}

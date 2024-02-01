@@ -62,16 +62,18 @@
     grid-template-columns: repeat(auto-fill, 300px);
     grid-auto-flow: column;
     grid-auto-columns: 300px;
-    padding: 0 30px 30px;
+    padding: 0 30px;
     overflow-x: auto;
 
     @include media-up($screen-md) {
         gap: 0;
-        padding: 0 30px 30px;
+        padding: 0;
         overflow-x: visible;
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(7, 180px);
+        position: relative;
+        left: -10px;
     }
 }
 
@@ -119,10 +121,6 @@
 // ----------------
 .polygrid-items-red {
     counter-reset: count;
-
-    @include media-up($screen-md) {
-        margin-left: -20px;
-    }
 
     .polygrid-item {
 
