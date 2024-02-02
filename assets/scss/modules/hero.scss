@@ -8,7 +8,7 @@
     height: 600px;
     
     @include media-up($screen-md) {
-        height: 740px;
+        height: 700px;
     }
 
     @include media-up($screen-lg) {
@@ -17,8 +17,15 @@
 
     .layout {
         padding: 0;
-        max-width: 1920px;
         height: 100%;
+
+        @include media-up($screen-lg) {
+            max-width: 1440px;
+        }
+
+        @include media-up($screen-xxl) {
+            max-width: 1920px;
+        }
     }
 }
 
@@ -39,10 +46,10 @@
         height: 100%;
     }
 
-
     // dots
     .slick-dots {
         height: auto;
+        padding: 0 30px;
         margin-top: 0;
         bottom: 20px;
         position: absolute;
@@ -51,12 +58,18 @@
         justify-content: center;
         gap: 8px;
 
+        @include media-view(landscape) {
+            justify-content: flex-start;
+        }
+        
         @include media-up($screen-xs) {
             bottom: 38px;
+            justify-content: flex-start;
         }
 
         @include media-up($screen-lg) {
             bottom: 48px;
+            justify-content: center;
         }
 
         li {
@@ -130,14 +143,6 @@
         display: block;
         inset: 0;
         position: absolute;
-
-        img {
-            width: 1440px;
-
-            @include media-up($screen-xxl) {
-                width: 1600px;
-            }
-        }
     }
 }
 
@@ -146,23 +151,13 @@
 
     @include media-up($screen-lg) {
         display: block;
-        top: -825px;
-        left: -395px;
+        top: 0;
+        left: 0;
         position: absolute;
         mask-size: cover;
         mask-position: center;
-        mask-image: url("../../images/hero/polygon.png");
+        mask-image: url("../../images/hero/polygon-lg.png");
         backdrop-filter: blur(60px);
-        transform: rotate(20deg);
-    }
-
-    @include media-up($screen-xxl) {
-        top: -935px;
-        left: -355px;
-    }
-
-    @include media-up($screen-xxl) {
-        left: -280px;
     }
 
     img {
@@ -170,73 +165,53 @@
     }
 }
 
-.hero-polygon-left,
-.hero-polygon-right {
+.hero-polygon-border-left {
     display: none;
 
     @include media-up($screen-lg) {
-        top: 0;
-        left: 0;
+        bottom: -5px;
+        left: -5px;
         opacity: 0.15;
-        display: none;
+        display: block;
         position: absolute;
-        transform: rotate(20deg);
     }
 }
 
-.hero-polygon-left {
+.hero-polygon-border-right {
+    display: none;
 
     @include media-up($screen-lg) {
-        top: 420px;
-        left: -1075px;
-    }
-
-    @include media-up($screen-xxl) {
-        top: 475px;
-        left: -1025px;
+        bottom: -5px;
+        right: -5px;
+        opacity: 0.15;
+        display: block;
+        position: absolute;
     }
 }
 
-.hero-polygon-right {
-
-    @include media-up($screen-lg) {
-        top: 360px;
-        left: 370px;
-    }
-
-    @include media-up($screen-xxl) {
-        top: 390px;
-        left: 590px;
-    }
-}
-
-.hero-polygon-bg {
+.hero-polygon-top-right {
     display: none;
 
     @include media-up($screen-lg) {
         display: block;
-        width: 1440px;
-        top: -900px;
-        left: 1020px;
+        top: -10px;
+        right: -10px;
         position: absolute;
         mask-size: cover;
         mask-position: 0 0;
-        mask-image: url("../../images/hero/polygon.png");
+        mask-image: url("../../images/hero/polygon-top-right-fill-lg.png");
         backdrop-filter: blur(75px);
-        transform: rotate(20deg);
     }
 
     @include media-up($screen-xxl) {
-        top: -1035px;
-        left: 1300px;
-        width: 1600px;
+        display: none;
     }
 
-    img {
+    .polygon-top-right-fill {
         opacity: 0.01;
     }
 
-    .hero-polygon-bg-border {
+    .polygon-top-right-border {
         top: 0;
         opacity: 0.1;
         left: 0;
@@ -279,16 +254,11 @@
         width: auto;
         bottom: auto;
         padding: 0;
-        top: 120px;
+        top: 180px;
         left: 170px;
         height: auto;
         backdrop-filter: blur(0);
         background-color: transparent;
-    }
-
-    @include media-up($screen-xxl) {
-        top: 100px;
-        left: 200px;
     }
 }
 

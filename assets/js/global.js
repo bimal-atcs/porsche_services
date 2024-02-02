@@ -8,3 +8,10 @@ $(window).resize(function () {
     // scrollbar
     $('.scrollbar-dynamic').scrollbar();
 });
+
+// on load window loader
+$(window).on('load',function(){
+    setTimeout(function() {
+    $('#overlayer').fadeOut('fast');
+    }, 3500);
+});
