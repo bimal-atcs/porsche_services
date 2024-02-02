@@ -6,5 +6,6 @@ $(".next-card-slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,
-    fade: true
+    fade: true,
+    draggable: true
 });

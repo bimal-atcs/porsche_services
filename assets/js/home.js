@@ -9,9 +9,10 @@ $(document).ready(function () {
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 1000,
         draggable: false,
         fade: true,
-        cssEase: 'linear'
+        infinite: true,
     });
 });
 

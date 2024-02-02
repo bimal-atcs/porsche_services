@@ -17,12 +17,20 @@
 // ----------------
 .complement {
     position: relative;
+
+    .layout {
+        position: relative;
+    }
 }
 
 // ----------------
 .complement-header {
     margin-bottom: $spacing-sm-low;
     padding-right: 88px;
+
+    @include media-up($screen-sm) {
+        padding-right: 325px;
+    }
 }
 
 

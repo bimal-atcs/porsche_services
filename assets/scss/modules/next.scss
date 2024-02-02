@@ -189,10 +189,18 @@
     }
 }
 
-.next-card-body {
+.next-card-image {
+    position: relative;
 
-    @include media-down($screen-xs) {
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
+}
+
+.next-card-body {
     
     @include media-up($screen-md) {
         max-width: 560px;
