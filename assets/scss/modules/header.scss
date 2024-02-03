@@ -27,12 +27,6 @@
     position: fixed;
     background-color: $color-white;
     border-bottom: 1px solid $color-grey-low;
-
-    @include media-down($screen-lg) {
-        .layout {
-            max-width: 100%;
-        }
-    }
 }
 
 
@@ -41,9 +35,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-
-    @include media-up($screen-lg) {
-    }
 }
 
 .header-navbar-menu {
@@ -139,17 +130,35 @@
 
 
 .header-navbar-brand {
-    flex-shrink: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 
-    @include media-up($screen-lg) {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @include media-up($screen-sm) {
+        justify-content: flex-start;
     }
+    
+    @include media-up($screen-lg) {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
 
-    img {
+.header-navbar-brand-text {
+    display: none;
+
+    @include media-up($screen-sm) {
         display: block;
+    }
+}
+
+.header-navbar-brand-icon {
+    display: block;
+    max-height: 40px;
+
+    @include media-up($screen-sm) {
+        display: none;
     }
 }
 

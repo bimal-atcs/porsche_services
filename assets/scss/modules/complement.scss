@@ -141,6 +141,10 @@
     height: 54px;
     margin-top: 16px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .complement-card-body {

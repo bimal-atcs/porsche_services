@@ -3,22 +3,35 @@
 
 // footer
 .footer {
+    padding: 20px 0;
     z-index: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     position: fixed;
-    text-align: center;
-    height: 110px;
     display: grid;
     justify-items: center;
     align-items: center;
-}
-
-.footer-brand {
     line-height: 1;
 
-    img {
+    @include media-up($screen-sm) {
+        padding: 30px 0;
+    }
+}
+
+.footer-brand-text {
+    display: none;
+
+    @include media-up($screen-sm) {
         display: block;
+    }
+}
+
+.footer-brand-icon {
+    display: block;
+    max-height: 40px;
+
+    @include media-up($screen-sm) {
+        display: none;
     }
 }
