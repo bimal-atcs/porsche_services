@@ -17,6 +17,12 @@ function profileDrawerWindow() {
 
         $('#profile-drawer-window .drawer').removeClass('drawer-close');
         $('#profile-drawer-window .drawer').addClass('drawer-open');
+
+        $(".header-navbar-drawer").removeClass('header-navbar-drawer-active');
+        $(".header-navbar-close").removeClass('header-navbar-close-active');
+        $('.mega-block').removeClass('mega-block-active');
+        $('.mega-back').removeClass('mega-back-active');
+        $('.header-navbar-manage').removeClass('header-navbar-manage-active');
     });
 
     // click on close button window modal
