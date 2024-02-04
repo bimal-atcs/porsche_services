@@ -6,7 +6,8 @@
     @include media-up($screen-lg) {
         &:hover {
             .mega-block {
-                display: block;
+                opacity: 1;
+                visibility: visible;
             }
         }
     }
@@ -15,11 +16,13 @@
 .mega-link {
     display: flex;
     align-items: center;
+    padding: 10px 15px;
     
     @include media-up($screen-lg) {
         display: inline-flex;
         position: relative;
         z-index: 1;
+        padding: 0;
     }
 
     span {
@@ -44,42 +47,84 @@
 
 .mega-has-child {
 
-    .mega-link {
-
-        img {
-            display: block;
-        }
+    .mega-link img {
+        display: block;
     }
 }
 
+
 .mega-block {
-    z-index: 0;
     top: 0;
-    left: -450px;
+    visibility: hidden;
+    left: -400px;
     width: 100%;
     height: 100%;
-    z-index: 1;
     position: absolute;
+    transition: $transition;
+    transition-property: left;
+
+    &.mega-block-active {
+        left: 0;
+        visibility: visible;
+    }
     
     @include media-up($screen-lg) {
         left: 0;
-        z-index: auto;
+        opacity: 0;
         padding-top: 80px;
         height: auto;
-        max-height: 600px;
-        display: none;
+        max-height: 640px;
+        transition: none;
+    }
+
+    .scroll-x {
+        display: none !important;
     }
 }
 
 .mega-wrap {
+    z-index: 1;
+    position: relative;
     height: 100%;
-    box-shadow: 0 10px 10px 0 rgba($color-black, 0.05);
     background-color: $color-white;
+
+    @include media-up($screen-lg) {
+        box-shadow: 0 10px 10px 0 rgba($color-black, 0.05);
+    }
+}
+
+.mega-back {
+    cursor: pointer;
+    z-index: 2;
+    width: 48px;
+    height: 40px;
+    top: 20px;
+    left: -400px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba($color-primary, 1);
+    transition: $transition;
+    transition-property: left;
+
+    &.mega-back-active {
+        left: 30px;
+    }
+
+    img {
+        filter: invert(1);
+    }
+
+    @include media-up($screen-lg) {
+        display: none;
+    }
 }
 
 // --------------------
 .mega-menu {
-    padding: 80px 0 30px;
+    padding: 100px 0 30px;
 
     @include media-up($screen-lg) {
         padding: 30px 0;

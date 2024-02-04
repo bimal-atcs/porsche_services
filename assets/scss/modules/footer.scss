@@ -17,21 +17,13 @@
     @include media-up($screen-sm) {
         padding: 30px 0;
     }
-}
 
-.footer-brand-text {
-    display: none;
-
-    @include media-up($screen-sm) {
+    img {
         display: block;
-    }
-}
+        max-height: 40px;
 
-.footer-brand-icon {
-    display: block;
-    max-height: 40px;
-
-    @include media-up($screen-sm) {
-        display: none;
+        @include media-up($screen-xs) {
+            max-height: 100%;
+        }
     }
 }

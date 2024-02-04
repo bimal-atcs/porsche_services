@@ -19,14 +19,10 @@
 .depart-footer {
     line-height: 1;
     z-index: 9;
-    height: 60px;
+    height: 80px;
     display: grid;
     align-items: center;
     justify-items: center;
-
-    @include media-up($screen-xs) {
-        height: 80px;
-    }
 
     @include media-up-view($screen-sm, landscape) {
         height: auto;
@@ -50,7 +46,7 @@
     }
     
     img {
-        max-width: 180px;
+        max-height: 40px;
 
         @include media-up($screen-xs) {
             max-width: 100%;

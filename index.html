@@ -35,9 +35,11 @@
                     <span></span>
                 </div>
 
-                <div class="header-navbar-drawer">
-                    <div class="header-navbar-drawer-close header-navbar-close">
-                        <img src="assets/images/icons/icon-close.svg" alt="">
+                <div class="header-navbar-drawer scrollbar-dynamic">
+                    <div class="header-navbar-close">
+                        <div class="header-navbar-close-icon">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
                     </div>
                     <ul class="header-navbar-links">
                         <li class="header-navbar-link">
@@ -51,6 +53,9 @@
                                 <span>Service Process</span>
                                 <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
                             </a>
+                            <div class="mega-back">
+                                <img src="assets/images/icons/icon-arrow-left.svg" alt="">
+                            </div>
                             
                             <div class="mega-block scrollbar-dynamic">
                                 <div class="mega-wrap">
@@ -161,12 +166,12 @@
                                 <span>Job Roles</span>
                                 <img src="assets/images/icons/icon-arrow-head-down-gray-xs.svg" alt="">
                             </a>
+                            <div class="mega-back">
+                                <img src="assets/images/icons/icon-arrow-left.svg" alt="">
+                            </div>
     
                             <div class="mega-block scrollbar-dynamic">
                                 <div class="mega-wrap">
-                                    <div class="mega-close header-navbar-close">
-                                        <img src="assets/images/icons/icon-close.svg" alt="">
-                                    </div>
                                     <div class="layout">
                                         <div class="mega-menu">
                                             <div class="mega-row">
@@ -339,8 +344,10 @@
 
                 <div class="header-navbar-brand">
                     <a href="javascript:;">
-                        <img class="header-navbar-brand-text" src="assets/images/global/logo-porsche-dark.png" alt="">
-                        <img class="header-navbar-brand-icon" src="assets/images/global/logo-porsche-icon.png" alt="">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="assets/images/global/logo-porsche-dark.png">
+                            <img src="assets/images/global/logo-porsche-icon.png" alt="">
+                        </picture>
                     </a>
                 </div>
 
@@ -369,9 +376,9 @@
                             </div>
                         </li>
                         <li>
-                            <div id="profile-drawer" class="header-navbar-setting">
+                            <div class="header-navbar-setting">
                                 <div class="header-navbar-profile">
-                                    <div class="header-navbar-avatar avatar"></div>
+                                    <div id="profile-drawer" class="header-navbar-avatar avatar"></div>
                                     <div class="header-navbar-text">
                                         <h6>eliaswagner</h6>
                                         <p>3 Job roles</p>
@@ -1035,9 +1042,11 @@
     </div>
 
     <footer class="page-footer footer">
-        <a class="footer-brand" href="javascript:;">
-            <img class="footer-brand-text" src="assets/images/global/logo-porsche-gray.png" alt="">
-            <img class="footer-brand-icon" src="assets/images/global/logo-porsche-icon.png" alt="">
+        <a href="javascript:;">
+            <picture>
+                <source media="(min-width: 768px)" srcset="assets/images/global/logo-porsche-gray.png">
+                <img src="assets/images/global/logo-porsche-icon.png" alt="">
+            </picture>
         </a>
     </footer>
 
