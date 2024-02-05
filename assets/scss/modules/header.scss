@@ -179,13 +179,16 @@
 
 .header-navbar-brand {
     flex: 1;
-    padding-right: 92px;
+    padding-right: 68px;
     display: flex;
     justify-content: center;
 
     @include media-up($screen-xs) {
-        padding-right: 0;
         justify-content: flex-start;
+    }
+
+    @include media-up($screen-sm) {
+        padding-right: 0;
     }
     
     @include media-up($screen-lg) {
@@ -418,7 +421,7 @@
     position: fixed;
     top: 22px;
     right: 60px;
-    width: 60px;
+    width: 36px;
     line-height: 1;
     justify-content: space-between;
     @include navbar-hover;
@@ -451,6 +454,11 @@
 }
 
 .header-navbar-arrow {
+    display: none;
+
+    @include media-up($screen-sm) {
+        display: block;
+    }
 
     img {
         max-height: 16px;
@@ -471,9 +479,9 @@
     border-radius: 4px;
     background-color: rgba($color-primary, 0.1);
 
-    span {
-        @include circle(8px);
-        background-color: rgba($color-primary, 0.5);
+    img {
+        filter: invert(1);
+        max-height: 20px;
     }
 
     @include media-up($screen-sm) {

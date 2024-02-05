@@ -145,6 +145,14 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: $global-radius;
+    border: 2px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        max-width: 44px;
+        max-height: 44px;
+    }
 }
 
 .complement-card-body {

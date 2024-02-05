@@ -1,0 +1,122 @@
+// imported config
+@use "../config" as *;
+
+
+// ----------------------------
+.sliding {
+    position: relative;
+
+    &::before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        top: 58px;
+        left: 0;
+        height: 1px;
+        background-color: $color-grey-low;
+    }
+}
+
+.sliding-drag {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.sliding-grid {
+    counter-reset: count;
+}
+
+.sliding-item {
+    padding-top: 58px;
+    min-height: 100vh;
+    position: relative;
+    width: max(240px, calc(100%/7));
+
+    &:last-child {
+
+        .sliding-cards {
+            border-right: 0;
+        }
+    }
+}
+
+.sliding-heading {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 58px;
+    position: absolute;
+    padding: 0 20px;
+    font-weight: 600;
+    color: $color-grey-high;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    counter-increment: count;
+    overflow: hidden;
+
+    &::before {
+        content: counter(count) ".";
+        z-index: 1;
+        font-size: 64px;
+        font-weight: normal;
+        line-height: 1;
+        color: rgba($color-grey-high, 0.1);
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+    }
+}
+
+.sliding-cards {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    border-right: 1px solid $color-grey-low;
+}
+
+.sliding-card {
+    padding: 16px 20px;
+    min-height: 80px;
+    position: relative;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-grey-low;
+}
+
+.sliding-card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $spacing-xs-mid;
+}
+
+.sliding-card-avatar {
+    flex-shrink: 0;
+    @include circle(20px);
+}
+
+.sliding-card-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        max-width: 18px;
+        max-height: 18px;
+    }
+}

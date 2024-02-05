@@ -20,7 +20,7 @@ h1, .heading-1 {
         font-size: $h1-font-size-tab;
     }
 
-    @include media-up($screen-md) {
+    @include media-up($screen-lg) {
         font-size: $h1-font-size-desk;
     }
 }
@@ -33,7 +33,7 @@ h2, .heading-2 {
         font-size: $h2-font-size-tab;
     }
 
-    @include media-up($screen-md) {
+    @include media-up($screen-lg) {
         font-size: $h2-font-size-desk;
     }
 }
@@ -46,7 +46,7 @@ h3, .heading-3 {
         font-size: $h3-font-size-tab;
     }
 
-    @include media-up($screen-md) {
+    @include media-up($screen-lg) {
         font-size: $h3-font-size-desk;
     }
 }
@@ -59,7 +59,7 @@ h4, .heading-4 {
         font-size: $h4-font-size-tab;
     }
     
-    @include media-up($screen-md) {
+    @include media-up($screen-lg) {
         font-size: $h4-font-size-desk;
     }
 }

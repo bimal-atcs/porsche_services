@@ -159,19 +159,32 @@
 
     img {
         position: absolute;
-        max-width: 38px;
+        max-width: 28px;
         right: 0;
-        top: 52px;
+        top: 58px;
+
+        @include media-view(landscape) {
+            max-width: 34px;
+            top: 55px;
+        }
+
+        @include media-up-view($screen-xs, portrait) {
+            max-width: 36px;
+        }
 
         @include media-up-view($screen-sm, landscape) {
-            top: 56px;
+            top: 57px;
         }
 
         @include media-up-view($screen-md, landscape) {
             top: 60px;
-            max-width: 48px;
             transition: $transition;
             transition-property: right;
+        }
+
+        @include media-up-view($screen-lg, landscape) {
+            top: 60px;
+            max-width: 48px;
         }
     }
 

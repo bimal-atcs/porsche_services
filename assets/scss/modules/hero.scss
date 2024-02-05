@@ -96,6 +96,13 @@
                     display: none;
                 }
             }
+
+            &.slick-active {
+
+                button {
+                    animation: width 8s linear forwards;
+                }
+            }
         }
     }
 }

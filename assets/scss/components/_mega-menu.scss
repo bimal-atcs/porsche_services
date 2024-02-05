@@ -238,6 +238,24 @@
     }
 }
 
+.mega-items-icon {
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        max-width: 24px;
+        max-height: 24px;
+    }
+}
+
 // --------------------
 .mega-col-service {
     counter-reset: count;
@@ -257,19 +275,6 @@
         }
     }
 }
-
-// --------------------
-.mega-col-complementary {
-
-    li {
-
-        img {
-            max-width: 28px;
-            margin-right: 10px;
-        }
-    }
-}
-
 
 // ------------------
 .mega-footer {

@@ -1,0 +1,68 @@
+// imported config
+@use "../config" as *;
+
+// ---------------
+.switch-block {
+    position: relative;
+}
+
+.switch {
+    display: none;
+}
+
+.switch-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch-label {
+    padding: 2px;
+    width: 48px;
+    height: 28px;
+    border-radius: 60px;
+    background-color: $color-grey-mid;
+    transition: $transition;
+    transition-property: background-color;
+}
+
+.switch-label::before,
+.switch-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.switch-label::before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    border-radius: 60px;
+    background-color: $color-white;
+    transition: $transition;
+    transition-property: background-color;
+}
+
+.switch-label::after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 20px;
+    border-radius: 52px;
+    background-color: $color-primary;
+    transition: $transition;
+    transition-property: margin, background-color;
+}
+
+.switch:checked ~ .switch-label,
+.switch:checked ~ .switch-label::before {
+    background-color: $color-success;
+}
+
+.switch:checked ~ .switch-label::after {
+    margin-left: 20px;
+    background-color: $color-white;
+}

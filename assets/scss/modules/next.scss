@@ -39,7 +39,7 @@
         margin-bottom: -65px;
     }
 
-    @include media-up($screen-md) {
+    @include media-up($screen-lg) {
         margin-bottom: -90px;
     }
 }

@@ -1,0 +1,69 @@
+// imported config
+@use "../config" as *;
+
+.scp {
+    padding-top: 48px;
+    margin-top: 80px;
+}
+
+.scp-header {
+    margin-bottom: 48px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-up($screen-md) {
+        gap: 0;
+        flex-direction: row;
+    }
+}
+
+.scp-heading {
+    flex: 1 0;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-weight: normal;
+    }
+}
+
+.scp-heading-icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.scp-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scp-filter {
+    display: flex;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.scp-filter-icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scp-border {
+    display: flex;
+}
+
+.scp-slider {
+    width: 100%;
+    min-height: 100vh;
+}
