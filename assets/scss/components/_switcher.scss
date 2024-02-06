@@ -7,18 +7,11 @@
 }
 
 .switch {
-    display: none;
-}
-
-.switch-label {
     display: block;
     position: relative;
     cursor: pointer;
     outline: none;
     user-select: none;
-}
-
-.switch-label {
     padding: 2px;
     width: 48px;
     height: 28px;
@@ -28,14 +21,14 @@
     transition-property: background-color;
 }
 
-.switch-label::before,
-.switch-label::after {
+.switch::before,
+.switch::after {
     content: "";
     display: block;
     position: absolute;
 }
 
-.switch-label::before {
+.switch::before {
     top: 2px;
     left: 2px;
     bottom: 2px;
@@ -46,7 +39,7 @@
     transition-property: background-color;
 }
 
-.switch-label::after {
+.switch::after {
     top: 4px;
     left: 4px;
     bottom: 4px;
@@ -57,12 +50,12 @@
     transition-property: margin, background-color;
 }
 
-.switch:checked ~ .switch-label,
-.switch:checked ~ .switch-label::before {
+.switch-active,
+.switch-active::before {
     background-color: $color-success;
 }
 
-.switch:checked ~ .switch-label::after {
+.switch-active::after {
     margin-left: 20px;
     background-color: $color-white;
 }

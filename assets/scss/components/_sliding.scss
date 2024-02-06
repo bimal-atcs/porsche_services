@@ -3,24 +3,112 @@
 
 
 // ----------------------------
-.sliding {
+.sub-steps-horizontal {
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translate(0, -50%);
+    position: absolute;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: '';
+        left: 0;
+        top: 50%;
+        margin-top: -1px;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background: $color-error;
+        background: linear-gradient(90deg, rgba($color-error, 0) 0%, rgba($color-error, 1) 50%, rgba($color-error, 0) 100%);
+    }
+}
+
+.sub-step {
+    z-index: 1;
+    cursor: pointer;
+    padding: 2px 6px 0;
+    height: 20px;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+    color: $color-white;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: $color-error;
     position: relative;
 
-    &::before {
+    img {
+        margin-top: -2px;
+        margin-left: 4px;
+    }
+}
+
+.sub-steps-vertical {
+    z-index: 1;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    &::after {
         content: '';
-        z-index: 1;
-        position: absolute;
-        width: 100%;
-        top: 58px;
+        top: 0;
         left: 0;
-        height: 1px;
-        background-color: $color-grey-low;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $color-error;
+        background: linear-gradient(0deg, rgba($color-error,0) 0%, rgba($color-error,1) 50%, rgba($color-error,0) 100%);
+    }
+
+    .sub-step {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        padding: 2px 15px 0px 15px;
+    }
+}
+
+.sub-steps-show {
+    display: flex;
+}
+
+
+// --------------------
+.sliding {
+
+    .flickity-viewport {
+        overflow: visible;
+    }
+
+    .flickity-enabled.is-draggable .flickity-viewport {
+        cursor: auto;
+
+        &.is-pointer-down {
+            cursor: grabbing;
+
+            .sliding-card {
+                cursor: grabbing;
+            }
+        }
     }
 }
 
 .sliding-drag {
     white-space: nowrap;
     overflow-x: auto;
+    overflow: visible;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 
@@ -31,24 +119,39 @@
 
 .sliding-grid {
     counter-reset: count;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 58px;
+        left: 0;
+        height: 1px;
+        background-color: $color-grey-low;
+    }
 }
 
 .sliding-item {
-    padding-top: 58px;
+    margin-top: 58px;
     min-height: 100vh;
     position: relative;
-    width: max(240px, calc(100%/7));
+    width: max(205px, calc(100%/7));
+    border-right: 1px solid $color-grey-low;
+    
+    &:first-child {
+        border-left: 1px solid $color-grey-low;
+    }
 
-    &:last-child {
-
-        .sliding-cards {
-            border-right: 0;
+    @for $i from 1 through 7 {
+        $num: 7 - $i;
+        &:nth-of-type(#{$i}) {
+            z-index: $num;
         }
     }
 }
 
 .sliding-heading {
-    top: 0;
+    top: -58px;
     left: 0;
     width: 100%;
     height: 58px;
@@ -59,8 +162,8 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    counter-increment: count;
     overflow: hidden;
+    counter-increment: count;
 
     &::before {
         content: counter(count) ".";
@@ -79,44 +182,145 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: 100vh;
-    border-right: 1px solid $color-grey-low;
+    counter-reset: count-sub;
 }
 
 .sliding-card {
-    padding: 16px 20px;
-    min-height: 80px;
     position: relative;
+    cursor: pointer;
+    white-space: normal;
+    padding: 20px 16px;
+    min-height: 80px;
     background-color: $color-white;
+    border-top: 1px solid $color-grey-low;
     border-bottom: 1px solid $color-grey-low;
+    margin-bottom: -1px;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: rgba($global-hover-bg-light, 1);
+
+            .sliding-counting {
+            
+                &::before {
+                    color: rgba($color-grey-mid, 1);
+                }
+            }
+            
+            .sliding-card-arrow {
+                opacity: 1;
+            }
+            
+            .sliding-card-body {
+                color: $color-error;
+            }
+
+            .info-block {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
 }
 
+// ----------------------------
+.sliding-card-active {
+    
+    .sliding-card-body {
+        color: $color-primary;
+    }
+}
+
+
+// ----------------------------
 .sliding-card-header {
+    padding-right: 30px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: $spacing-xs-mid;
+    margin-bottom: $spacing-xs;
+}
+
+.sliding-counting {
+    counter-increment: count-sub;
+
+    &::before {
+        content: counter(count) "." counter(count-sub);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        color: rgba($color-grey-mid, 0.6);
+    }
 }
 
 .sliding-card-avatar {
-    flex-shrink: 0;
     @include circle(20px);
+    flex-shrink: 0;
+    display: none;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity, visibility;
+    }
+}
+
+.sliding-card-avatar-show {
+    display: flex;
 }
 
 .sliding-card-icon {
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     border-radius: 4px;
     border: 1px solid $color-notify;
     background-color: $color-notify-light;
 
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity, visibility;
+    }
+
     img {
         max-width: 18px;
         max-height: 18px;
+    }
+}
+
+.sliding-card-icon-show {
+    display: flex;
+}
+
+.sliding-card-arrow {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity;
+    }
+}
+
+.sliding-card-body {
+    color: $color-grey-high;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
     }
 }

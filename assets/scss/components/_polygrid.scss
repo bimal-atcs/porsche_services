@@ -4,6 +4,7 @@
 
 // ----------------
 .polygrid {
+    z-index: 1;
     width: 100vw;
     left: 50%;
     margin-left: -50vw;
@@ -297,14 +298,14 @@
 .polygrid-item-white-sign {
     left: 0;
     opacity: 0.4;
-    bottom: -10px;
+    bottom: -20px;
     position: absolute;
     max-width: 120px;
     filter: grayscale(1);
     opacity: 0.15;
 
     @include media-up($screen-md) {
-        bottom: 0;
+        bottom: -15px;
     }
 }
 

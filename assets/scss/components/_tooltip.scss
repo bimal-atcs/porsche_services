@@ -1,0 +1,71 @@
+// imported config
+@use "../config" as *;
+
+
+.tip {
+    z-index: 1;
+    position: relative;
+}
+
+.tip {
+
+    &:hover {
+        &::before,
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.tip::before {
+    content: attr(data-tooltip);
+    bottom: 100%;
+    z-index: 1;
+    padding: 16px;
+    width: 250px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    position: absolute;
+    color: $color-white;
+    text-align: center;
+    background-color: $color-primary;
+    box-shadow: 0 5px 12px 0 rgba($color-primary, 0.4);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tip::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -14px;
+    width: 12px;
+    height: 12px;
+    transform: translate(0, -50%) rotate(45deg);
+    background-color: $color-primary;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tip-top-left {
+
+    &::before {
+        left: calc(100% - 24px);
+    }
+
+    &::after {
+        left: 2px;
+    }
+}
+
+.tip-top-right {
+
+    &::before {
+        right: calc(100% - 24px);
+    }
+
+    &::after {
+        right: 2px;
+    }
+}

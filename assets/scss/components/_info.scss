@@ -1,0 +1,147 @@
+// imported config
+@use "../config" as *;
+
+$info-width: 650px;
+
+.info-block {
+    opacity: 0;
+    visibility: hidden;
+    top: 50%;
+    left: 100%;
+    padding-left: 20px;
+    position: absolute;
+    transform: translate(0, -50%);
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity;
+    }
+}
+
+.info-block-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.info {
+    max-width: $info-width;
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid $color-primary;
+    background-color: $color-white;
+    box-shadow: 0 5px 10px 0px rgba($color-primary, 0.2);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 16px;
+        height: 30px;
+        right: 0px;
+        z-index: 1;
+        background-color: $color-white;
+        transform: translate(0, -50%);
+    }
+
+    &::after {
+        content: "";
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        background-color: $color-white;
+        border: 2px solid $color-primary;
+        transform: translate(50%, -50%) rotate(45deg);
+        position: absolute;
+    }
+}
+
+.info-left {
+
+    &::before {
+        left: 0px;
+    }
+
+    &::after {
+        right: 100%;
+    }
+}
+
+.info-right {
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+}
+
+.info-items {
+    display: flex;
+}
+
+.info-item {
+    width: calc(#{$info-width}/2);
+}
+
+.info-item-header {
+    padding: 16px;
+    border-bottom: 1px solid $color-grey-low;
+
+    h5 {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+}
+
+.info-item-body {
+    padding: 16px 0;
+    z-index: 1;
+    position: relative;
+    background-color: $color-white;
+}
+
+.info-item-content {
+    padding: 0 16px;
+    margin-bottom: $spacing-sm-low;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.info-item-content-header {
+    margin-bottom: $spacing-xs;
+
+    h6 {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: rgba($color-grey-mid, 0.6);
+        text-transform: uppercase;
+    }
+}
+
+.info-item-content-lists {
+    list-style-type: square;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: $spacing-xs;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.bullet-none {
+        list-style-type: none;
+        padding-left: 0;
+    }
+}
+
+.info-footer {
+    padding: 16px;
+}
