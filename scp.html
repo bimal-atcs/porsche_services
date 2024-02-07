@@ -496,19 +496,23 @@
         </div>
     </header>
     
-    <div class="page-body page-scroll-on scrollbar-dynamic">
-        <div class="page-content">
-            <div class="scp">
+    <div class="scp page-body page-scroll-on scrollbar-dynamic">
+        <div class="scp-content page-content">
+            <div class="sliding-gradient-right" style="display: none;"></div>
+            <div class="sliding-gradient-left" style="display: none;"></div>
+            <div class="sliding-gradient-bottom"></div>
+            
+            <div class="scp-header">
                 <div class="layout">
-                    <div class="scp-header">
-                        <div class="scp-heading">
+                    <div class="scp-group">
+                        <div class="scp-group-header">
                             <h2>My Service Core Process</h2>
                             <div class="scp-heading-icon">
                                 <img src="assets/images/icons/icon-arrow-head-down.svg" alt="">
                             </div>
                         </div>
     
-                        <div class="scp-group">
+                        <div class="scp-group-filter">
                             <div class="scp-filter">
                                 <div class="scp-filter-icon">
                                     <img src="assets/images/icons/icon-question-filled-gray.svg" alt="">
@@ -641,243 +645,526 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="scp-body">
-                    <div class="scp-slider">
-                        <div class="sliding">
-                            <div class="sliding-grid sliding-drag">
-                                <div class="sliding-item">
-                                    <div class="sliding-heading">
-                                        <p>Initiation</p>
-                                    </div>
-                                    <div class="sliding-cards">
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar sliding-card-avatar-show avatar"></div>
-                                                <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                                <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                                    <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
-                                                </div>
-                                                <div class="sliding-card-arrow">
-                                                    <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="sliding-card-body">
-                                                <p>Identify Customers Concern and verify Data</p>
-                                            </div>
-                                            <div class="info-block">
-                                                <div class="info info-left">
-                                                    <div class="info-items">
-                                                        <div class="info-item">
-                                                            <div class="info-item-header">
-                                                                <h5>Service Consultant Tasks</h5>
-                                                            </div>
-                                                            <div class="info-item-body">
-                                                                <div class="info-item-content">
-                                                                    <div class="info-item-content-header">
-                                                                        <h6>Lead</h6>
-                                                                    </div>
-                                                                    <ul class="info-item-content-lists">
-                                                                        <li>Consider ECU Update (In accordance to local regulations)</li>
-                                                                        <li>Manage order extension: Inform Customer</li>
-                                                                        <li>Manage job order extension: Inform technician about any changes</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="info-item-content">
-                                                                    <div class="info-item-content-header">
-                                                                        <h6>SUPPORTIVE</h6>
-                                                                    </div>
-                                                                    <ul class="info-item-content-lists">
-                                                                        <li>Consider Porsche Connect specifications</li>
-                                                                        <li>Manage order extension: Inform Service Consultant</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="info-item">
-                                                            <div class="info-item-header">
-                                                                <h5>Service Manager Tasks</h5>
-                                                            </div>
-                                                            <div class="info-item-body">
-                                                                <div class="info-item-content">
-                                                                    <div class="info-item-content-header">
-                                                                        <h6>Lead</h6>
-                                                                    </div>
-                                                                    <ul class="info-item-content-lists">
-                                                                        <li>Consider ECU Update (In accordance to local regulations)</li>
-                                                                        <li>Manage order extension: Inform Customer</li>
-                                                                        <li>Consider Porsche Connect specifications</li>
-                                                                        <li>Manage job order extension: Inform technician about any changes</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="info-footer">
-                                                        <a class="button primary block" href="javascript:;">View tasks</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="sliding-card sliding-card-active">
-                                            <div class="sub-steps-horizontal sub-steps-show">
-                                                <div class="sub-step">
-                                                    <span>2 sub-step</span>
-                                                    <img src="assets/images/icons/icon-plus.svg" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar"></div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                                <div class="sliding-card-arrow">
-                                                    <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="sliding-card-body">
-                                                <p>Identify Customers Concern and verify Data</p>
-                                            </div>
-                                            <div class="info-block">
-                                                <div class="info info-left">
-                                                    <div class="info-items">
-                                                        <div class="info-item">
-                                                            <div class="info-item-header">
-                                                                <h5>Service Consultant Tasks</h5>
-                                                            </div>
-                                                            <div class="info-item-body">
-                                                                <div class="info-item-content">
-                                                                    <div class="info-item-content-header">
-                                                                        <h6>Lead</h6>
-                                                                    </div>
-                                                                    <ul class="info-item-content-lists bullet-none">
-                                                                        <li>Consider ECU Update (In accordance to local regulations)</li>
-                                                                        <li>Manage order extension: Inform Customer</li>
-                                                                        <li>Manage job order extension: Inform technician about any changes</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="info-item-content">
-                                                                    <div class="info-item-content-header">
-                                                                        <h6>SUPPORTIVE</h6>
-                                                                    </div>
-                                                                    <ul class="info-item-content-lists bullet-none">
-                                                                        <li>Consider Porsche Connect specifications</li>
-                                                                        <li>Manage order extension: Inform Service Consultant</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="info-footer">
-                                                        <a class="button primary block" href="javascript:;">View tasks</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-heading">
-                                        <p>Preparation</p>
-                                    </div>
-                                    <div class="sliding-cards">
-                                        <div class="sub-steps-vertical sub-steps-show">
-                                            <div class="sub-step">
-                                                <span>3 steps</span>
-                                                <img src="assets/images/icons/icon-plus.svg" alt="">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="sliding-card">
-                                            <div class="sub-steps-horizontal sub-steps-show">
-                                                <div class="sub-step">
-                                                    <span>2 sub-step</span>
-                                                    <img src="assets/images/icons/icon-plus.svg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sliding-card">
-                                            <div class="sliding-card-header">
-                                                <span class="sliding-counting"></span>
-                                                <div class="sliding-card-avatar avatar">
-                                                </div>
-                                                <div class="sliding-card-icon">
-                                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-cards"></div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-cards"></div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-cards"></div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-cards"></div>
-                                </div>
-                                <div class="sliding-item">
-                                    <div class="sliding-cards"></div>
+            <div class="scp-body sliding">
+                <div class="sliding-grid sliding-drag">
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Initiation</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sub-steps-vertical sub-steps-show">
+                                <div class="sub-step">
+                                    <span>3 steps</span>
+                                    <img src="assets/images/icons/icon-plus.svg" alt="">
                                 </div>
                             </div>
+
+                            <div class="sliding-card">
+                                <div class="sub-steps-horizontal sub-steps-show">
+                                    <div class="sub-step">
+                                        <span>2 sub-step</span>
+                                        <img src="assets/images/icons/icon-plus.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar sliding-card-avatar-show avatar"></div>
+                                    <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                    <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                        <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
+                                    </div>
+                                    <div class="sliding-card-arrow">
+                                        <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sliding-card-body">
+                                    <p>Identify Customers Concern and verify Data</p>
+                                </div>
+                                <div class="info-block info-block-left">
+                                    <div class="info">
+                                        <div class="info-items">
+                                            <div class="info-item">
+                                                <div class="info-item-header">
+                                                    <h5>Service Consultant Tasks</h5>
+                                                </div>
+                                                <div class="info-item-body">
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>Lead</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider ECU Update (In accordance to local regulations)</li>
+                                                            <li>Manage order extension: Inform Customer</li>
+                                                            <li>Manage job order extension: Inform technician about any changes</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>SUPPORTIVE</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider Porsche Connect specifications</li>
+                                                            <li>Manage order extension: Inform Service Consultant</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="info-item-header">
+                                                    <h5>Service Manager Tasks</h5>
+                                                </div>
+                                                <div class="info-item-body">
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>Lead</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider ECU Update (In accordance to local regulations)</li>
+                                                            <li>Manage order extension: Inform Customer</li>
+                                                            <li>Consider Porsche Connect specifications</li>
+                                                            <li>Manage job order extension: Inform technician about any changes</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-footer">
+                                            <a class="button primary block" href="javascript:;">View tasks</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sliding-card steps-card steps-card-top">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Order or block parts in DMS
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sliding-card steps-card steps-card-top">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Order or block parts in DMS
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sliding-card sliding-card-active">
+                                <div class="sliding-card-header">
+                                    <div class="sliding-card-header">
+                                        <span class="sliding-counting"></span>
+                                        <div class="sliding-card-avatar sliding-card-avatar-hide avatar"></div>
+                                        <div class="sliding-card-icon sliding-card-icon-hide tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                            <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                        </div>
+                                        <div class="sliding-card-icon sliding-card-icon-hide tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                            <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
+                                        </div>
+                                        <div class="sliding-card-arrow">
+                                            <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sliding-card-body">
+                                    <p>Identify Customers Concern and verify Data</p>
+                                </div>
+                                <div class="info-block info-block-left">
+                                    <div class="info">
+                                        <div class="info-items">
+                                            <div class="info-item">
+                                                <div class="info-item-header">
+                                                    <h5>Service Consultant Tasks</h5>
+                                                </div>
+                                                <div class="info-item-body">
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>Lead</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists bullet-none">
+                                                            <li>Consider ECU Update (In accordance to local regulations)</li>
+                                                            <li>Manage order extension: Inform Customer</li>
+                                                            <li>Manage job order extension: Inform technician about any changes</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>SUPPORTIVE</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists bullet-none">
+                                                            <li>Consider Porsche Connect specifications</li>
+                                                            <li>Manage order extension: Inform Service Consultant</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-footer">
+                                            <a class="button primary block" href="javascript:;">View tasks</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Preparation</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                </div>
+                            </div>
+
+                            <div class="sliding-card">
+                                <div class="sub-steps-horizontal sub-steps-show">
+                                    <div class="sub-step">
+                                        <span>2 sub-step</span>
+                                        <img src="assets/images/icons/icon-plus.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sliding-card steps-card steps-card-top">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Order or block parts in DMS
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card steps-card-top">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Order or block parts in DMS
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card">
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar avatar">
+                                    </div>
+                                    <div class="sliding-card-icon">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliding-item">
+                        <div class="sliding-cards sliding-cards-vertical-center">
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Take receipt of shipping documents
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Unpack parts
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sliding-item">
+                        <div class="sliding-cards sliding-cards-vertical-center">
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliding-item">
+                        <div class="sliding-cards sliding-cards-vertical-center">
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sliding-card steps-card">
+                                <div class="step-card-block">
+                                    <div class="steps-card-header">
+                                        <div class="sliding-card-icon steps-card-icon">
+                                            <span>P</span>
+                                        </div>
+                                    </div>
+                                    <div class="steps-card-body">
+                                        Visual inspection
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Check-in</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card">
+                                <div class="sub-steps-horizontal sub-steps-show">
+                                    <div class="sub-step">
+                                        <span>2 sub-step</span>
+                                        <img src="assets/images/icons/icon-plus.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sliding-card-header">
+                                    <span class="sliding-counting"></span>
+                                    <div class="sliding-card-avatar sliding-card-avatar-show avatar"></div>
+                                    <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                    </div>
+                                    <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                        <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
+                                    </div>
+                                    <div class="sliding-card-arrow">
+                                        <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="sliding-card-body">
+                                    <p>Identify Customers Concern and verify Data</p>
+                                </div>
+                                <div class="info-block info-block-left">
+                                    <div class="info">
+                                        <div class="info-items">
+                                            <div class="info-item">
+                                                <div class="info-item-header">
+                                                    <h5>Service Consultant Tasks</h5>
+                                                </div>
+                                                <div class="info-item-body">
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>Lead</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider ECU Update (In accordance to local regulations)</li>
+                                                            <li>Manage order extension: Inform Customer</li>
+                                                            <li>Manage job order extension: Inform technician about any changes</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>SUPPORTIVE</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider Porsche Connect specifications</li>
+                                                            <li>Manage order extension: Inform Service Consultant</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <div class="info-item-header">
+                                                    <h5>Service Manager Tasks</h5>
+                                                </div>
+                                                <div class="info-item-body">
+                                                    <div class="info-item-content">
+                                                        <div class="info-item-content-header">
+                                                            <h6>Lead</h6>
+                                                        </div>
+                                                        <ul class="info-item-content-lists">
+                                                            <li>Consider ECU Update (In accordance to local regulations)</li>
+                                                            <li>Manage order extension: Inform Customer</li>
+                                                            <li>Consider Porsche Connect specifications</li>
+                                                            <li>Manage job order extension: Inform technician about any changes</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="info-footer">
+                                            <a class="button primary block" href="javascript:;">View tasks</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Operation</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card"></div>
+                        </div>
+                    </div>
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Quality control</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card"></div>
+                        </div>
+                    </div>
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Check-out</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card"></div>
+                        </div>
+                    </div>
+                    <div class="sliding-item">
+                        <div class="sliding-heading">
+                            <p>Follow-up</p>
+                        </div>
+                        <div class="sliding-cards">
+                            <div class="sliding-card"></div>
                         </div>
                     </div>
                 </div>

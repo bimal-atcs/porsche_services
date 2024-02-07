@@ -5,15 +5,17 @@
 .tip {
     z-index: 1;
     position: relative;
-}
 
-.tip {
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity;
 
-    &:hover {
-        &::before,
-        &::after {
-            opacity: 1;
-            visibility: visible;
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }
@@ -67,5 +69,14 @@
 
     &::after {
         right: 2px;
+    }
+}
+
+.tip-show {
+
+    &::before,
+    &::after {
+        opacity: 1;
+        visibility: visible;
     }
 }
