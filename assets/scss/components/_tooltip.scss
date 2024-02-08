@@ -9,14 +9,6 @@
     @include media-up($screen-md) {
         transition: $transition;
         transition-property: opacity;
-
-        &:hover {
-            &::before,
-            &::after {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
     }
 }
 
