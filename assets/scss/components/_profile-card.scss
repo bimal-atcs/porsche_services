@@ -42,19 +42,24 @@
         object-fit: cover;
         position: absolute;
     }
+
+    ~ {
+        .profile-card-content {
+            margin-top: -30px;
+        
+            .profile-header {
+                align-items: start;
+            }
+        
+            .profile-header-title {
+                margin-top: 18px;
+            }
+        }
+    }
 }
 
 // ----------------
 .profile-card-content {
-    margin-top: -30px;
-
-    .profile-header {
-        align-items: start;
-    }
-
-    .profile-header-title {
-        margin-top: 22px;
-    }
 }
 
 

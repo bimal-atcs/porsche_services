@@ -8,7 +8,7 @@
     height: 600px;
     
     @include media-up($screen-md) {
-        height: 700px;
+        height: 800px;
     }
 
     @include media-up($screen-lg) {
@@ -18,6 +18,10 @@
     .layout {
         padding: 0;
         height: 100%;
+
+        @include media-up($screen-md) {
+            max-width: 1280px;
+        }
 
         @include media-up($screen-lg) {
             max-width: 1440px;
@@ -146,24 +150,25 @@
 .hero-polygons {
     display: none;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: block;
         inset: 0;
         position: absolute;
     }
+
 }
 
 .hero-polygon {
     display: none;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: block;
         top: 0;
         left: 0;
         position: absolute;
         mask-size: cover;
         mask-position: center;
-        mask-image: url("../../images/hero/polygon-lg.png");
+        mask-image: url("../../images/hero/polygon-md.png");
         backdrop-filter: blur(60px);
     }
 
@@ -175,7 +180,7 @@
 .hero-polygon-border-left {
     display: none;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         bottom: -5px;
         left: -5px;
         opacity: 0.15;
@@ -187,7 +192,7 @@
 .hero-polygon-border-right {
     display: none;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         bottom: -5px;
         right: -5px;
         opacity: 0.15;
@@ -199,30 +204,51 @@
 .hero-polygon-top-right {
     display: none;
 
-    @include media-up($screen-lg) {
+    .polygon-top-right-fill-md,
+    .polygon-top-right-fill-lg {
+        opacity: 0.01;
+    }
+
+    .polygon-top-right-border-md,
+    .polygon-top-right-border-lg {
+        top: 0;
+        opacity: 0.1;
+        left: 0;
+        position: absolute;
+    }
+
+    @include media-up($screen-md) {
         display: block;
         top: -10px;
         right: -10px;
         position: absolute;
         mask-size: cover;
         mask-position: 0 0;
-        mask-image: url("../../images/hero/polygon-top-right-fill-lg.png");
+        mask-image: url("../../images/hero/polygon-top-right-fill-md.png");
         backdrop-filter: blur(75px);
+
+        .polygon-top-right-fill-lg,
+        .polygon-top-right-border-lg {
+            display: none;
+        }
+    }
+
+    @include media-up($screen-lg) {
+        mask-image: url("../../images/hero/polygon-top-right-fill-lg.png");
+
+        .polygon-top-right-fill-md,
+        .polygon-top-right-border-md {
+            display: none;
+        }
+
+        .polygon-top-right-fill-lg,
+        .polygon-top-right-border-lg {
+            display: block;
+        }
     }
 
     @include media-up($screen-xxl) {
         display: none;
-    }
-
-    .polygon-top-right-fill {
-        opacity: 0.01;
-    }
-
-    .polygon-top-right-border {
-        top: 0;
-        opacity: 0.1;
-        left: 0;
-        position: absolute;
     }
 }
 
@@ -257,15 +283,20 @@
         width: 100%;
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         width: auto;
         bottom: auto;
         padding: 0;
-        top: 180px;
-        left: 170px;
+        top: 150px;
+        left: 30px;
         height: auto;
         backdrop-filter: blur(0);
         background-color: transparent;
+    }
+
+    @include media-up($screen-lg) {
+        top: 180px;
+        left: 160px;
     }
 }
 

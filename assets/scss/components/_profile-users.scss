@@ -3,6 +3,17 @@
 
 
 // profile users
+.profile-users {
+
+    @include media-up($screen-sm) {
+        width: 320px;
+    }
+
+    @include media-up($screen-md) {
+        width: 480px;
+    }
+}
+
 .profile-users-header {
     color: $color-grey-high;
     margin-bottom: $spacing-sm-low;
@@ -18,14 +29,17 @@
 }
 
 .profile-users-group {
-    gap: 10px;
+    gap: 20px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     margin-bottom: 32px;
 
     @include media-up($screen-sm) {
         gap: 15px;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     @include media-up($screen-md) {
@@ -35,21 +49,19 @@
 
 .profile-users-avatars {
     display: flex;
-    margin-bottom: 60px;
+    justify-content: center;
+    margin-bottom: 20px;
 
-    @include media-view(landscape) {
+    @include media-up($screen-sm) {
         margin-bottom: 32px;
-    }
-
-    @include media-up($screen-xs) {
-        margin-bottom: 32px;
+        justify-content: flex-start
     }
 }
 
 .profile-users-avatar {
     @include circle(56px);
     margin-right: -10px;
-    display: grid;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: $base-color-bg;
@@ -58,6 +70,7 @@
         $num: 9 - $i;
         &:nth-child(#{$i}) {
             z-index: $num;
+            display: grid;
         }
     }
     
@@ -72,54 +85,19 @@
 
         @for $i from 6 through 9 {
             &:nth-child(#{$i}) {
-                display: block;
+                display: grid;
             }
-        }
-    }
-}
-
-.profile-users-actions {
-
-    .button {
-        
-        @include media-view(landscape) {
-            width: calc(100% + 70px);
-        }
-
-        @include media-up($screen-xs) {
-            width: calc(100% + 75px);
-        }
-
-        @include media-up($screen-sm) {
-            width: calc(100% + 80px);
-        }
-
-        @include media-up($screen-md) {
-            width: calc(100% + 5px);
         }
     }
 }
 
 .profile-users-more {
     color: $color-grey-mid;
-    position: absolute;
-    left: 50%;
-    top: 70px;
-    transform: translate(-50%, 0);
     
-    @include media-view(landscape) {
+    @include media-up($screen-sm) {
         margin-top: 15px;
         left: 0;
         top: 0;
         transform: none;
-        position: relative;
-    }
-    
-    @include media-up($screen-xs) {
-        margin-top: 15px;
-        left: 0;
-        top: 0;
-        transform: none;
-        position: relative;
     }
 }
