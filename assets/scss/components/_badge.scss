@@ -1,0 +1,21 @@
+// imported config
+@use "../config" as *;
+
+
+.badges {
+    padding: 2px 5px 0 5px;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-grey-low;
+    border: 1px solid $color-grey-mid;
+}
+
+.badges-show {
+    display: flex;
+}

@@ -24,7 +24,7 @@
     color: $color-white;
     text-align: center;
     background-color: $color-primary;
-    box-shadow: 0 5px 12px 0 rgba($color-primary, 0.4);
+    box-shadow: 0 5px 10px 5px rgba($color-primary, 0.2);
     opacity: 0;
     visibility: hidden;
 }
@@ -45,22 +45,22 @@
 .tip-top-left {
 
     &::before {
-        left: calc(100% - 24px);
+        left: -6px;
     }
 
     &::after {
-        left: 2px;
+        left: calc(50% - 6px);
     }
 }
 
 .tip-top-right {
 
     &::before {
-        right: calc(100% - 24px);
+        right: -6px;
     }
 
     &::after {
-        right: 2px;
+        right: calc(50% - 6px);
     }
 }
 

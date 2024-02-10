@@ -26,3 +26,9 @@
         background-color: $color-label;
     }
 }
+
+.label-avatar {
+    margin-left: -10px;
+    margin-right: 4px;
+    @include circle(20px);
+}

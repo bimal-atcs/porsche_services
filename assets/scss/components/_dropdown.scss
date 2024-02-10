@@ -111,26 +111,11 @@
 }
 
 .dropdown-badge {
-    padding: 2px 5px 0 5px;
     margin-left: 8px;
-    min-width: 22px;
-    height: 22px;
-    border-radius: 4px;
-    display: none;
-    font-size: 14px;
-    line-height: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-grey-low;
-    border: 1px solid $color-grey-mid;
-}
-
-.dropdown-badge-show {
-    display: flex;
 }
 
 .dropdown-icon {
-    margin-left: 16px;
+    margin-left: 12px;
     width: 32px;
     height: 32px;
     display: flex;

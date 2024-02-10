@@ -3,6 +3,7 @@
 
 // page structure
 .page-body {
+    z-index: 1;
 
     // page scroll on
     &.page-scroll-on {
@@ -23,7 +24,6 @@
 }
 
 .page-content {
-    z-index: 1;
     position: relative;
     min-height: 100vh;
     background-color: $base-color-bg;

@@ -3,7 +3,6 @@ $(document).ready(function () {
     sliding();
     slidingCard();
     infoHover();
-    toolTipHover();
 });
 
 //run on every window resize
@@ -11,7 +10,6 @@ $(window).resize(function () {
     sliding();
     slidingCard();
     infoHover();
-    toolTipHover();
 });
 
 // sliding items height
@@ -53,32 +51,6 @@ function infoHover() {
     }).mouseleave(function(e) {
         e.preventDefault();
         $(".info-block").removeClass('info-block-show');
-    });
-}
-
-// tool tip hover
-function toolTipHover() {
-    $winWidth = $(window).width();
-
-    $('.tip').mouseenter(function(e) {
-        e.preventDefault();
-        $('.tip').removeClass('tip-top-left');
-        $('.tip').removeClass('tip-top-right');
-        $(this).addClass('tip-show');
-
-        $toolTipThis = $(this).offset().left;
-        $getWdith = $winWidth/2;
-        if($toolTipThis < $getWdith/2) {
-            $(".tip").removeClass('tip-top-right');
-            $(this).addClass('tip-top-left');
-        }
-        else if($toolTipThis > $getWdith) {
-            $(".tip").removeClass('tip-top-left');
-            $(this).addClass('tip-top-right');
-        }
-    }).mouseleave(function(e) {
-        e.preventDefault();
-        $(".tip").removeClass('tip-show');
     });
 }
 

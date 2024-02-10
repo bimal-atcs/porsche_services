@@ -61,6 +61,11 @@
         border-color: $color-white;
     }
 
+    &.light {
+        background-color: $global-hover-bg;
+        border-color: $global-hover-bg;
+    }
+
     &.icon {
         padding: 0;
         min-height: auto;

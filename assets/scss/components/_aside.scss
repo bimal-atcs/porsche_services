@@ -1,0 +1,138 @@
+// imported config
+@use "../config" as *;
+
+
+.aside {
+    width: $aside-width;
+    position: sticky;
+    counter-reset: count-sub;
+}
+
+.aside-nav {
+    position: relative;
+}
+
+.aside-links {
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        border-bottom: 1px solid $color-grey-low;
+    }
+}
+
+.aside-link {
+    padding: 12px 45px 12px 8px;
+    color: $color-grey-high;
+    font-weight: 600;
+    position: relative;
+    display: grid;
+    margin: 4px 0;
+    border-radius: 4px;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color, color;
+
+        &:hover {
+            color: $color-error;
+            background-color: rgba($color-grey-high, 0.02);
+
+            .aside-link-arrow {
+                filter: none;
+            }
+        }
+    }
+}
+
+.aside-link-count {
+    counter-increment: count-sub;
+
+    &::before {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        color: rgba($color-grey-mid, 0.6);
+    }
+    
+    &::after {
+        content: counter(count-sub);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        color: rgba($color-grey-mid, 0.6);
+    }
+}
+
+.aside-link-avatar {
+    @include circle(18px);
+}
+
+.aside-link-header {
+    margin-bottom: 4px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.aside-link-arrow {
+    top: 50%;
+    right: 8px;
+    transform: translate(0, -50%);
+    position: absolute;
+    filter: grayscale(1);
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: filter;
+    }
+}
+
+.aside-link-active {
+    color: $color-error;
+
+    .aside-link-arrow {
+        filter: none;
+    }
+}
+
+.aside-bottom {
+    z-index: 1;
+    bottom: 0;
+    height: 120px;
+    position: fixed;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: $aside-width;
+    background-color: $base-color-bg;
+}
+
+.aside-dropdown {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.aside-button {
+    cursor: pointer;
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $color-grey-low;
+}
+
+.aside-button-badge {
+    margin-left: 8px;
+}
+
+.aside-button-arrow {
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
