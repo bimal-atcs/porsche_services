@@ -3,8 +3,9 @@
 
 
 .aside {
-    width: $aside-width;
+    z-index: 1;
     position: sticky;
+    width: $aside-width;
     counter-reset: count-sub;
 }
 
@@ -113,6 +114,13 @@
     display: flex;
     gap: 16px;
     align-items: center;
+}
+
+.aside-dropdown.dropdown-option-active {
+
+    .aside-button-arrow {
+        transform: rotate(180deg);
+    }
 }
 
 .aside-button {
