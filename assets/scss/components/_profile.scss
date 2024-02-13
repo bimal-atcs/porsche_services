@@ -51,9 +51,27 @@
     margin-bottom: $spacing-xs-mid;
 }
 
+.profile-multiple {
+    width: 370px;
+    overflow: hidden;
+    border-radius: $global-radius;
+    background-color: $color-white;
+    box-shadow: 0 4px 16px 0 rgba($color-black, 0.16);
+}
+
 // profile secondary
+.profile-secondary {
+    padding-bottom: $spacing-sm-low;
+    border-bottom: 1px solid $color-grey-low;
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+}
+
 .profile-secondary .profile-header {
     align-items: start;
+    margin-bottom: 0;
 }
 
 .profile-secondary .profile-role-labels {

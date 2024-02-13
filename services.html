@@ -499,7 +499,7 @@
         <div class="service-content">
             <div class="layout">
                 <div class="service-block select-check-in">
-                    <div class="service-steps">
+                    <div class="service-steps service-steps-sticky">
                         <div class="service-step initiation">
                             <a class="service-step-link" href="javascript:;">Initiation</a>
                         </div>
@@ -531,7 +531,7 @@
                                         <a class="aside-link" href="#welcome-customer-and-receive-car">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Welcome customer and receive car</p>
@@ -542,7 +542,7 @@
                                         <a class="aside-link" href="javascript:;">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Clarify customer’s concern</p>
@@ -553,7 +553,7 @@
                                         <a class="aside-link aside-link-active" href="javascript:;">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Offer relevant services and products</p>
@@ -564,7 +564,7 @@
                                         <a class="aside-link" href="javascript:;">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Finalize job order</p>
@@ -575,7 +575,7 @@
                                         <a class="aside-link" href="javascript:;">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Provide mobility service and say goodbye to customer</p>
@@ -586,7 +586,7 @@
                                         <a class="aside-link" href="javascript:;">
                                             <div class="aside-link-header">
                                                 <span class="aside-link-count"></span>
-                                                <div class="aside-link-avatar avatar">
+                                                <div class="aside-link-avatar aside-link-avatar-show avatar">
                                                 </div>
                                             </div>
                                             <p>Hand over job order to workshop</p>
@@ -738,20 +738,14 @@
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
                                         </div>
-                                        <h4>Key results</h4>
+                                        <h4>Best practices</h4>
                                     </div>
                                     <div class="service-hero-item service-hero-item-active">
                                         <div class="service-hero-item-icon">
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
                                         </div>
-                                        <h4>View process map</h4>
-                                        <div class="service-hero-item-info">
-                                            <div class="service-hero-item-info-icon">
-                                                <img src="assets/images/icons/icon-information-filled.svg" alt="">
-                                            </div>
-                                            <span>15 deviations</span>
-                                        </div>
+                                        <h4>Key results</h4>
                                     </div>
                                 </div>
                             </div>
@@ -759,6 +753,7 @@
                             <div class="service-slides">
                                 <div id="welcome-customer-and-receive-car" class="service-slide">
                                     <div class="service-slide-header">
+                                        <a class="service-slide-header-link" href="#">#</a>
                                         <h2>
                                             Welcome costumer and receive car
                                             <span class="service-slide-header-gradient"></span>
@@ -770,10 +765,20 @@
                                             <span class="service-slide-header-count"></span>
                                         </div>
                                     </div>
+
+                                    <div class="service-slide-message message message-show">
+                                        <div class="message-icon">
+                                            <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                        </div>
+                                        <div class="message-text">
+                                            This is a deviation message regarding a Porsche Connect issue that impacts this sub-step
+                                        </div>
+                                    </div>
+                                    
                                     <div class="service-slide-accordion">
                                         <ul class="accordion">
                                             <li class="accordion-list">
-                                                <a class="accordion-link" href=#>
+                                                <div class="accordion-link" href="#">
                                                     <div class="accordion-link-icon">
                                                         <img class="accordion-link-icon-plus" src="assets/images/icons/icon-plus-black.svg" alt="">
                                                         <img class="accordion-link-icon-minus" src="assets/images/icons/icon-minus-black.svg" alt="">
@@ -781,115 +786,69 @@
                                                     <div class="accordion-link-header">
                                                         <span class="accordion-link-count">Task</span>
                                                         <div class="labels">
-                                                            <span class="label primary">
+                                                            <div class="label-profile label primary">
+                                                                <div class="label-profile-card profile-card">
+                                                                    <div class="profile-card-body">
+                                                                        <div class="profile-card-frame">
+                                                                            <img src="assets/images/core/frame.png" alt="">
+                                                                        </div>
+                                                                        <div class="profile-card-content">
+                                                                            <div class="profile">
+                                                                                <div class="profile-header">
+                                                                                    <div class="profile-header-user profile-header-user-border">
+                                                                                        <div class="profile-header-avatar avatar">
+                                                                                            <img src="assets/images/users/avatar.png" alt="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="profile-header-title">
+                                                                                        <h5>eliaswagner</h5>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="profile-role">
+                                                                                    <div class="profile-role-header">
+                                                                                        <p>MY Job roles</p>
+                                                                                    </div>
+                                                                                    <div class="profile-role-labels labels">
+                                                                                        <span class="label primary">
+                                                                                            Service Consultant
+                                                                                        </span>
+                                                                                        <span class="label">
+                                                                                            Service Consultant
+                                                                                        </span>
+                                                                                        <span class="label">
+                                                                                            Sales Manager (<span>D</span>)
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="profile-card-actions">
+                                                                            <a class="button primary-outline" href="javascript:;">
+                                                                                <img src="assets/images/icons/icon-edit.svg" alt="">
+                                                                                Edit profile
+                                                                            </a>
+                                                                            <a class="button primary grow" href="javascript:;">View My Tasks</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="label-avatar avatar"></div>
                                                                 Service Consultant
-                                                            </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="accordion-icons">
+                                                            <div class="accordion-icon accordion-icon-show tip" data-tooltip="This is an information message regarding a Warranty and Goodwill issue that impacts the core process">
+                                                                <img src="assets/images/complementary/icon-body-paint.png" alt="">
+                                                            </div>
+                                                            <div class="accordion-icon">
+                                                                <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="accordion-link-body">
                                                         <h5>Update yourself about the scheduled service appointments of the day. Inform the sales team about walk-in customers and share relevant information. (e.g. Prospect customer, VIP, etc.)</h5>
-                                                    </div>
-                                                </a>
-                                                <div class="accordion-content">
-                                                    <div class="accordion-content-items">
-                                                        <div class="accordion-content-item">
-                                                            <div class="accordion-content-header">
-                                                                <h6>Job roles</h6>
-                                                            </div>
-                                                            <div class="accordion-content-body">
-                                                                <p>Lead</p>
-                                                                <ul class="accordion-content-labels">
-                                                                    <li>
-                                                                        <div class="labels">
-                                                                            <span class="label primary">
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                Service Consultant
-                                                                            </span>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-
-                                                                <p>Supportive</p>
-                                                                <ul class="accordion-content-labels">
-                                                                    <li>
-                                                                        <div class="labels">
-                                                                            <span class="label">
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                Service Scheduler
-                                                                            </span>
-                                                                            <span class="label">
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                Service Assistant
-                                                                            </span>
-                                                                            <span class="label">
-                                                                                <div class="label-avatar avatar"></div>
-                                                                                Host
-                                                                            </span>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="accordion-content-item">
-                                                            <div class="accordion-content-header">
-                                                                <h6>Systems</h6>
-                                                            </div>
-                                                            <div class="accordion-content-body">
-                                                                <p>Local</p>
-                                                                <ul class="accordion-content-lists">
-                                                                    <li>
-                                                                        DMS
-                                                                        <div>
-
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-
-                                                                <p>central</p>
-                                                                <ul class="accordion-content-lists">
-                                                                    <li>C@P (CRM@Aftersales)</li>
-                                                                    <li>PCSS (Porsche Central Service System)</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="accordion-content-item">
-                                                            <div class="accordion-content-header">
-                                                                <h6>Customer Contact Touchpoints</h6>
-                                                            </div>
-                                                            <div class="accordion-content-body">
-                                                                <ul class="accordion-content-lists">
-                                                                    <li>Onsite contact</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                            </li>
-
-                                            <li class="accordion-list">
-                                                <a class="accordion-link" href=#>
-                                                    <div class="accordion-link-icon">
-                                                        <img class="accordion-link-icon-plus" src="assets/images/icons/icon-plus-black.svg" alt="">
-                                                        <img class="accordion-link-icon-minus" src="assets/images/icons/icon-minus-black.svg" alt="">
-                                                    </div>
-                                                    <div class="accordion-link-header">
-                                                        <span class="accordion-link-count">Task</span>
-                                                        <div class="labels">
-                                                            <span class="label primary">
-                                                                <div class="label-avatar avatar"></div>
-                                                                Service Consultant
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-link-body">
-                                                        <h5>Update yourself about the scheduled service appointments of the day. Inform the sales team about walk-in customers and share relevant information. (e.g. Prospect customer, VIP, etc.)</h5>
-                                                    </div>
-                                                </a>
                                                 <div class="accordion-content">
                                                     <div class="accordion-content-items">
                                                         <div class="accordion-content-item">
@@ -901,7 +860,51 @@
                                                                 <ul class="accordion-content-labels">
                                                                     <li>
                                                                         <div class="labels">
-                                                                            <span class="label primary">
+                                                                            <span class="label-profile label primary">
+                                                                                <div class="label-profile-card profile-card">
+                                                                                    <div class="profile-card-body">
+                                                                                        <div class="profile-card-frame">
+                                                                                            <img src="assets/images/core/frame.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="profile-card-content">
+                                                                                            <div class="profile">
+                                                                                                <div class="profile-header">
+                                                                                                    <div class="profile-header-user profile-header-user-border">
+                                                                                                        <div class="profile-header-avatar avatar">
+                                                                                                            <img src="assets/images/users/avatar.png" alt="">
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="profile-header-title">
+                                                                                                        <h5>eliaswagner</h5>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-role">
+                                                                                                    <div class="profile-role-header">
+                                                                                                        <p>MY Job roles</p>
+                                                                                                    </div>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="profile-card-actions">
+                                                                                            <a class="button primary-outline" href="javascript:;">
+                                                                                                <img src="assets/images/icons/icon-edit.svg" alt="">
+                                                                                                Edit profile
+                                                                                            </a>
+                                                                                            <a class="button primary grow" href="javascript:;">View My Tasks</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 Service Consultant
                                                                             </span>
@@ -913,19 +916,187 @@
                                                                 <ul class="accordion-content-labels">
                                                                     <li>
                                                                         <div class="labels">
-                                                                            <span class="label">
+                                                                            <span class="label-profile label">
+                                                                                <div class="label-profile-card">
+                                                                                    <div class="profile-multiple">
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Adele Bauer</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Emma Koch</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Jan Berger</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 Service Scheduler
                                                                             </span>
-                                                                            <span class="label">
+                                                                            <span class="label-profile label">
+                                                                                <div class="label-profile-card">
+                                                                                    <div class="profile-multiple">
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Adele Bauer</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Emma Koch</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Jan Berger</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 Service Assistant
                                                                             </span>
-                                                                            <span class="label">
+                                                                            <span class="label-profile label">
+                                                                                <div class="label-profile-card">
+                                                                                    <div class="profile-multiple">
+                                                                                        <div class="profile profile-secondary">
+                                                                                            <div class="profile-header">
+                                                                                                <div class="profile-header-user">
+                                                                                                    <div class="profile-header-avatar avatar">
+                                                                                                        <img src="assets/images/users/avatar.png" alt="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="profile-header-title">
+                                                                                                    <h5>Adele Bauer</h5>
+                                                                                                    <div class="profile-role-labels labels">
+                                                                                                        <span class="label primary">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Service Consultant
+                                                                                                        </span>
+                                                                                                        <span class="label">
+                                                                                                            Sales Manager (<span>D</span>)
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                
                                                                                 <div class="label-avatar avatar"></div>
                                                                                 Host
                                                                             </span>
@@ -1092,6 +1263,167 @@
         </div>
     </div>
 
+    <div id="customer-expectations" class="window window-close">
+        <div class="window-blur"></div>
+        <div class="window-dialog window-dialog-md">
+            <div class="window-content">
+                <div class="window-scroll scrollbar-dynamic">
+                    <div class="window-header">
+                        <div class="window-header-content">
+                            <h4>Customer expectations</h4>
+                        </div>
+                        <div class="window-header-close">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <ul class="window-points">
+                            <li>
+                                <p><strong>I drop off my car easily</strong> at the Porsche premises</p>
+                            </li>
+                            <li>
+                                <p>I am <strong>welcomed personally</strong></p>
+                            </li>
+                            <li>
+                                <p>My Service Consultant is very <strong>well informed about me and my car</strong></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="best-practices" class="window window-close">
+        <div class="window-blur"></div>
+        <div class="window-dialog window-dialog-md">
+            <div class="window-content">
+                <div class="window-scroll scrollbar-dynamic">
+                    <div class="window-header">
+                        <div class="window-header-content">
+                            <h4>Best practices</h4>
+                            <p>Use this impulses and best practices to create the best service experience to your customer.</p>
+                        </div>
+                        <div class="window-header-close">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <ul class="window-points">
+                            <li>
+                                <p>Re-check all scheduled service check-ins of the day before customers’ arrival: Be informed about the job order details and customer profiles to provide personalized service.</p>
+                            </li>
+                            <li>
+                                <p>Conduct a joint test drive together with the customer in case of NVH (Noise Vibration Harshness).</p>
+                            </li>
+                            <li>
+                                <p>Perform a service reception (direct dialogue reception) with the customer.</p>
+                            </li>
+                            <li>
+                                <p>In case of Porsche Connect specific requests, ask the Porsche Pro to give advise or assistance to the customer.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="key-results" class="window window-close">
+        <div class="window-blur"></div>
+        <div class="window-dialog window-dialog-lg">
+            <div class="window-content">
+                <div class="window-scroll scrollbar-dynamic">
+                    <div class="window-header">
+                        <div class="window-header-content">
+                            <h4>Key results</h4>
+                            <p>Use this impulses and best practices to create the best service experience to your customer.</p>
+                        </div>
+                        <div class="window-header-close">
+                            <img src="assets/images/icons/icon-close.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="key">
+                            <div class="key-header">
+                                <ul class="key-tabs">
+                                    <li class="key-tab key-tab-active" data-tab="customer-facing">
+                                        Customer facing
+                                    </li>
+                                    <li class="key-tab" data-tab="non-customer-facing">
+                                        Non-Customer facing
+                                    </li>
+                                </ul>
+
+                                <div class="key-button button primary">
+                                    <img src="assets/images/icons/icon-printer.svg" alt="">
+                                    Print
+                                </div>
+                            </div>
+
+                            <div id="customer-facing" class="key-content key-content-active">
+                                <div class="key-lists key-lists-bg-white">
+                                    <div class="key-list-header">
+                                        <div class="key-list-header-title">Key result</div>
+                                        <div class="key-list-header-title">Lead</div>
+                                        <div class="key-list-header-title">Supportive</div>
+                                    </div>
+                                    <div class="key-list-data">
+                                        <div class="key-list-result">
+                                            <div class="key-list-result-icon">
+                                                <img src="assets/images/icons/icon-check-gray.svg" alt="">
+                                            </div>
+                                            <div class="key-list-result-content">
+                                                A personalized greeting is provided and customer’s concerns are verified
+                                            </div>
+                                        </div>
+                                        <div class="key-list-lead">
+                                            <div class="labels">
+                                                <span class="label">
+                                                    Service Consultant
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="key-list-supportive">
+                                            <div class="labels">
+                                                <span class="label">
+                                                    Service Assistance
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="key-list-data">
+                                        <div class="key-list-result">
+                                            <div class="key-list-result-icon">
+                                                <img src="assets/images/icons/icon-check-gray.svg" alt="">
+                                            </div>
+                                            <div class="key-list-result-content">
+                                                A test drive was carried out in the event of any noise or driving dynamic concerns
+                                            </div>
+                                        </div>
+                                        <div class="key-list-lead">
+                                            <div class="labels">
+                                                <span class="label">
+                                                    Service Consultant
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="key-list-supportive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="non-customer-facing" class="key-content">
+                                sadf
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div id="overlayer">
         <div class="loader-block">
             <div class="loader">
@@ -1106,12 +1438,12 @@
     <script src="assets/js/global.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/profile.js"></script>
-    <script src="assets/js/tab.js"></script>
-    <script src="assets/js/service.js"></script>
+    <script src="assets/js/keys.js"></script>
     <script src="assets/js/tooltip.js"></script>
     <script src="assets/js/dropdownComp.js"></script>
     <script src="assets/js/aside.js"></script>
-    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/label.js"></script>
     <script src="assets/js/link-scroll.js"></script>
+    <script src="assets/js/service.js"></script>
 </body>
 </html>

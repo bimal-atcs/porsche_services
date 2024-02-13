@@ -59,6 +59,14 @@
     }
 }
 
+.window-dialog-md {
+    max-width: 760px;
+}
+
+.window-dialog-lg {
+    max-width: 1080px;
+}
+
 .window-content {
     width: 100%;
     max-height: 100%;
@@ -84,6 +92,13 @@
     margin-bottom: $spacing-md-high;
 }
 
+.window-header-content {
+
+    p {
+        color: $color-grey-mid;
+    }
+}
+
 .window-header-close {
     cursor: pointer;
     width: 24px;
@@ -101,4 +116,16 @@
     width: 40px;
     height: 40px;
     position: absolute;
+}
+
+.window-points {
+
+    li {
+        padding: 24px 8px;
+        border-bottom: 1px solid $color-grey-low;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
 }

@@ -9,6 +9,7 @@
 }
 
 .accordion-link {
+    cursor: pointer;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -79,6 +80,34 @@
     h5 {
         font-weight: normal;
     }
+}
+
+.accordion-icons {
+    flex: 1 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.accordion-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.accordion-icon-show {
+    display: inline-flex;
 }
 
 

@@ -1,0 +1,36 @@
+// imported config
+@use "../config" as *;
+
+
+.message {
+    border-radius: 4px;
+    display: none;
+    padding: 16px;
+    gap: 8px;
+    align-items: center;
+    background-color: $color-notify-light;
+}
+
+.message-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    border: 1px solid $color-notify;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.message-text {
+    flex: 1 0;
+}
+
+.message-show {
+    display: flex;
+}

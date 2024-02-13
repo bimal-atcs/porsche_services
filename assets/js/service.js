@@ -1,12 +1,16 @@
 //run when page first loads
 $(document).ready(function () {
-    serviceNav();
+    serviceAccordion();
 });
 
 //run on every window resize
 $(window).resize(function () {
-    serviceNav();
 });
 
-function serviceNav() {
+function serviceAccordion() {
+    $('.accordion-link').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('accordion-link-active');
+        $(this).next('.accordion-content').slideToggle(350);
+    });  
 }

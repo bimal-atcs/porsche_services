@@ -8,8 +8,8 @@
         border-bottom-color: $color-error;
 
         &::before {
-            bottom: -14px;
             opacity: 0.1;
+            bottom: -14px;
             color: $color-error;
         }
 
@@ -100,31 +100,6 @@
     }
 }
 
-// .service-step-active {
-
-//     a {
-//         color: $color-error;
-//         border-bottom-color: $color-error;
-
-//         &::before {
-//             bottom: -14px;
-//             opacity: 0.1;
-//             color: $color-error;
-//         }
-
-//         @include media-up($screen-md) {
-
-//             &:hover {
-//                 border-bottom-color: $color-error;
-
-//                 &::before {
-//                     color: $color-error;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 
 // ----------------------------
 .service-view {
@@ -143,9 +118,13 @@
 .service-panel {
     padding: 0 50px 100px;
     border-radius: 8px 0 0 0;
-    background-color: $color-white;
-    width: calc(100% - #{$aside-width});
     counter-reset: count-sub;
+    background-color: $color-white;
+    width: calc(100% - #{$aside-width-lg});
+    
+    @include media-up($screen-xxl) {
+        width: calc(100% - #{$aside-width-xxl});
+    }
 }
 
 .service-slide {
@@ -232,6 +211,10 @@
                 left: -1px;
                 bottom: -1px;
             }
+
+            .service-hero-item-icon-arrow {
+                top: 34px;
+            }
         }
     }
 }
@@ -242,6 +225,19 @@
     top: 30px;
     right: 30px;
     position: absolute;
+}
+
+.service-hero-item-icon-arrow {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: top;
+    }
 }
 
 .service-hero-item-icon-top-right,
@@ -292,7 +288,6 @@
     }
 }
 
-
 .service-hero-item-info {
     margin-top: 16px;
     display: flex;
@@ -304,7 +299,8 @@
     background-color: $base-color-bg;
 
     span {
-        margin-top: 2px;
+        top: 2px;
+        position: relative;
     }
 }
 
@@ -323,8 +319,8 @@
 
 // -------------------------
 .service-slide-header {
+    margin-bottom: 30px;
     cursor: pointer;
-    margin-bottom: 40px;
     position: relative;
     border-bottom: 2px solid $color-grey-low;
 
@@ -334,23 +330,6 @@
         display: inline-block;
         margin-bottom: -2px;
         background-color: $color-white;
-
-        &::before {
-            content: '#';
-            position: absolute;
-            right: 100%;
-            margin-right: 10px;
-            bottom: 5px;
-            font-size: 24px;
-            opacity: 0;
-            visibility: hidden;
-            color: rgba($color-grey-high, 0.6);
-
-            @include media-up($screen-md) {
-                transition: $transition;
-                transition-property: opacity, visibility;
-            }
-        }
 
         &::after {
             content: '';
@@ -368,12 +347,9 @@
         
         &:hover {
 
-            h2 {
-
-                &::before {
-                    opacity: 1;
-                    visibility: visible;
-                }
+            .service-slide-header-link {
+                opacity: 1;
+                visibility: visible;
             }
 
             .service-slide-header-button {
@@ -381,6 +357,22 @@
                 visibility: visible;
             }
         }
+    }
+}
+
+.service-slide-header-link {
+    right: 100%;
+    padding-right: 5px;
+    bottom: 5px;
+    font-size: 24px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    color: rgba($color-grey-high, 0.6);
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity, visibility;
     }
 }
 
@@ -431,6 +423,10 @@
     &::after {
         content: counter(count-sub);
     }
+}
+
+.service-slide-message {
+    margin-bottom: 30px;
 }
 
 .service-slide-accordion {

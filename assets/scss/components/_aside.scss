@@ -5,8 +5,12 @@
 .aside {
     z-index: 1;
     position: sticky;
-    width: $aside-width;
+    width: $aside-width-lg;
     counter-reset: count-sub;
+
+    @include media-up($screen-xxl) {
+        width: $aside-width-xxl;
+    }
 }
 
 .aside-nav {
@@ -14,11 +18,30 @@
 }
 
 .aside-links {
+    margin-bottom: 40px;
     padding: 0 44px;
     display: flex;
     flex-direction: column;
 
     li {
+        border-bottom: 1px solid $color-grey-low;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.aside-heading {
+    padding: 0 44px;
+    
+    h6 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+        opacity: 0.6;
+        color: $color-grey-mid;
+        text-transform: uppercase;
         border-bottom: 1px solid $color-grey-low;
     }
 }
@@ -38,7 +61,7 @@
 
         &:hover {
             color: $color-error;
-            background-color: rgba($color-grey-high, 0.02);
+            background-color: rgba($color-grey-high, 0.05);
 
             .aside-link-arrow {
                 filter: none;
@@ -68,6 +91,11 @@
 
 .aside-link-avatar {
     @include circle(18px);
+    display: none;
+}
+
+.aside-link-avatar-show {
+    display: flex;
 }
 
 .aside-link-header {
@@ -106,8 +134,12 @@
     display: grid;
     align-items: center;
     justify-items: center;
-    width: $aside-width;
     background-color: $base-color-bg;
+    width: $aside-width-lg;
+
+    @include media-up($screen-xxl) {
+        width: $aside-width-xxl;
+    }
 }
 
 .aside-dropdown {

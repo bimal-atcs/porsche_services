@@ -1,0 +1,18 @@
+// NOTE: we could use @media hover
+@use "variables" as *;
+@use "shapes" as *;
+
+@mixin comp-icon($size, $image-size, $border-width, $radius: 4px) {
+    @include rounded($size, $radius);
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        width: $image-size;
+        height: $image-size;
+    }
+}

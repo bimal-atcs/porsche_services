@@ -4,16 +4,10 @@
 $info-width: 650px;
 
 .info-block {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     top: 50%;
     position: absolute;
     transform: translate(0, -50%);
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: opacity;
-    }
 }
 
 .info-block-left {
@@ -43,8 +37,7 @@ $info-width: 650px;
 }
 
 .info-block-show {
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 .info {

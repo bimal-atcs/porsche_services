@@ -1,0 +1,232 @@
+// imported config
+@use "../config" as *;
+
+// --------------
+.key-accordion {
+    counter-reset: count;
+}
+
+.key-accordion-list-disabled {
+    opacity: 0.6;
+    pointer-events: none;
+
+    .key-accordion-link-title {
+        opacity: 0.3;
+    }
+    
+    .key-accordion-link-buttons,
+    .key-accordion-content {
+        visibility: hidden;
+    }
+}
+
+.key-accordion-link {
+    cursor: pointer;
+    display: flex;
+    border-radius: 4px 4px 0 0;
+    align-items: center;
+    padding: 15px 10px;
+    position: relative;
+    overflow: hidden;
+    counter-increment: count;
+    border-bottom: 1px solid $color-grey-low;
+
+    &::before {
+        content: counter(count) ".";
+        font-size: 64px;
+        font-weight: normal;
+        line-height: 1;
+        color: rgba($color-grey-high, 0.1);
+        position: absolute;
+        bottom: -16px;
+        left: 0;
+    }
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: rgba($color-grey-low, 0.1);
+        }
+    }
+}
+
+.key-accordion-link-active {
+
+    .key-accordion-link-button-arrow {
+        transform: rotate(180deg);
+    }
+}
+
+.key-accordion-link-title {
+    flex: 1 0;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    color: $color-grey-high;
+    text-transform: uppercase;
+    padding-left: 25px;
+}
+
+.key-accordion-link-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.key-accordion-link-button.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.key-accordion-link-button-results {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: $base-color-bg;
+}
+
+.key-accordion-link-button-arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-accordion-content {
+    display: none;
+    padding: 16px 0 16px 16px;
+    border-bottom: 1px solid $color-grey-low;
+}
+
+
+// ------------
+.key-header {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.key-tabs {
+    flex: 1 0;
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.key-tab {
+    cursor: pointer;
+    font-weight: 600;
+    color: $color-grey-mid;
+    border-bottom: 1px solid transparent;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: color;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.key-tab-active {
+    color: $color-primary;
+    border-color: $color-primary;
+}
+
+.key-button {
+
+    img {
+        filter: invert(1);
+    }
+}
+
+.key-content {
+    display: none;
+}
+
+.key-content-active {
+    display: block;
+}
+
+
+// ---------------------
+.key-lists {
+    border-radius: 8px;
+    background-color: rgba($color-grey-low, 0.15);
+
+    &.key-lists-bg-white {
+        background-color: $color-white;
+    }
+}
+
+.key-list-header {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 180px 230px;
+    color: $color-disabled;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 18px 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.key-list-data {
+    padding: 24px 8px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 180px 230px;
+    align-items: center;
+    margin-bottom: -1px;
+    border-top: 1px solid $color-grey-low;
+    border-bottom: 1px solid $color-grey-low;
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+}
+
+.key-list-result {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.key-list-result-icon {
+    @include circle(32px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $base-color-bg;
+}
+
+.key-list-result-content {
+    flex: 1 0;
+}
+
+.key-list-supportive {
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .labels {
+        flex: 1 0;
+    }
+}
+
+.key-list-supportive-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        opacity: 0.5;
+    }
+}
