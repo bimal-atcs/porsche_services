@@ -71,10 +71,13 @@
     @include media-up($screen-lg) {
         left: 0;
         opacity: 0;
-        padding-top: 80px;
         height: auto;
         max-height: 640px;
         transition: none;
+
+        &.scroll-content {
+            padding-top: 80px;
+        }
     }
 
     .scroll-x {

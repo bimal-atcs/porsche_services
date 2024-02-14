@@ -32,15 +32,15 @@ function slidingCard() {
 
 // info hover popup
 function infoHover() {
-    $winWidth = $(window).width();
+    let winWidth = $(window).width();
 
     $('.sliding-card').mouseenter(function(e) {
         e.preventDefault();
         $(this).find(".info-block").addClass('info-block-show');
 
-        $slideCardThis = $(this).offset().left;
-        $getWdith = $winWidth/2;
-        if($slideCardThis < $getWdith) {
+        let slideCardThis = $(this).offset().left;
+        let getWdith = winWidth/2;
+        if(slideCardThis < getWdith) {
             $(".info-block").removeClass('info-block-right');
             $(this).find(".info-block").addClass('info-block-left');
         }

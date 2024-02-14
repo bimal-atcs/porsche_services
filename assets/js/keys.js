@@ -11,7 +11,7 @@ $(window).resize(function () {
 // key tabbing
 function keyTab() {
     $('.key-tab').click(function(){
-		var tab_id = $(this).attr('data-tab');
+		let tab_id = $(this).attr('data-tab');
 		$('.key-tab').removeClass('key-tab-active');
 		$('.key-content').removeClass('key-content-active');
 

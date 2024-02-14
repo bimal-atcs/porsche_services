@@ -5,12 +5,8 @@
 .aside {
     z-index: 1;
     position: sticky;
-    width: $aside-width-lg;
+    width: $aside-width;
     counter-reset: count-sub;
-
-    @include media-up($screen-xxl) {
-        width: $aside-width-xxl;
-    }
 }
 
 .aside-nav {
@@ -129,17 +125,13 @@
 .aside-bottom {
     z-index: 1;
     bottom: 0;
-    height: 120px;
+    height: 100px;
     position: fixed;
     display: grid;
     align-items: center;
     justify-items: center;
     background-color: $base-color-bg;
-    width: $aside-width-lg;
-
-    @include media-up($screen-xxl) {
-        width: $aside-width-xxl;
-    }
+    width: $aside-width;
 }
 
 .aside-dropdown {

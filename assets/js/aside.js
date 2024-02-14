@@ -9,26 +9,26 @@ $(window).resize(function () {
 });
 
 function aside() {
-    $windowHeight = $(window).height();
-    $headerH = $('.header').height();
-    $serviceContentPadding = parseInt($('.service-content').css('padding-top'));
-    $serviceBlockPadding = parseInt($('.service-block').css('padding-top'));
-    $serviceViewPadding = parseInt($('.service-view').css('padding-top'));
-    $sum = $headerH + $serviceContentPadding + $serviceBlockPadding + $serviceViewPadding;
+    let windowHeight = $(window).height();
+    let headerH = $('.header').height();
+    let serviceContentPadding = parseInt($('.service-content').css('padding-top'));
+    let serviceBlockPadding = parseInt($('.service-block').css('padding-top'));
+    let serviceViewPadding = parseInt($('.service-view').css('padding-top'));
+    let sum = headerH + serviceContentPadding + serviceBlockPadding + serviceViewPadding;
     
     if($('.service-steps').hasClass('service-steps-sticky')) {
-        $stepsH = $('.service-steps').outerHeight();
+        let stepsH = $('.service-steps').outerHeight();
 
-        $('.aside-nav').css('height', $windowHeight - ($sum + $stepsH - $serviceContentPadding));
-        $('.aside').css('top', $headerH + $stepsH + $serviceBlockPadding);
+        $('.aside-nav').css('height', windowHeight - (sum + stepsH - serviceContentPadding));
+        $('.aside').css('top', headerH + stepsH + serviceBlockPadding);
     } else {
-        $('.aside-nav').css('height', $windowHeight - ($headerH + $serviceBlockPadding));
-        $('.aside').css('top', $headerH + $serviceBlockPadding);
+        $('.aside-nav').css('height', windowHeight - (headerH + serviceBlockPadding));
+        $('.aside').css('top', headerH + serviceBlockPadding);
     }
 
     if($('.aside-dropdown').hasClass('dropdown-option')) {
-        $asideButton = $('.aside-bottom').outerHeight();
-        $('.aside-links').css('margin-bottom', $asideButton);
+        let asideButton = $('.aside-bottom').outerHeight();
+        $('.aside-links').css('margin-bottom', asideButton);
     } else {
         $('.aside-links').css('margin-bottom', '');
     }

@@ -9,10 +9,9 @@ $(window).resize(function () {
 });
 
 function pageContent() {
-    $headerHeight = $('.header').outerHeight();
-    $footerHeight = $('.footer').outerHeight();
+    let footerHeight = $('.footer').outerHeight();
 
     $(".page-content").css({
-        'margin-bottom': $footerHeight
+        'margin-bottom': footerHeight
     });
 }

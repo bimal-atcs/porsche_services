@@ -3,15 +3,16 @@
 
 // page structure
 .page-body {
-    z-index: 1;
-
+    
     // page scroll on
     &.page-scroll-on {
         height: 100%;
+        z-index: 1;
     }
     
     // page scroll off
     &.page-scroll-off {
+        z-index: 1;
 
         > .scroll-content {
             overflow-y: hidden;

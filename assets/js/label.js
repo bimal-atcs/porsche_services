@@ -9,11 +9,8 @@ $(window).resize(function () {
 });
 
 function labelHover() {
-    $winWidth = $(window).width();
-    $winHeight = $(window).height();
-
-    $labelProfileTop = $('.label-profile').offset().top;
-    $labelProfileLeft = $('.label-profile').offset().left;
+    let winWidth = $(window).width();
+    let winHeight = $(window).height();
 
     $('.label-profile-card').removeClass('profile-card-top');
     $('.label-profile-card').removeClass('profile-card-right');
@@ -27,22 +24,24 @@ function labelHover() {
             e.preventDefault();
             $(this).find('.label-profile-card').addClass('profile-card-show');
     
-            $getWidth = $winWidth/2;
-            $getHeight = $winHeight/2;
-            $toolTipLeft = $(this).offset().left;
-            $toolTipTop = $(this).offset().top;
-            
-            if($toolTipTop < $getHeight) {
+            let getWidth = winWidth/2;
+            let getHeight = winHeight/2;
+            let labelTipTop = $(this).offset().top;
+            let labelTipLeft = $(this).offset().left;
+
+            // from top
+            if(labelTipTop < getHeight) {
                 $(this).find('.label-profile-card').addClass('profile-card-top');
             }
-            else if($toolTipTop > $getHeight) {
+            else if(labelTipTop > getHeight) {
                 $(this).find('.label-profile-card').addClass('profile-card-bottom');
             }
 
-            if($toolTipLeft < $getWidth) {
+            // from left
+            if(labelTipLeft < getWidth) {
                 $(this).find('.label-profile-card').addClass('profile-card-left');
             }
-            else if($toolTipLeft > $getWidth) {
+            else if(labelTipLeft > getWidth) {
                 $(this).find('.label-profile-card').addClass('profile-card-right');
             }
         }).mouseleave(function(e) {
