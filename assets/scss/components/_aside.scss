@@ -13,6 +13,40 @@
     position: relative;
 }
 
+.aside-tab-block {
+    padding: 0 44px;
+}
+
+.aside-tabs {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-grey-low;
+}
+
+.aside-tab {
+    cursor: pointer;
+    flex: 1 0;
+    font-weight: 600;
+    color: $color-grey-mid;
+    padding: 10px;
+    border-bottom: 1px solid transparent;
+}
+
+.aside-tab-active {
+    color: $color-primary;
+    border-bottom-color: $color-primary;
+}
+
+.aside-content {
+    display: none;
+}
+
+.aside-content-active {
+    display: block;
+}
+
 .aside-links {
     margin-bottom: 40px;
     padding: 0 44px;

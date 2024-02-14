@@ -1,13 +1,16 @@
 //run when page first loads
 $(document).ready(function () {
     aside();
+    asideTab();
 });
 
 //run on every window resize
 $(window).resize(function () {
     aside();
+    asideTab();
 });
 
+// aside navbar
 function aside() {
     let windowHeight = $(window).height();
     let headerH = $('.header').height();
@@ -32,4 +35,16 @@ function aside() {
     } else {
         $('.aside-links').css('margin-bottom', '');
     }
+}
+
+// aside tabbing
+function asideTab() {
+    $('.aside-tab').click(function(){
+		let tab_id = $(this).attr('data-tab');
+		$('.aside-tab').removeClass('aside-tab-active');
+		$('.aside-content').removeClass('aside-content-active');
+
+		$(this).addClass('aside-tab-active');
+		$("#"+tab_id).addClass('aside-content-active');
+	})
 }

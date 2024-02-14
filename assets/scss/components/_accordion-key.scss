@@ -1,6 +1,12 @@
 // imported config
 @use "../config" as *;
 
+
+// --------------
+.key {
+    width: 100%;
+}
+
 // --------------
 .key-accordion {
     counter-reset: count;
@@ -24,9 +30,9 @@
     cursor: pointer;
     display: flex;
     border-radius: 4px 4px 0 0;
-    align-items: flex-end;
-    padding: 15px 10px;
-    min-height: 70px;
+    align-items: center;
+    padding: 0 10px;
+    min-height: 60px;
     position: relative;
     overflow: hidden;
     counter-increment: count;
@@ -82,7 +88,11 @@
 }
 
 .key-accordion-link-button-results {
-    padding: 8px 12px;
+    padding: 0 12px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     background-color: $base-color-bg;
 }

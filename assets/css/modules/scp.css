@@ -1,1 +1,65 @@
-.scp .scroll-element.scroll-x{display:none !important}.scp-content{padding-top:128px}.scp-header{margin-bottom:48px}.scp-group{display:flex;gap:30px;flex-direction:column;align-items:center}@media screen and (min-width: 1280px){.scp-group{gap:0;flex-direction:row}}.scp-group-header{flex:1 0;display:flex;align-items:center}.scp-group-header h2{font-weight:normal}.scp-heading-icon{cursor:pointer;width:32px;height:32px;display:flex;justify-content:center;align-items:center;margin-left:10px}.scp-group-filter{display:flex;align-items:center;justify-content:flex-end}.scp-filter{cursor:pointer;display:flex;align-items:center;margin-right:24px}.scp-filter-icon{margin-right:5px;width:16px;height:16px;display:flex;justify-content:center;align-items:center}
+.scp .scroll-element.scroll-x {
+  display: none !important;
+}
+
+.scp-content {
+  padding-top: 128px;
+}
+
+.scp-header {
+  margin-bottom: 48px;
+}
+
+.scp-group {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .scp-group {
+    gap: 0;
+    flex-direction: row;
+  }
+}
+
+.scp-group-header {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+}
+.scp-group-header h2 {
+  font-weight: normal;
+}
+
+.scp-heading-icon {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.scp-group-filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.scp-filter {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.scp-filter-icon {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
