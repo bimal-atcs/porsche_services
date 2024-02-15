@@ -37,7 +37,7 @@ function toolTipHover() {
         $(".tip").removeClass('tip-top-right');
     });
 
-    // tip has tip-view
+    // tip has tip-view-option
     if($('.tip').hasClass('tip-view-option')) {
         $('.tip-view').removeClass('tip-view-left');
         $('.tip-view').removeClass('tip-view-right');

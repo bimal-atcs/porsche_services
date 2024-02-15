@@ -78,9 +78,13 @@ h6, .heading-6 {
     line-height: $h6-line-height;
 }
 
-
-
 // paragraph
 p {
     margin: 0;
+}
+
+// bullet listing
+.bullet-lists {
+    list-style-type: square;
+    padding-left: 25px;
 }

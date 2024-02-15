@@ -468,7 +468,6 @@
     }
 }
 
-
 .service-slide-figure {
     margin: 10px 0;
     padding: 0;
@@ -503,7 +502,35 @@
     }
 }
 
-// ---------------
+// --------------------
+.service-slide-roles {
+    border-radius: 8px;
+    background-color: rgba($base-color-bg, 0.4);
+}
+
+.service-slide-role-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-slide-role-item {
+    padding: 16px;
+    flex: 1 0 50%;
+    max-width: 50%;
+    border-bottom: 1px solid $color-grey-low;
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
+
+    h6 {
+        margin-bottom: 16px;
+    }
+}
+
+
+// ------------------
+// scp steps process
 #select-initiation {
 
     .initiation {

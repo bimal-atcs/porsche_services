@@ -23,19 +23,10 @@ function labelHover() {
         $('.label-profile').mouseenter(function(e) {
             e.preventDefault();
             $(this).find('.label-profile-card').addClass('profile-card-show');
-    
-            let getWidth = winWidth/2;
-            let getHeight = winHeight/2;
-            let labelTipTop = $(this).offset().top;
-            let labelTipLeft = $(this).offset().left;
+            $(this).find('.label-profile-card').addClass('profile-card-bottom');
 
-            // from top
-            if(labelTipTop < getHeight) {
-                $(this).find('.label-profile-card').addClass('profile-card-top');
-            }
-            else if(labelTipTop > getHeight) {
-                $(this).find('.label-profile-card').addClass('profile-card-bottom');
-            }
+            let getWidth = winWidth/2;
+            let labelTipLeft = $(this).offset().left;
 
             // from left
             if(labelTipLeft < getWidth) {

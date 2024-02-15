@@ -10,6 +10,19 @@ $(window).resize(function () {
 // page scroll to section
 function dataScroll() {
     $('.service-hero-item').removeClass('service-hero-item-active');
+
+    // remove active class on scroll
+    $(window).scroll(function() {
+        let headerHeight = $('.header').outerHeight();
+        let winScroll = $(window).scrollTop();
+        let serviceSlidesTop = $('.service-slides').offset().top;
+    
+        if (winScroll >= serviceSlidesTop - headerHeight) {
+            $('.service-hero-item').removeClass('service-hero-item-active');
+        }
+    });
+
+    // scroll to ID section
     $('.service-hero-item').click(function(e) {
         e.preventDefault();
         let headerHeight = $('.header').outerHeight();

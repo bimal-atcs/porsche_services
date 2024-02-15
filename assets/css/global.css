@@ -206,6 +206,11 @@ p {
   margin: 0;
 }
 
+.bullet-lists {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
 .badges {
   padding: 2px 5px 0 5px;
   min-width: 22px;
@@ -1001,6 +1006,11 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.labels-column {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .label {
@@ -3062,11 +3072,6 @@ p {
   margin-top: 0;
 }
 
-.accordion-content-lists {
-  padding-left: 25px;
-  list-style-type: square;
-}
-
 @media screen and (min-width: 1280px) {
   .accordion-link-active:hover {
     background-color: #fff;
@@ -3305,6 +3310,18 @@ p {
 }
 .key-list-supportive-icon img {
   opacity: 0.5;
+}
+
+.scroll-up {
+  position: fixed;
+  z-index: 99;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
+
+.scroll-up-show {
+  display: block;
 }
 
 /*

@@ -1,0 +1,14 @@
+// imported config
+@use "../config" as *;
+
+.scroll-up {
+    position: fixed;
+    z-index: 99;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+}
+
+.scroll-up-show {
+    display: block;
+}

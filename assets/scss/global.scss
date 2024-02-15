@@ -1,7 +1,8 @@
 // global file is common for all pages
 // NOTE:
-// 1. for desktop above md (1280px) hover applied
-// 2. @media hover could be used instead
+// 1. Only desktop above md > 1280px hover applied
+// 2. @media (hover: hover) could be used instead
+//    - may problem for some effects and hover
 
 // root
 @use "root/fonts";
@@ -32,6 +33,7 @@
 @use "components/message";
 @use "components/accordion-service";
 @use "components/accordion-key";
+@use "components/scroll-up";
 
 
 

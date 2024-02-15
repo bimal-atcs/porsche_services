@@ -422,6 +422,29 @@
   border-bottom: 0;
 }
 
+.service-slide-roles {
+  border-radius: 8px;
+  background-color: rgba(238, 239, 242, 0.4);
+}
+
+.service-slide-role-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-slide-role-item {
+  padding: 16px;
+  flex: 1 0 50%;
+  max-width: 50%;
+  border-bottom: 1px solid #d8d8db;
+}
+.service-slide-role-item:last-of-type {
+  border-bottom: 0;
+}
+.service-slide-role-item h6 {
+  margin-bottom: 16px;
+}
+
 #select-initiation .initiation a {
   color: #bb302c;
   border-bottom-color: #bb302c;
