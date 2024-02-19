@@ -121,14 +121,13 @@
     padding-top: 50px;
     background-color: $base-color-bg;
     display: flex;
-    align-items: flex-start;
 }
 
 
 // ------------
 .service-panel {
     padding: 0 50px 100px;
-    border-radius: 8px 0 0 0;
+    border-radius: 8px 0 0 8px;
     counter-reset: count-sub;
     background-color: $color-white;
     width: calc(100% - #{$aside-width});
@@ -143,20 +142,20 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 0 80px;
+    gap: 0 30px;
     padding-bottom: 80px;
 }
 
 .service-hero-content {
-    padding: 50px 0 190px;
+    padding: 50px 50px 190px 0;
     flex: 1 0;
 
     h2 {
         font-weight: normal;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
 
-        ~ h4 {
-            margin-top: -8px;
+        + h4 {
+            margin-top: -16px;
         }
     }
 
@@ -171,7 +170,6 @@
 
     p {
         font-size: 18px;
-        color: $color-grey-high;
     }
 }
 
@@ -187,8 +185,161 @@
         height: 100%;
         object-fit: cover;
     }
+
+    video {
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        object-fit: cover;
+    }
 }
 
+.service-hero-figure-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+
+
+// -----------------------------
+.service-users {
+    padding-bottom: 50px;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.service-user-block {
+    display: flex;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 16px 80px 16px 16px;
+    position: relative;
+    background-color: rgba($base-color-bg, 0.4);
+}
+
+.service-user-arrow {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    right: 20px;
+    top: 28px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: $global-hover-radius;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: rgba($global-hover-bg, 0.4);
+        }
+    }
+}
+
+.service-user-arrow-show {
+    display: flex;
+}
+
+.service-user-profile {
+    display: flex;
+    padding-right: 32px;
+    border-right: 1px solid $color-grey-low;
+
+    + .service-user-details {
+        margin-left: 32px;
+    }
+}
+
+.service-user-profile-avatar {
+    @include circle(40px);
+    margin-right: 8px;
+}
+
+.service-user-profile-heading {
+    flex: 1 0;
+
+    h6 {
+        font-weight: normal;
+    }
+
+    p {
+        color: $color-grey-mid;
+    }
+}
+
+.service-user-details {
+    flex: 1 0;
+    position: relative;
+
+    h6 {
+        color: $color-disabled;
+        margin-bottom: 4px;
+    }
+}
+
+.service-user-detail {
+    display: flex;
+    max-height: 25px;
+    overflow: hidden;
+}
+
+.service-user-detail-lists {
+    display: flex;
+    height: 100%;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid $color-primary;
+
+        img {
+            width: 24px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.service-user-detail-view {
+    padding-left: 10px;
+    flex-shrink: 0;
+    color: $color-grey-mid;
+    display: none;
+}
+
+.service-user-detail-view-show {
+    display: block;
+}
+
+.service-user-content {
+    padding-top: 16px;
+    font-size: 18px;
+
+    br + br {
+        content: '';
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+
+// -----------------------
 .service-hero-items {
     margin-top: -130px;
     flex: 1 100%;

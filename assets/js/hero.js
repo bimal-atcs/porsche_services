@@ -22,6 +22,13 @@ function videoClick() {
         $(this).parents('.hero-alert').find('video').get(0).pause();
         $(this).removeAttr('style');
     });
+
+    // click on close icon
+    $('.hero-alert-header-icon').click(function() {
+        if($('.hero-alert').hasClass('hero-alert-show')) {
+            $(this).parents('.hero-alert').removeClass('hero-alert-show');
+        }
+    });
 }
 
 

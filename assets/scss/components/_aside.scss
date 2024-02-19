@@ -6,6 +6,7 @@
     z-index: 1;
     position: sticky;
     width: $aside-width;
+    align-self: flex-start;
     counter-reset: count-sub;
 }
 
@@ -68,8 +69,8 @@
     h6 {
         font-size: 12px;
         letter-spacing: 1px;
-        padding-bottom: 8px;
         opacity: 0.6;
+        padding: 0 8px 8px;
         color: $color-grey-mid;
         text-transform: uppercase;
         border-bottom: 1px solid $color-grey-low;

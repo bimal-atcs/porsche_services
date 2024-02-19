@@ -30,9 +30,19 @@
     cursor: pointer;
     width: 32px;
     height: 32px;
+    border-radius: $global-hover-radius;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: $global-hover-bg-light;
+        }
+    }
 
     img {
         max-height: 24px;

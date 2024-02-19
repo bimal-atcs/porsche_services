@@ -3,15 +3,55 @@ $(document).ready(function () {
     serviceAccordion();
     serviceWindow();
     serviceScroll();
+    serviceNotifications();
 });
 
 //run on every window resize
 $(window).resize(function () {
 });
 
-// aside scroll service
+
+// user notifications header
+function serviceNotifications() {
+    if($('.service-hero-content').hasClass('service-user')) {
+        let userDetailHeight = $('.service-user-detail').outerHeight();
+        let userDetailListHeight = $('.service-user-detail-lists').outerHeight();
+
+        if(userDetailHeight >= userDetailListHeight) {
+            $('.service-user-detail').removeClass('fixed');
+            $('.service-user-detail-view').removeClass('service-user-detail-view-show');
+            $('.service-user-arrow').removeClass('service-user-arrow-show');
+            $('.service-user-block').css('padding-right', '16px');
+        } else {
+            $('.service-user-block').css('padding-right', '80px');
+            $('.service-user-detail').addClass('fixed');
+            $('.service-user-detail-view').addClass('service-user-detail-view-show');
+            $('.service-user-arrow').addClass('service-user-arrow-show');
+            
+            // click on arrow
+            $('.service-user-arrow').click(function() {
+                let getClass = $(this).parents('.service-user-block').find('.service-user-detail');
+                if (getClass.hasClass('fixed')) {
+                    getClass.css('max-height', '100%');
+                    getClass.removeClass('fixed');
+
+                    if($('.service-user-detail-view').hasClass('service-user-detail-view-show')) {
+                        $('.service-user-detail-view').removeClass('service-user-detail-view-show');
+                    }
+                } else if (!getClass.hasClass('fixed')) {
+                    getClass.addClass('fixed');
+                    getClass.removeAttr('style');
+                    if(!$('.service-user-detail-view').hasClass('service-user-detail-view-show')) {
+                        $('.service-user-detail-view').addClass('service-user-detail-view-show');
+                    }
+                }
+            });
+        }
+    }
+}
+
+// aside link scroll
 function serviceScroll() {
-    $('.aside-link').removeClass('aside-link-active');
     $('.aside-link').click(function(e) {
         e.preventDefault();
         let headerHeight = $('.header').outerHeight();
