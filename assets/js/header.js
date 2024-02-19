@@ -1,6 +1,7 @@
 //run when page first loads
 $(document).ready(function () {
     headerMenu();
+    headerAlert();
 });
 
 //run on every window resize
@@ -8,6 +9,22 @@ $(window).resize(function () {
     headerMenu();
 });
 
+// header alert
+function headerAlert() {
+    if($('.header-navbar-icon').hasClass('header-navbar-icon-alert')) {
+        $('.header-navbar-icon-alert').click(function() {
+            if($('.header-navbar-alert').hasClass('header-navbar-alert-hide')) {
+                $(this).next('.header-navbar-alert').removeClass('header-navbar-alert-hide');
+                $(this).next('.header-navbar-alert').addClass('header-navbar-alert-show');
+            } else if ($('.header-navbar-alert').hasClass('header-navbar-alert-show')) {
+                $(this).next('.header-navbar-alert').addClass('header-navbar-alert-hide');
+                $(this).next('.header-navbar-alert').removeClass('header-navbar-alert-show');
+              }
+        });
+    }
+}
+
+// header menu
 function headerMenu() {
     if($('.page-body').hasClass('scrollbar-dynamic')) {
         $('.page-body').removeClass('page-scroll-off');
