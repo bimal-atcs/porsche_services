@@ -33,6 +33,10 @@
         color: $color-white;
         background-color: $color-primary;
         border-color: $color-primary;
+
+        img {
+            filter: invert(1);
+        }
     }
 
     &.primary-outline {

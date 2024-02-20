@@ -1,0 +1,71 @@
+// imported config
+@use "../config" as *;
+
+.process {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: $base-color-bg;
+}
+
+.process-header {
+    padding: 32px;
+}
+
+.process-heading {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.process-header-close {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -16px;
+    position: absolute;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: $global-hover-bg;
+        }
+    }
+
+    img {
+        max-width: 24px;
+        max-height: 24px;
+    }
+}
+
+.process-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.process-text-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid $color-notify;
+    background-color: $color-notify-light;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}

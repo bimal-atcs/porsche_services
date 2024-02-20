@@ -1,0 +1,52 @@
+// imported config
+@use "../config" as *;
+
+
+// complementary icons
+.icon-comp {
+    border: 0 solid $color-notify;
+    background-color: $color-notify-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.xs {
+        border-width: 1px;
+        @include rounded(20px, 4px);
+    
+        img {
+            max-width: 16px;
+            max-height: 16px;
+        }
+    }
+
+    &.sm {
+        border-width: 1px;
+        @include rounded(28px, 4px);
+    
+        img {
+            max-width: 24px;
+            max-height: 24px;
+        }
+    }
+
+    &.md {
+        border-width: 2px;
+        @include rounded(54px, 8px);
+    
+        img {
+            max-width: 44px;
+            max-height: 44px;
+        }
+    }
+
+    &.xxl {
+        border-width: 8px;
+        @include rounded(196px, 32px);
+
+        img {
+            max-width: 156px;
+            max-height: 156px;
+        }
+    }
+}

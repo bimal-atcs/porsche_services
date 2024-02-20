@@ -203,9 +203,24 @@
     top: 60px;
     left: 50%;
     transform: translate(-50%, 0);
-    display: none;
 }
 
+
+.service-hero-figure-comp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid $color-notify;
+    background-color: $color-notify-light;
+    border-radius: 32px;
+    width: 196px;
+    height: 196px;
+
+    img {
+        max-width: 156px;
+        max-height: 156px;
+    }
+}
 
 // -----------------------------
 .service-users {
