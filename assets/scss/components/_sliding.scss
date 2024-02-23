@@ -54,7 +54,7 @@
     z-index: 2;
     width: 1px;
     min-height: 600px;
-    right: -2px;
+    right: 0;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -86,6 +86,7 @@
 
 // --------------------
 .sliding {
+    padding-right: 1px;
 
     .flickity-viewport {
         overflow: visible;
@@ -156,6 +157,7 @@
 .sliding-grid {
     z-index: 1;
     height: 100%;
+    position: relative;
     counter-reset: count;
 
     &::before {
@@ -169,32 +171,49 @@
     }
 }
 
+// .sliding-area {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     grid-auto-flow: column;
+//     grid-auto-columns: 200px;
+//     overflow-y: hidden;
+//     overflow-x: auto;
+
+//     .sliding-item {
+//         width: 100%;
+//     }
+
+//     .sliding-card {
+//         margin-bottom: -1px;
+//     }
+// }
+
 .sliding-item {
     margin-top: 58px;
     position: relative;
     width: max(205px, calc(100%/7));
-    border-right: 1px solid transparent;
+    border-right: 1px solid $color-grey-low;
 
-    &::after {
-        content: '';
-        top: 0;
-        right: -2px;
-        height: 100%;
-        width: 1px;
-        background-color: $color-grey-low;
-        position: absolute;
-    }
+    // &::after {
+    //     content: '';
+    //     top: 0;
+    //     right: -2px;
+    //     height: 100%;
+    //     width: 1px;
+    //     background-color: $color-grey-low;
+    //     position: absolute;
+    // }
     
     &:first-child {
         border-left: 1px solid $color-grey-low;
     }
 
-    @for $i from 1 through 7 {
-        $num: 7 - $i;
-        &:nth-of-type(#{$i}) {
-            z-index: $num;
-        }
-    }
+    // @for $i from 1 through 7 {
+    //     $num: 7 - $i;
+    //     &:nth-of-type(#{$i}) {
+    //         z-index: $num;
+    //     }
+    // }
 }
 
 .sliding-heading {
@@ -226,11 +245,17 @@
 }
 
 .sliding-cards {
+    margin-left: -1px;
+    margin-right: -2px;
     height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     counter-reset: count-sub;
+
+    &:hover {
+        z-index: 9;
+    }
 }
 
 .sliding-cards-vertical-center {
@@ -239,7 +264,7 @@
     min-height: 600px;
 
     .sliding-card {
-        margin-right: -3px;
+        // margin-right: -3px;
     }
 }
 
@@ -252,7 +277,7 @@
     background-color: $color-white;
     border: 1px solid $color-grey-low;
     margin-bottom: -2px;
-    margin-right: -2px;
+    // margin-right: -2px;
 
 
     @include media-up($screen-md) {
@@ -418,5 +443,5 @@
 }
 
 .steps-card-top {
-    margin-right: -3px;
+    // margin-right: -2px;
 }

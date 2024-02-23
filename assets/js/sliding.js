@@ -18,11 +18,12 @@ function sliding() {
     $('.sliding-item').css('height', $slideHeight);
 }
 
+// on hover slide items
 function slidingCard() {
     $('.sliding-card').mouseenter(function(e) {
         e.preventDefault();
         $(this).parents(".sliding-item").css({
-            'z-index': '99'
+            'z-index': '9'
         });
     }).mouseleave(function(e) {
         e.preventDefault();

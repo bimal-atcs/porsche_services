@@ -9,6 +9,14 @@
     z-index: 100;
     position: fixed;
     background-color: $base-color-bg;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .process-header {
