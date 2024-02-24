@@ -3,7 +3,8 @@
 
 // mega
 .mega {
-    @include media-up($screen-lg) {
+
+    @include media-up($screen-md) {
         &:hover {
             .mega-block {
                 opacity: 1;
@@ -18,7 +19,7 @@
     align-items: center;
     padding: 10px 15px;
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: inline-flex;
         position: relative;
         z-index: 1;
@@ -32,7 +33,7 @@
         ~ img {
             transform: rotate(-90deg);
 
-            @include media-up($screen-lg) {
+            @include media-up($screen-md) {
                 margin-left: 4px;
                 max-height: 16px;
                 transform: none;
@@ -68,7 +69,7 @@
         visibility: visible;
     }
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         left: 0;
         opacity: 0;
         height: auto;
@@ -91,7 +92,7 @@
     height: 100%;
     background-color: $color-white;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         box-shadow: 0 10px 10px 0 rgba($color-black, 0.05);
     }
 }
@@ -120,7 +121,7 @@
         filter: invert(1);
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: none;
     }
 }
@@ -129,7 +130,7 @@
 .mega-menu {
     padding: 100px 0 30px;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         padding: 30px 0;
     }
     
@@ -140,7 +141,7 @@
 
 .mega-row {
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: grid;
         gap: 100px;
         grid-template-columns: repeat(auto-fit, minmax(0%, max-content));
@@ -158,7 +159,7 @@
         margin-bottom: 0;
     }
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         margin-bottom: 0;
     }
 }
@@ -175,7 +176,7 @@
         margin-top: 0;
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         padding: 0;
     }
 }
@@ -183,7 +184,7 @@
 .mega-body {
     padding: 0 8px;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         padding: 0;
     }
 }
@@ -209,6 +210,7 @@
 }
 
 .mega-items {
+    counter-reset: count;
     font-weight: normal;
     font-size: 18px;
     color: $color-primary;
@@ -220,7 +222,7 @@
         position: relative;
         border-bottom: 1px solid rgba($color-grey-low, 0.5);
 
-        @include media-up($screen-lg) {
+        @include media-up($screen-md) {
             min-width: 200px;
             min-height: 56px;
             padding: 0;
@@ -261,21 +263,20 @@
 
 // --------------------
 .mega-col-service {
-    counter-reset: count;
+    counter-increment: count;
+    
+    &::before {
+        font-size: 68px;
+        line-height: 1;
+        color: rgba($color-black, 0.08);
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        content: counter(count) ".";
+    }
 
-    li {
-        padding-left: 30px;
-        counter-increment: count;
-
-        &::before {
-            content: counter(count) ".";
-            font-size: 68px;
-            line-height: 1;
-            color: rgba($color-black, 0.08);
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-        }
+    a {
+        margin-left: 30px;
     }
 }
 
@@ -285,7 +286,7 @@
     padding-top: 15px;
     text-align: right;
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         margin-bottom: 0;
         padding-top: 10px;
         text-align: center;

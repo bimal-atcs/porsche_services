@@ -102,7 +102,7 @@
         margin-right: 15px;
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: none;
     }
 
@@ -146,7 +146,7 @@
         }
     }
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         left: 0;
         height: auto;
         overflow: visible;
@@ -178,7 +178,7 @@
         left: 0;
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         display: none;
         transition: none;
     }
@@ -204,9 +204,9 @@
     padding: 80px 30px 30px;
     min-height: 100vh;
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         padding: 0;
-        gap: 24px;
+        gap: 0;
         align-items: center;
         flex-direction: row;
         min-height: auto;
@@ -221,8 +221,17 @@
         background-color: rgba($color-black, 0.05);
     }
 
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         padding: 4px 6px;
+        margin-right: 16px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include media-up($screen-xl) {
+        margin-right: 24px;
     }
 }
 
@@ -240,7 +249,7 @@
         padding-right: 0;
     }
     
-    @include media-up($screen-lg) {
+    @include media-up($screen-md) {
         z-index: 1;
         position: absolute;
         left: 50%;

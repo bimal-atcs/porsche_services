@@ -36,7 +36,7 @@ function headerMenu() {
         });
     }
 
-    if ($(window).width() >= 1440) {
+    if ($(window).width() >= 1280) {
         $(".header-navbar-drawer").removeClass('header-navbar-drawer-active');
         $('.header-navbar-drawer').removeClass('header-navbar-drawer-overflow');
         $('.mega-block').removeClass('mega-block-active');
