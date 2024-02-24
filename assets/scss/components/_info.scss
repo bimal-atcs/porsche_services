@@ -19,7 +19,7 @@ $info-width: 650px;
     }
 
     .info::after {
-        left: -16px;
+        left: -15px;
     }
 }
 
@@ -32,7 +32,29 @@ $info-width: 650px;
     }
 
     .info::after {
-        right: 0;
+        right: 1px;
+    }
+}
+
+.info-block-top {
+    top: 0;
+    transform: none;
+
+    .info::before,
+    .info::after {
+        top: 25px;
+    }
+}
+
+.info-block-bottom {
+    top: auto;
+    bottom: 0;
+    transform: none;
+
+    .info::before,
+    .info::after {
+        top: 100%;
+        margin-top: -25px;
     }
 }
 

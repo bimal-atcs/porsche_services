@@ -1,20 +1,13 @@
 // imported config
 @use "../config" as *;
 
-// hide horizontal scrollbar
-.scp {
-
-    .scroll-element.scroll-x {
-        display: none !important;
-    }
-}
-
+// ---------------
 .scp-content {
-    padding-top: $header-navbar-height + $spacing-xl-mid;
+    padding-top: $header-navbar-height;
 }
 
 .scp-header {
-    margin-bottom: $spacing-xl-mid;
+    margin-top: $spacing-xl-mid;
 }
 
 .scp-group {

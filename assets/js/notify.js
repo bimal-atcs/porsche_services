@@ -1,12 +1,12 @@
 $(document).ready(function() {
-    videoClick();
+    videoPlayPause();
 });
 
 //run on every window resize
 $(window).resize(function () {
 });
 
-function videoClick() {
+function videoPlayPause() {
     // click on video icon
     $('.notify-body-video-icon').click(function() {
         $('.notify-body-video-text').css('display', 'none');
@@ -26,6 +26,10 @@ function videoClick() {
     // click on close icon
     $('.notify-icon').click(function() {
         if($('.notify').hasClass('notify-show')) {
+            $('.notify-body-video-text').removeAttr('style');
+            $('.notify-body-video-icon').removeAttr('style');
+            $(this).parents('.notify').find('video').get(0).pause();
+            $(this).parents('.notify').find('video').get(0).currentTime = 0;
             $(this).parents('.notify').removeClass('notify-show');
         }
     });

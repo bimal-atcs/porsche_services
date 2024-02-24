@@ -5,14 +5,14 @@
 // ------------------
 .dropdown {
     position: relative;
-}
-
-.dropdown-option {
-    position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.dropdown-option {
+    position: relative;
 }
 
 .dropdown-list {
@@ -95,6 +95,10 @@
     cursor: pointer;
     position: relative;
     border: 1px solid $color-grey-low;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     @include media-up($screen-md) {
         transition: $transition;
