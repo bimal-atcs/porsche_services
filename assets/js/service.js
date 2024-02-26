@@ -27,6 +27,8 @@ function serviceNotifications() {
             
             // click on arrow
             $('.service-user-arrow').click(function() {
+                $(this).toggleClass('service-user-arrow-active');
+                
                 let getClass = $(this).closest('.service-user-block').find('.service-user-detail');
                 if (getClass.hasClass('fixed')) {
                     getClass.css('max-height', '100%');
