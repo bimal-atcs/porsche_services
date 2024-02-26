@@ -66,27 +66,55 @@
     align-items: center;
     background-color: $base-color-bg;
 
-    @for $i from 1 through 9 {
-        $num: 9 - $i;
-        &:nth-child(#{$i}) {
-            z-index: $num;
-            display: grid;
-        }
+    &:nth-child(1) {
+        z-index: 9;
+        display: grid;
     }
-    
-    @for $i from 6 through 9 {
-        &:nth-child(#{$i}) {
-            display: none;
-        }
+
+    &:nth-child(2) {
+        z-index: 8;
+        display: grid;
+    }
+
+    &:nth-child(3) {
+        z-index: 7;
+        display: grid;
+    }
+
+    &:nth-child(4) {
+        z-index: 6;
+        display: grid;
+    }
+
+    &:nth-child(5) {
+        z-index: 5;
+        display: grid;
+    }
+
+    &:nth-child(6) {
+        z-index: 4;
+    }
+
+    &:nth-child(7) {
+        z-index: 3;
+    }
+
+    &:nth-child(8) {
+        z-index: 2;
+    }
+
+    &:nth-child(9) {
+        z-index: 1;
     }
     
     @include media-up($screen-md) {
         margin-right: -12px;
 
-        @for $i from 6 through 9 {
-            &:nth-child(#{$i}) {
-                display: grid;
-            }
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9) {
+            display: grid;
         }
     }
 }
