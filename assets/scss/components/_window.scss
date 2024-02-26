@@ -5,7 +5,6 @@
 .window {
     top: 0;
     left: 0;
-    z-index: 10;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -14,6 +13,7 @@
 
     // window open
     &.window-open {
+        z-index: 99;
         visibility: visible;
 
         .window-blur {
@@ -23,6 +23,7 @@
 
     // window close
     &.window-close {
+        z-index: -1;
         visibility: hidden;
 
         .window-blur {

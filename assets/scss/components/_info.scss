@@ -37,12 +37,12 @@ $info-width: 650px;
 }
 
 .info-block-top {
-    top: 0;
+    top: -100px;
     transform: none;
 
     .info::before,
     .info::after {
-        top: 25px;
+        top: 130px;
     }
 }
 

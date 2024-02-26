@@ -21,7 +21,7 @@
         <div class="layout">
             <div class="header-navbar">
                 <div class="header-navbar-menu">
-                    <span class="aside-link-count"></span>
+                    <span></span>
                 </div>
 
                 <div class="header-navbar-drawer scrollbar-dynamic">
@@ -51,42 +51,42 @@
                                     <div class="layout">
                                         <div class="mega-menu">
                                             <div class="mega-row">
-                                                <div class="mega-col mega-col-service">
+                                                <div class="mega-col">
                                                     <div class="mega-header">
                                                         <p>service process</p>
                                                     </div>
                                                     <ul class="mega-items">
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Initiation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Preparation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Check-in</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Operation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Quality Control</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Check-out</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Follow-up</span>
                                                             </a>
@@ -312,7 +312,7 @@
                                                     </div>
                                                     <div class="mega-body">
                                                         <a class="button primary" href="javascript:;">
-                                                            <img src="assets/images/icons/icon-printer-white.svg" alt="">
+                                                            <img src="assets/images/icons/icon-printer.svg" alt="">
                                                             <span>view job role profles</span>
                                                         </a>
                                                     </div>
@@ -449,10 +449,76 @@
                             </div>
                         </li>
                         <li>
-                            <a href="javascript:;" class="header-navbar-icon">
+                            <a href="javascript:;" class="header-navbar-icon-alert header-navbar-icon">
                                 <span class="header-navbar-icon-notify"></span>
                                 <img src="assets/images/icons/icon-bell-gray.svg" alt="">
                             </a>
+                            <div class="header-navbar-alert header-navbar-alert-hide">
+                                <div class="header-navbar-alert-header">Notifications</div>
+                                <div class="header-navbar-alert-body">
+                                    <ul class="header-navbar-alert-lists">
+                                        <li>
+                                            <a class="header-navbar-alert-list alert-notify" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+
+                                                    <ul class="header-navbar-alert-thumbs">
+                                                        <li>
+                                                            <img src="assets/images/hero/thumb-video.png" alt="">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list alert-notify" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Michael Maier</strong> published <strong>New Content - Porsche Service Station</strong></p>
+                                                    <span>15 January, 2024</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+
+                                                    <ul class="header-navbar-alert-thumbs">
+                                                        <li>
+                                                            <img src="assets/images/hero/hero-thumb-1.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img src="assets/images/hero/hero-thumb-2.jpg" alt="">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header-navbar-alert-footer">
+                                    <a class="header-navbar-alert-link" href="javascript:;">
+                                        <span>View all Notifications</span>
+                                        <div class="header-navbar-alert-link-icon">
+                                            <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <a href="javascript:;" class="header-navbar-icon">
@@ -548,19 +614,19 @@
                                 </div>
 
                                 <div class="service-hero-items">
-                                    <a href="#service-impulses" class="service-hero-item">
+                                    <a href="#service-impulses" class="service-hero-item service-hero-item-scroll">
                                         <div class="service-hero-item-icon service-hero-item-icon-arrow">
                                             <img src="assets/images/icons/icon-arrow-down.svg" alt="">
                                         </div>
                                         <h4>Service impulses</h4>
                                     </a>
-                                    <a href="#key-results" class="service-hero-item">
+                                    <a href="#key-results" class="service-hero-item service-hero-item-scroll">
                                         <div class="service-hero-item-icon service-hero-item-icon-arrow">
                                             <img src="assets/images/icons/icon-arrow-down.svg" alt="">
                                         </div>
                                         <h4>Key results</h4>
                                     </a>
-                                    <a href="javascript:;" class="service-hero-item">
+                                    <a href="#process-map" class="service-hero-item service-hero-item-window">
                                         <div class="service-hero-item-icon">
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
@@ -980,15 +1046,15 @@
         </div>
     </div>
 
-    <div id="process-map" class="process">
+    <div id="process-map" class="process window window-close">
         <div class="process-header">
             <div class="process-heading">
                 <h4>Service Core Process - Charging Solutions Deviations</h4>
-                <div class="process-heading-icon button primary icon">
+                <div class="process-heading-button button primary icon">
                     <img src="assets/images/icons/icon-printer.svg" alt="">
                 </div>
 
-                <div class="process-header-close">
+                <div class="process-header-close window-header-close">
                     <img src="assets/images/icons/icon-close.svg" alt="">
                 </div>
             </div>
@@ -1006,13 +1072,10 @@
                     <div class="sliding-heading">
                         <p>Initiation</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card">
                             <div class="sliding-card-header">
                                 <span class="sliding-counting"></span>
-                                <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                </div>
                                 <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
                                     <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
                                 </div>
@@ -1023,7 +1086,7 @@
                             <div class="sliding-card-body">
                                 <p>Identify Customers Concern and verify Data</p>
                             </div>
-                            <div class="info-block info-block-left">
+                            <div class="info-block">
                                 <div class="info">
                                     <div class="info-items">
                                         <div class="info-item">
@@ -1080,23 +1143,18 @@
                         
                         <div class="sliding-card sliding-card-active">
                             <div class="sliding-card-header">
-                                <div class="sliding-card-header">
-                                    <span class="sliding-counting"></span>
-                                    <div class="sliding-card-icon sliding-card-icon-hide tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                        <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                    </div>
-                                    <div class="sliding-card-icon sliding-card-icon-hide tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                        <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
-                                    </div>
-                                    <div class="sliding-card-arrow">
-                                        <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
-                                    </div>
+                                <span class="sliding-counting"></span>
+                                <div class="sliding-card-icon sliding-card-icon-hide tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
+                                    <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
+                                </div>
+                                <div class="sliding-card-arrow">
+                                    <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
                                 </div>
                             </div>
                             <div class="sliding-card-body">
                                 <p>Identify Customers Concern and verify Data</p>
                             </div>
-                            <div class="info-block info-block-left">
+                            <div class="info-block">
                                 <div class="info">
                                     <div class="info-items">
                                         <div class="info-item">
@@ -1138,7 +1196,7 @@
                     <div class="sliding-heading">
                         <p>Preparation</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card">
                             <div class="sliding-card-header">
                                 <span class="sliding-counting"></span>
@@ -1212,13 +1270,10 @@
                     <div class="sliding-heading">
                         <p>Check-in</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card">
                             <div class="sliding-card-header">
                                 <span class="sliding-counting"></span>
-                                <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
-                                    <img src="assets/images/complementary/icon-body-paint.png" alt="">
-                                </div>
                                 <div class="sliding-card-icon sliding-card-icon-show tip tip-top-left" data-tooltip="This is a deviation message regarding a Body and Paint issue that impacts the core process">
                                     <img src="assets/images/complementary/icon-charging-solutions.png" alt="">
                                 </div>
@@ -1229,56 +1284,50 @@
                             <div class="sliding-card-body">
                                 <p>Identify Customers Concern and verify Data</p>
                             </div>
-                            <div class="info-block info-block-left">
+                            <div class="info-block">
                                 <div class="info">
                                     <div class="info-items">
                                         <div class="info-item">
                                             <div class="info-item-header">
-                                                <h5>Service Consultant Tasks</h5>
+                                                <h5>Deviation</h5>
                                             </div>
                                             <div class="info-item-body">
                                                 <div class="info-item-content">
-                                                    <div class="info-item-content-header">
-                                                        <h6>Lead</h6>
-                                                    </div>
                                                     <ul class="info-item-content-lists">
-                                                        <li>Consider ECU Update (In accordance to local regulations)</li>
-                                                        <li>Manage order extension: Inform Customer</li>
-                                                        <li>Manage job order extension: Inform technician about any changes</li>
+                                                        <li>Check charging hardware data in PCSS. Perform a diagnosis in SoliD</li>
+                                                        <li>Consider specific resources, tools and parts to perform a proper diagnosis at Service Check-In</li>
                                                     </ul>
                                                 </div>
                                                 <div class="info-item-content">
                                                     <div class="info-item-content-header">
-                                                        <h6>SUPPORTIVE</h6>
+                                                        <h6>job roles</h6>
                                                     </div>
-                                                    <ul class="info-item-content-lists">
-                                                        <li>Consider Porsche Connect specifications</li>
-                                                        <li>Manage order extension: Inform Service Consultant</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="info-item">
-                                            <div class="info-item-header">
-                                                <h5>Service Manager Tasks</h5>
-                                            </div>
-                                            <div class="info-item-body">
-                                                <div class="info-item-content">
-                                                    <div class="info-item-content-header">
-                                                        <h6>Lead</h6>
+                                                    <div class="info-item-content-labels labels labels-column">
+                                                        <span class="label">
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            Service Scheduler
+                                                        </span>
+                                                        <span class="label">
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            Aftersales Manager
+                                                        </span>
+                                                        <span class="label">
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            <div class="label-avatar avatar"></div>
+                                                            Host
+                                                        </span>
                                                     </div>
-                                                    <ul class="info-item-content-lists">
-                                                        <li>Consider ECU Update (In accordance to local regulations)</li>
-                                                        <li>Manage order extension: Inform Customer</li>
-                                                        <li>Consider Porsche Connect specifications</li>
-                                                        <li>Manage job order extension: Inform technician about any changes</li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="info-footer">
-                                        <a class="button primary block" href="javascript:;">View tasks</a>
+                                        <a class="button primary block" href="javascript:;">View sub-step</a>
                                     </div>
                                 </div>
                             </div>
@@ -1290,7 +1339,7 @@
                     <div class="sliding-heading">
                         <p>Operation</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card"></div>
                     </div>
                 </div>
@@ -1299,7 +1348,7 @@
                     <div class="sliding-heading">
                         <p>Quality control</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card"></div>
                     </div>
                 </div>
@@ -1308,7 +1357,7 @@
                     <div class="sliding-heading">
                         <p>Check-out</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card"></div>
                     </div>
                 </div>
@@ -1317,7 +1366,7 @@
                     <div class="sliding-heading">
                         <p>Follow-up</p>
                     </div>
-                    <div class="sliding-cards">
+                    <div class="sliding-cards sliding-cards-light">
                         <div class="sliding-card"></div>
                     </div>
                 </div>
@@ -1339,7 +1388,7 @@
     <script src="assets/js/keys.js"></script>
     <script src="assets/js/tooltip.js"></script>
     <script src="assets/js/aside.js"></script>
-    <script src="assets/js/page-scroll.js"></script>
+    <script src="assets/js/page-scroll-window.js"></script>
     <script src="assets/js/sliding.js"></script>
 </body>
 </html>

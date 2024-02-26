@@ -69,15 +69,15 @@ function headerMenu() {
 
         // child menu drawer
         $(".mega-has-child .mega-link").click(function() {
-            $(this).parents('.mega-has-child').find('.mega-block').addClass('mega-block-active');
-            $(this).parents('.mega-has-child').find('.mega-back').addClass('mega-back-active');
-            $(this).parents('.header-navbar-drawer').addClass('header-navbar-drawer-overflow');
+            $(this).closest('.mega-has-child').find('.mega-block').addClass('mega-block-active');
+            $(this).closest('.mega-has-child').find('.mega-back').addClass('mega-back-active');
+            $(this).closest('.header-navbar-drawer').addClass('header-navbar-drawer-overflow');
         });
 
         $('.mega-back').click(function() {
-            $(this).parents('.mega-has-child').find('.mega-block').removeClass('mega-block-active');
-            $(this).parents('.mega-has-child').find('.mega-back').removeClass('mega-back-active');
-            $(this).parents('.header-navbar-drawer').removeClass('header-navbar-drawer-overflow');
+            $(this).closest('.mega-has-child').find('.mega-block').removeClass('mega-block-active');
+            $(this).closest('.mega-has-child').find('.mega-back').removeClass('mega-back-active');
+            $(this).closest('.header-navbar-drawer').removeClass('header-navbar-drawer-overflow');
         });
     }
 

@@ -24,13 +24,19 @@
 }
 
 .process-heading {
+    padding-right: 40px;
     display: flex;
     align-items: center;
     gap: 30px;
     position: relative;
 }
 
+.process-heading-button.icon {
+    @include rounded(40px, 4px);
+}
+
 .process-header-close {
+    margin: 0;
     cursor: pointer;
     width: 40px;
     height: 40px;

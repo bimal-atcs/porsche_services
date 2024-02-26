@@ -8,7 +8,7 @@ $(window).resize(function () {
     dropdownDown();
 });
 
-
+// dropdown
 function dropdownDown() {
     $('.dropdown').removeClass('dropdown-active');
 

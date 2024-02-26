@@ -21,7 +21,7 @@
         <div class="layout">
             <div class="header-navbar">
                 <div class="header-navbar-menu">
-                    <span class="aside-link-count"></span>
+                    <span></span>
                 </div>
 
                 <div class="header-navbar-drawer scrollbar-dynamic">
@@ -51,42 +51,42 @@
                                     <div class="layout">
                                         <div class="mega-menu">
                                             <div class="mega-row">
-                                                <div class="mega-col mega-col-service">
+                                                <div class="mega-col">
                                                     <div class="mega-header">
                                                         <p>service process</p>
                                                     </div>
                                                     <ul class="mega-items">
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Initiation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Preparation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Check-in</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Operation</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Quality Control</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Check-out</span>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        <li class="mega-col-service">
                                                             <a href="javascript:;">
                                                                 <span>Follow-up</span>
                                                             </a>
@@ -312,7 +312,7 @@
                                                     </div>
                                                     <div class="mega-body">
                                                         <a class="button primary" href="javascript:;">
-                                                            <img src="assets/images/icons/icon-printer-white.svg" alt="">
+                                                            <img src="assets/images/icons/icon-printer.svg" alt="">
                                                             <span>view job role profles</span>
                                                         </a>
                                                     </div>
@@ -449,10 +449,76 @@
                             </div>
                         </li>
                         <li>
-                            <a href="javascript:;" class="header-navbar-icon">
+                            <a href="javascript:;" class="header-navbar-icon-alert header-navbar-icon">
                                 <span class="header-navbar-icon-notify"></span>
                                 <img src="assets/images/icons/icon-bell-gray.svg" alt="">
                             </a>
+                            <div class="header-navbar-alert header-navbar-alert-hide">
+                                <div class="header-navbar-alert-header">Notifications</div>
+                                <div class="header-navbar-alert-body">
+                                    <ul class="header-navbar-alert-lists">
+                                        <li>
+                                            <a class="header-navbar-alert-list alert-notify" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+
+                                                    <ul class="header-navbar-alert-thumbs">
+                                                        <li>
+                                                            <img src="assets/images/hero/thumb-video.png" alt="">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list alert-notify" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Michael Maier</strong> published <strong>New Content - Porsche Service Station</strong></p>
+                                                    <span>15 January, 2024</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+
+                                                    <ul class="header-navbar-alert-thumbs">
+                                                        <li>
+                                                            <img src="assets/images/hero/hero-thumb-1.jpg" alt="">
+                                                        </li>
+                                                        <li>
+                                                            <img src="assets/images/hero/hero-thumb-2.jpg" alt="">
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="header-navbar-alert-list" href="javascript:;">
+                                                <div class="header-navbar-alert-avatar avatar"></div>
+                                                <div class="header-navbar-alert-content">
+                                                    <p><strong>Tamara Horn</strong> published <strong>New Functions for your Service NEXT Tool Station</strong></p>
+                                                    <span>Today, 10:30 AM</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header-navbar-alert-footer">
+                                    <a class="header-navbar-alert-link" href="javascript:;">
+                                        <span>View all Notifications</span>
+                                        <div class="header-navbar-alert-link-icon">
+                                            <img src="assets/images/icons/icon-arrow-head-right.svg" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <a href="javascript:;" class="header-navbar-icon">
@@ -719,21 +785,21 @@
                                 </div>
 
                                 <div class="service-hero-items">
-                                    <a href="#customer-expectations" class="service-hero-item">
+                                    <a href="#customer-expectations" class="service-hero-item service-hero-item-window">
                                         <div class="service-hero-item-icon">
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
                                         </div>
                                         <h4>Customer expectations</h4>
                                     </a>
-                                    <a href="#best-practices" class="service-hero-item">
+                                    <a href="#best-practices" class="service-hero-item service-hero-item-window">
                                         <div class="service-hero-item-icon">
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
                                         </div>
                                         <h4>Best practices</h4>
                                     </a>
-                                    <a href="#key-results" class="service-hero-item">
+                                    <a href="#key-results" class="service-hero-item service-hero-item-window">
                                         <div class="service-hero-item-icon">
                                             <span class="service-hero-item-icon-top-right"></span>
                                             <span class="service-hero-item-icon-bottom-left"></span>
@@ -4406,6 +4472,7 @@
     <script src="assets/js/dropdownComp.js"></script>
     <script src="assets/js/aside.js"></script>
     <script src="assets/js/label.js"></script>
+    <script src="assets/js/page-scroll-window.js"></script>
     <script src="assets/js/service.js"></script>
 </body>
 </html>
