@@ -33,6 +33,10 @@
     color: $color-grey-mid;
     padding: 10px;
     border-bottom: 1px solid transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .aside-tab-active {
@@ -87,8 +91,6 @@
     border-radius: 4px;
 
     @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: background-color, color;
 
         &:hover {
             color: $color-error;
@@ -104,7 +106,8 @@
 .aside-link-count {
     counter-increment: count-sub;
 
-    &::before {
+    &::before,
+    &::after {
         font-size: 16px;
         font-weight: 600;
         line-height: 1;
@@ -113,10 +116,6 @@
     
     &::after {
         content: counter(count-sub);
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1;
-        color: rgba($color-grey-mid, 0.6);
     }
 }
 
@@ -142,16 +141,19 @@
     transform: translate(0, -50%);
     position: absolute;
     filter: grayscale(1);
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: filter;
-    }
 }
 
 .aside-link-active {
     color: $color-error;
 
+    .aside-link-count {
+    
+        &::before,
+        &::after {
+            color: rgba($color-error, 0.6);
+        }
+    }
+    
     .aside-link-arrow {
         filter: none;
     }

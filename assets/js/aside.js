@@ -2,12 +2,14 @@
 $(document).ready(function () {
     aside();
     asideTab();
+    asideLinkScroll();
 });
 
 //run on every window resize
 $(window).resize(function () {
     aside();
     asideTab();
+    asideLinkScroll();
 });
 
 // aside navbar
@@ -47,4 +49,45 @@ function asideTab() {
 		$(this).addClass('aside-tab-active');
 		$("#"+tab_id).addClass('aside-content-active');
 	})
+}
+
+// aside link scroll
+function asideLinkScroll() {
+    if($('.aside-links').hasClass('aside-links-scroll')) {
+        let headerHeight = $('.header').outerHeight();
+        let stepsHeight = $('.service-steps').outerHeight();
+        let sumHeadStepHeight = headerHeight + stepsHeight;
+        
+        // scroll page
+        let getSlide = $('.service-slide');
+        let getSlidePadding = parseInt($('.service-slide').css('padding-top'));
+        for(let i = 0; i < getSlide.length; i++) {
+            let getSlideNum = getSlide.eq(i);
+            let getSlideOffset = getSlideNum.offset().top;
+
+            $(window).scroll(function() {
+                let scrollPosition = $(window).scrollTop();
+                if (scrollPosition >= getSlideOffset - (sumHeadStepHeight + (getSlidePadding/2))) {
+                    $('.aside-link').removeClass('aside-link-active');
+                    $('.aside-link').eq(i).addClass('aside-link-active');
+                } else if(scrollPosition < ($(window).height()/2)) {
+                    $('.aside-link').removeClass('aside-link-active');
+                }
+            });
+        }
+        
+        // scroll link
+        $('.aside-link').click(function(e) {
+            e.preventDefault();
+            
+            $('.aside-link').removeClass('aside-link-active');
+            $(this).addClass('aside-link-active');
+    
+            let getSection = $($(this).attr('href'));
+            let scrollTo = getSection.offset().top - sumHeadStepHeight;
+            $('html, body').animate({
+                scrollTop: scrollTo
+            }, 700);
+        });
+    }
 }

@@ -1,7 +1,6 @@
 //run when page first loads
 $(document).ready(function () {
     serviceAccordion();
-    serviceScroll();
     serviceNotifications();
 });
 
@@ -48,26 +47,9 @@ function serviceNotifications() {
     }
 }
 
-// aside link scroll
-function serviceScroll() {
-    $('.aside-link').click(function(e) {
-        e.preventDefault();
-        let headerHeight = $('.header').outerHeight();
-        let stepsHeight = $('.service-steps').outerHeight();
-
-        $('.aside-link').removeClass('aside-link-active');
-        $(this).addClass('aside-link-active');
-
-        let getSection = $($(this).attr('href'));
-        let scrollTo = getSection.offset().top - (headerHeight + stepsHeight);
-        $('html, body').animate({
-            scrollTop: scrollTo
-        }, 700);
-    });
-}
-
-// service accordion
+// service accordion service page
 function serviceAccordion() {
+    $('.accordion-link').removeClass('accordion-link-active');
     $('.accordion-link').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('accordion-link-active');
