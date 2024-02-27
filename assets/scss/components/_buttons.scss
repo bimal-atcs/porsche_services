@@ -19,6 +19,15 @@
     text-transform: capitalize;
     border: 2px solid transparent;
 
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: opacity;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
     img {
         margin-top: -2px;
         margin-right: 8px;

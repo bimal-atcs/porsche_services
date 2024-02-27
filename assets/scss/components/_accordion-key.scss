@@ -68,12 +68,12 @@
 
 .key-accordion-link-title {
     flex: 1 0;
-    position: relative;
-    font-weight: 600;
     font-size: 14px;
+    padding: 0 25px;
+    font-weight: 600;
+    position: relative;
     color: $color-grey-high;
     text-transform: uppercase;
-    padding-left: 25px;
 }
 
 .key-accordion-link-buttons {
@@ -157,6 +157,7 @@
 
 .key-content {
     display: none;
+    min-height: 420px;
 }
 
 .key-content-active {

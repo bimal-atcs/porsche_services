@@ -1,17 +1,17 @@
 //run when page first loads
 $(document).ready(function () {
-    infoHover();
+    slideCardHover();
     slidingItems();
 });
 
 //run on every window resize
 $(window).resize(function () {
-    infoHover();
+    slideCardHover();
     slidingItems();
 });
 
-// info hover popup
-function infoHover() {
+// slide info hover popup
+function slideCardHover() {
     let winWidth = $(window).width();
     let winHeight = $(window).height();
 

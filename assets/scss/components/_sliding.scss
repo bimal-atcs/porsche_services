@@ -117,14 +117,10 @@
 }
 
 // --------------------
-.sliding {
-    height: 100vh;
-}
-
 .sliding-items {
     padding-top: 110px;
     z-index: 1;
-    height: 100%;
+    min-height: 100vh;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: max(205px, calc(100%/7));

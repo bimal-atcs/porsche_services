@@ -60,7 +60,7 @@ function asideLinkScroll() {
         
         // scroll page
         let getSlide = $('.service-slide');
-        let getSlidePadding = parseInt($('.service-slide').css('padding-top'));
+        let getSlidePadding = parseInt(getSlide.css('padding-top'));
         for(let i = 0; i < getSlide.length; i++) {
             let getSlideNum = getSlide.eq(i);
             let getSlideOffset = getSlideNum.offset().top;

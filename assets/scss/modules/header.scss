@@ -498,6 +498,7 @@
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
         display: none;
@@ -701,10 +702,9 @@
     justify-items: center;
     align-items: center;
     border-radius: 4px;
-    background-color: rgba($color-primary, 0.1);
+    background-color: rgba($color-primary, 0.05);
 
     img {
-        filter: invert(1);
         max-height: 20px;
     }
 

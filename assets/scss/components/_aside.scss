@@ -5,9 +5,17 @@
 .aside {
     z-index: 1;
     position: sticky;
-    width: $aside-width;
     align-self: flex-start;
     counter-reset: count-sub;
+    width: $aside-width-md;
+
+    @include media-up($screen-lg) {
+        width: $aside-width-lg;
+    }
+    
+    @include media-up($screen-xl) {
+        width: $aside-width-xl;
+    }
 }
 
 .aside-nav {
@@ -15,7 +23,15 @@
 }
 
 .aside-tab-block {
-    padding: 0 44px;
+    padding: 0 25px;
+
+    @include media-up($screen-lg) {
+        padding: 0 30px;
+    }
+
+    @include media-up($screen-xl) {
+        padding: 0 44px;
+    }
 }
 
 .aside-tabs {
@@ -37,11 +53,25 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    @include media-up($screen-md) {
+        &:hover {
+            color: rgba($color-primary, 0.7);
+            border-bottom-color: rgba($color-primary, 0.1);
+        }
+    }
 }
 
 .aside-tab-active {
     color: $color-primary;
     border-bottom-color: $color-primary;
+
+    @include media-up($screen-md) {
+        &:hover {
+            color: $color-primary;
+            border-bottom-color: $color-primary;
+        }
+    }
 }
 
 .aside-content {
@@ -54,9 +84,17 @@
 
 .aside-links {
     margin-bottom: 40px;
-    padding: 0 44px;
+    padding: 0 25px;
     display: flex;
     flex-direction: column;
+
+    @include media-up($screen-lg) {
+        padding: 0 30px;
+    }
+
+    @include media-up($screen-xl) {
+        padding: 0 44px;
+    }
 
     li {
         border-bottom: 1px solid $color-grey-low;
@@ -68,7 +106,15 @@
 }
 
 .aside-heading {
-    padding: 0 44px;
+    padding: 0 25px;
+
+    @include media-up($screen-lg) {
+        padding: 0 30px;
+    }
+
+    @include media-up($screen-xl) {
+        padding: 0 44px;
+    }
     
     h6 {
         font-size: 12px;
@@ -150,7 +196,7 @@
     
         &::before,
         &::after {
-            color: rgba($color-error, 0.6);
+            color: rgba($color-error, 1);
         }
     }
     
@@ -168,7 +214,15 @@
     align-items: center;
     justify-items: center;
     background-color: $base-color-bg;
-    width: $aside-width;
+    width: $aside-width-md;
+
+    @include media-up($screen-lg) {
+        width: $aside-width-lg;
+    }
+
+    @include media-up($screen-xl) {
+        width: $aside-width-xl;
+    }
 }
 
 .aside-dropdown {

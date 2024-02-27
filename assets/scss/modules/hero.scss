@@ -104,18 +104,14 @@
             &.slick-active {
 
                 button {
-                    animation: width 8s linear forwards;
+                    animation: widthStretch 9s linear forwards;
                 }
             }
         }
     }
 }
 
-@keyframes width {
-    from {
-        width: 8px;
-    }
-
+@keyframes widthStretch {
     to {
         width: 100%;
     }
