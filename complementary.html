@@ -441,8 +441,13 @@
                                     <img src="assets/images/icons/icon-search-gray.svg" alt="">
                                 </div>
                                 <div class="header-navbar-inputs">
-                                    <input class="header-navbar-input" type="text" name="" id="" placeholder="Enter keywords, text, content...">
-                                    <div class="header-navbar-input-close">
+                                    <form role="search" id="searchform" class="header-navbar-form">
+                                        <div>
+                                            <input class="header-navbar-input" type="text" value="" name="s" id="s" placeholder="Enter keywords, text, content..." autocomplete="off">
+                                            <input type="submit" id="searchsubmit" value="Search">
+                                        </div>
+                                    </form>
+                                    <div id="search-close" class="header-navbar-input-close">
                                         <img src="assets/images/icons/icon-close.svg" alt="">
                                     </div>
                                 </div>
