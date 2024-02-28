@@ -13,8 +13,22 @@
     align-items: center;
     line-height: 1;
 
+    @include media-up($screen-xs) {
+
+        a {
+            max-width: 200px;
+        }
+    }
+    
     @include media-up($screen-sm) {
         padding: 30px 0;
+    }
+
+    @include media-up($screen-lg) {
+
+        a {
+            max-width: 100%;
+        }
     }
 
     img {

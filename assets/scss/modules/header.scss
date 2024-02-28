@@ -247,6 +247,10 @@
 
     @include media-up($screen-xs) {
         justify-content: flex-start;
+
+        a {
+            max-width: 200px;
+        }
     }
 
     @include media-up($screen-sm) {
@@ -258,6 +262,12 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+
+    @include media-up($screen-lg) {
+        a {
+            max-width: 100%;
+        }
     }
 
     img {

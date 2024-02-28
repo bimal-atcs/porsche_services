@@ -210,13 +210,13 @@
         height: 545px;
     }
 
-    img {
+    > img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    video {
+    > video {
         width: 100%;
         height: 100%;
         top: 50%;
@@ -227,16 +227,45 @@
     }
 }
 
-.service-hero-figure-icon {
+.service-hero-figure-polygon {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transform-origin: 0 0;
+    transform: rotate(70deg) scale(1.8);
+    left: 220px;
+    top: 40px;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    backdrop-filter: blur(2px);
+    background-color: rgba($color-primary, 0.15);
+    clip-path: path(
+    "M38,2 L82,2 A12,12 0 0,1 94,10 L112,44 A12,12 0 0,1 112,56 L94,90 A12,12 0 0,1 82,98 L38,98 A12,12 0 0,1 26,90 L8,56 A12,12 0 0,1 8,44 L26,10 A12,12 0 0,1 38,2");
+
+    @include media-up($screen-lg) {
+        left: 250px;
+        top: 55px;
+    }
+    
+    img {
+        transform: rotate(50deg);
+        max-width: 28px;
+        position: absolute;
+        top: 30px;
+        left: 65px;
+        transform-origin: 0 0;
+    }
+}
+
+.service-hero-figure-comp {
     cursor: pointer;
     position: absolute;
     top: 60px;
     left: 50%;
     transform: translate(-50%, 0);
-}
-
-
-.service-hero-figure-comp {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,8 +276,8 @@
     height: 160px;
 
     img {
-        max-width: 90px;
-        max-height: 90px;
+        max-width: 120px;
+        max-height: 120px;
     }
 
     @include media-up($screen-lg) {
@@ -567,11 +596,15 @@
 
 // -------------------------
 .service-slide-header {
-    margin-right: -50px;
+    margin-right: -30px;
     margin-bottom: 35px;
     cursor: pointer;
     position: relative;
     border-bottom: 2px solid $color-grey-low;
+
+    @include media-up($screen-lg) {
+        margin-right: -50px;
+    }
 
     h2 {
         max-width: 640px;
