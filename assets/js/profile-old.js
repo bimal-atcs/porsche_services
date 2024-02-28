@@ -2,8 +2,6 @@
 $(document).ready(function() {
     // profile drawer
     profileDrawerWindow();    
-    changeInstanceWindow();
-    switchDepartmentWindow();  
 });
 
 // profile drawer
@@ -49,41 +47,5 @@ function profileDrawerWindow() {
 
         $('#profile-drawer-window .drawer').removeClass('drawer-open');
         $('#profile-drawer-window .drawer').addClass('drawer-close');
-    });
-}
-
-// change instance drawer
-function changeInstanceWindow() {
-    // add class on where window needs to open
-    $('#change-instance-drawer').click(function(e) {
-        e.preventDefault();
-        $('#change-instance-window').removeClass('window-close');
-        $('#change-instance-window').addClass('window-open');
-    });
-
-    // click on close button window modal
-    $('#change-instance-window .window-header-close, #change-instance-window .window-blur').click(function(e) {
-        e.preventDefault();
-        $('#change-instance-window').removeClass('window-open');
-        $('#change-instance-window').addClass('window-close');
-    });
-}
-
-// switch department drawer
-function switchDepartmentWindow() {
-    // add class on where window needs to open
-    $('#switch-department-drawer').click(function(e) {
-        e.preventDefault();
-        
-        $('#switch-department-window').removeClass('window-close');
-        $('#switch-department-window').addClass('window-open');
-    });
-
-    // click on close button window modal
-    $('#switch-department-window .window-header-close, #switch-department-window .window-blur').click(function(e) {
-        e.preventDefault();
-
-        $('#switch-department-window').removeClass('window-open');
-        $('#switch-department-window').addClass('window-close');
     });
 }

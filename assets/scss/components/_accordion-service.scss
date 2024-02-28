@@ -123,16 +123,24 @@
     background-color: rgba($base-color-bg, 0.4);
     display: grid;
     gap: 16px;
-    grid-template-columns: 248px 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    
+    @include media-up($screen-md) {
+        grid-template-columns: 248px 1fr 1fr;
+    }
 }
 
 .accordion-content-item {
-    padding-left: 24px;
+    padding-left: 15px;
     border-left: 1px solid $color-grey-low;
 
     &:first-child {
         padding-left: 0;
         border-left: 0;
+    }
+
+    @include media-up($screen-md) {
+        padding-left: 24px;
     }
 }
 
@@ -157,7 +165,15 @@
 }
 
 .accordion-content-labels {
-    // some stuff
+
+    .labels {
+        display: flex;
+        flex-direction: column;
+
+        @include media-up($screen-md) {
+            flex-flow: row wrap;
+        }
+    }
 }
 
 .accordion-content-lists {

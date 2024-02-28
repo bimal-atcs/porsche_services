@@ -107,8 +107,12 @@
 
 .key-accordion-content {
     display: none;
-    padding: 16px 0 16px 16px;
+    padding: 16px 0;
     border-bottom: 1px solid $color-grey-low;
+
+    @include media-up($screen-md) {
+        padding: 16px 0 16px 16px;
+    }
 }
 
 
@@ -175,36 +179,62 @@
 }
 
 .key-list-header {
+    gap: 16px;
     display: grid;
-    gap: 30px;
-    grid-template-columns: 1fr 180px 230px;
+    grid-template-columns: 1fr 180px 180px;
     color: $color-disabled;
     text-transform: uppercase;
     align-items: center;
     padding: 18px 8px;
     font-weight: 600;
     font-size: 14px;
+
+    @include media-up($screen-md) {
+        gap: 30px;
+        grid-template-columns: 1fr 180px 230px;
+    }
 }
 
 .key-list-data {
     padding: 24px 8px;
-    gap: 30px;
+    gap: 16px;
     display: grid;
-    grid-template-columns: 1fr 180px 230px;
-    align-items: center;
+    grid-template-columns: 1fr 170px 170px;
     margin-bottom: -1px;
     border-top: 1px solid $color-grey-low;
     border-bottom: 1px solid $color-grey-low;
+
+    @include media-up($screen-md) {
+        align-items: center;
+        gap: 30px;
+        grid-template-columns: 1fr 180px 230px;
+    }
 
     &:last-of-type {
         border-bottom: 0;
     }
 }
 
+.key-list-data-list-header {
+    color: $color-disabled;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+
+    @include media-up($screen-sm) {
+        display: none;
+    }
+}
+
 .key-list-result {
     display: flex;
     gap: 16px;
-    align-items: center;
+    align-items: flex-start;
+
+    @include media-up($screen-md) {
+        align-items: center;
+    }
 }
 
 .key-list-result-icon {
@@ -217,16 +247,27 @@
 
 .key-list-result-content {
     flex: 1 0;
+    margin-top: 5px;
+
+    @include media-up($screen-md) {
+        margin-top: 0;
+    }
 }
 
 .key-list-supportive {
-    padding-right: 16px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 5px;
+    flex-direction: column;
 
     .labels {
         flex: 1 0;
+    }
+
+    @include media-up($screen-md) {
+        align-items: center;
+        flex-direction: row;
     }
 }
 
@@ -239,5 +280,9 @@
 
     img {
         opacity: 0.5;
+    }
+
+    @include media-up($screen-md) {
+        margin-right: 16px;
     }
 }

@@ -150,6 +150,8 @@
 }
 
 .aside-link-count {
+    top: 1px;
+    position: relative;
     counter-increment: count-sub;
 
     &::before,
