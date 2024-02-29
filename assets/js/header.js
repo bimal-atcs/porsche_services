@@ -13,13 +13,38 @@ $(window).resize(function () {
 function headerAlert() {
     if($('.header-navbar-icon').hasClass('header-navbar-icon-alert')) {
         $('.header-navbar-icon-alert').click(function() {
+            let getAlert = $('.header-navbar-alert');
+            let getAlertBorder = parseInt(getAlert.css('border'));
+            let getAlertHeaderHeight = $('.header-navbar-alert-header').outerHeight();
+            let getAlertFooterHeight = $('.header-navbar-alert-footer').outerHeight();
+            let getAlertBodyPadding = parseInt($('.header-navbar-alert-body').css('padding'));
+            let getListHeight = $('.header-navbar-alert-lists').outerHeight();
+            let getListsLength = $('.header-navbar-alert-lists > li').length;
+            
+            // alert lists
+            if(getListsLength >= 5) {
+                getAlert.css('height', '500px')
+            } else {
+                getAlert.css({
+                    'height': getAlertHeaderHeight + getAlertFooterHeight + getListHeight + ((getAlertBodyPadding * 2) + (getAlertBorder * 2))
+                });
+            }
+
+            // has class
             if($('.header-navbar-alert').hasClass('header-navbar-alert-hide')) {
                 $(this).next('.header-navbar-alert').removeClass('header-navbar-alert-hide');
                 $(this).next('.header-navbar-alert').addClass('header-navbar-alert-show');
-            } else if ($('.header-navbar-alert').hasClass('header-navbar-alert-show')) {
+            }
+            else if ($('.header-navbar-alert').hasClass('header-navbar-alert-show')) {
                 $(this).next('.header-navbar-alert').addClass('header-navbar-alert-hide');
                 $(this).next('.header-navbar-alert').removeClass('header-navbar-alert-show');
-              }
+            }
+        });
+
+        // click on close
+        $('.header-navbar-alert-close').click(function() {
+            $(this).closest('.header-navbar-alert').removeClass('header-navbar-alert-show');
+            $(this).closest('.header-navbar-alert').addClass('header-navbar-alert-hide');
         });
     }
 }

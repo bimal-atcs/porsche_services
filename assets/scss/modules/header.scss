@@ -483,11 +483,12 @@
 }
 
 .header-navbar-alert {
-    display: none;
+    visibility: hidden;
     
     @include media-up($screen-sm) {
-        height: 500px;
+        height: 200px;
         z-index: 2;
+        display: flex;
         position: fixed;
         flex-direction: column;
         width: 400px;
@@ -497,11 +498,11 @@
         transform: translate(-50%, 0);
 
         &.header-navbar-alert-hide {
-            display: none;
+            visibility: hidden;
         }
         
         &.header-navbar-alert-show {
-            display: flex;
+            visibility: visible;
         }
     }
 }
@@ -511,6 +512,31 @@
     padding: 16px;
     font-weight: 600;
     border-bottom: 1px solid $color-grey-low;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-navbar-alert-close {
+    margin-left: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    @include media-up($screen-md) {
+        transition: $transition;
+        transition-property: background-color;
+
+        &:hover {
+            background-color: $global-hover-bg-light;
+        }
+    }
 }
 
 .header-navbar-alert-body {
@@ -567,12 +593,15 @@
 .header-navbar-alert-avatar {
     flex-shrink: 0;
     @include circle(40px);
+
+    + .header-navbar-alert-content {
+        width: calc(100% - 40px);
+    }
 }
 
 .header-navbar-alert-content {
     color: $color-primary;
     padding: 0 8px;
-    width: calc(100% - 40px);
 
     p {
         overflow: hidden;
