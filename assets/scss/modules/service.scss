@@ -135,12 +135,16 @@
 
 // ------------
 .service-panel {
-    padding: 0 30px 50px;
+    padding: 0 30px 120px;
     border-radius: 8px 0 0 8px;
     counter-reset: count-sub;
     background-color: $color-white;
     width: calc(100% - #{$aside-width-md});
 
+    @include media-up($screen-md) {
+        padding-left: 50px;
+    }
+    
     @include media-up($screen-lg) {
         padding-right: 50px;
         width: calc(100% - #{$aside-width-lg});
@@ -153,6 +157,10 @@
 
 .service-slide {
     padding: 30px 0;
+
+    &:last-of-type {
+        padding-bottom: 0;
+    }
     
     @include media-up($screen-xl) {
         padding: 50px 0;
@@ -182,7 +190,7 @@
     font-size: 18px;
 
     @include media-up($screen-md) {
-        padding: 30px 30px 170px 0;
+        padding: 40px 30px 170px 0;
     }
 
     @include media-up($screen-lg) {
