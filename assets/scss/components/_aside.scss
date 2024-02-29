@@ -8,6 +8,7 @@
     align-self: flex-start;
     counter-reset: count-sub;
     width: $aside-width-md;
+    background-color: $base-color-bg;
 
     @include media-up($screen-lg) {
         width: $aside-width-lg;

@@ -25,7 +25,7 @@ function aside() {
         let stepsH = $('.service-steps').outerHeight();
 
         $('.aside-nav').css('height', windowHeight - (sum + stepsH - serviceContentPadding));
-        $('.aside').css('top', headerH + stepsH + serviceBlockPadding);
+        $('.aside').css('top', headerH + stepsH);
     } else {
         $('.aside-nav').css('height', windowHeight - (headerH + serviceBlockPadding));
         $('.aside').css('top', headerH + serviceBlockPadding);

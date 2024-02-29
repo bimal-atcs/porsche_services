@@ -58,11 +58,10 @@
 }
 
 .service-step-link {
-    top: 90px;
     display: flex;
     align-items: center;
     height: 54px;
-    position: sticky;
+    position: relative;
     color: $color-grey-high;
     text-transform: uppercase;
     font-weight: 600;
@@ -81,6 +80,33 @@
         position: absolute;
         bottom: -17px;
         left: 0;
+    }
+
+    @include media-up($screen-sm) {
+        // top: 90px;
+        display: flex;
+        align-items: center;
+        height: 54px;
+        // position: sticky;
+        color: $color-grey-high;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        padding-left: 32px;
+        border-bottom: 1px solid $color-grey-low;
+        overflow: hidden;
+        counter-increment: count;
+
+        &::before {
+            content: counter(count) ".";
+            font-size: 64px;
+            font-weight: normal;
+            line-height: 1;
+            color: rgba($color-grey-high, 0.1);
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+        }
     }
 
     @include media-up($screen-md) {
@@ -484,6 +510,7 @@
 
 // -----------------------
 .service-hero-items {
+    padding-right: 10px;
     margin-top: 30px;
     flex: 1 100%;
     gap: 0 16px;
@@ -493,6 +520,7 @@
     @include media-up($screen-md) {
         gap: 0 24px;
         margin-top: -130px;
+        padding-right: 0;
         grid-template-columns: repeat(3, calc((100%/4) - 24px));
     }
 
@@ -511,7 +539,7 @@
     height: 240px;
     border-radius: 4px;
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
@@ -519,8 +547,10 @@
     backdrop-filter: blur(50px);
     background-color: rgba($color-white, 0.4);
 
-    @include media-up($screen-lg) {
-        padding: 30px;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+        display: flex;
     }
 
     h4 {
@@ -543,6 +573,10 @@
                 top: 33px;
             }
         }
+    }
+
+    @include media-up($screen-lg) {
+        padding: 30px;
     }
 }
 
@@ -764,13 +798,13 @@
 }
 
 .service-slide-header-count {
-    bottom: -75px;
+    bottom: -70px;
     position: relative;
     counter-increment: count-sub;
 
     &::before,
     &::after {
-        font-size: 60px;
+        font-size: 66px;
         line-height: 1;
         color: rgba($color-grey-high, 0.1);
     }
