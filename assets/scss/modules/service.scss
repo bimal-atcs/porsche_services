@@ -46,71 +46,67 @@
 }
 
 .service-steps {
-    z-index: 1;
+    z-index: 2;
     padding: 10px 0 0;
-    display: grid;
-    grid-template-columns: repeat(7, calc(100%/7));
-    align-items: center;
     counter-reset: count;
     position: sticky;
     top: $header-navbar-height;
     background-color: $base-color-bg;
+    display: flex;
+
+    @include media-up($screen-sm) {
+        display: grid;
+        grid-template-columns: repeat(7, calc(100%/7));
+    }
+}
+
+.service-step {
+    flex: 1 auto;
+
+    @include media-up($screen-sm) {
+        flex: none;
+    }
 }
 
 .service-step-link {
+    height: 40px;
     display: flex;
-    align-items: center;
-    height: 54px;
+    align-items: flex-start;
     position: relative;
     color: $color-grey-high;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
-    padding-left: 32px;
+    font-size: 12px;
+    padding-top: 4px;
+    padding-left: 8px;
     border-bottom: 1px solid $color-grey-low;
     overflow: hidden;
     counter-increment: count;
 
     &::before {
         content: counter(count) ".";
-        font-size: 64px;
+        font-size: 54px;
         font-weight: normal;
         line-height: 1;
         color: rgba($color-grey-high, 0.1);
         position: absolute;
-        bottom: -17px;
+        bottom: -16px;
         left: 0;
     }
 
     @include media-up($screen-sm) {
-        // top: 90px;
-        display: flex;
-        align-items: center;
-        height: 54px;
-        // position: sticky;
-        color: $color-grey-high;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 14px;
+        padding-top: 0;
         padding-left: 32px;
-        border-bottom: 1px solid $color-grey-low;
-        overflow: hidden;
-        counter-increment: count;
+        font-size: 14px;
+        height: 54px;
+        align-items: center;
 
         &::before {
-            content: counter(count) ".";
             font-size: 64px;
-            font-weight: normal;
-            line-height: 1;
-            color: rgba($color-grey-high, 0.1);
-            position: absolute;
-            bottom: -17px;
-            left: 0;
         }
     }
 
     @include media-up($screen-md) {
-        padding-right: 10px;
         transition: $transition;
         transition-property: color, border-color;
         
@@ -150,8 +146,8 @@
     height: 100%;
     position: relative;
     padding-top: 30px;
-    background-color: $base-color-bg;
     display: flex;
+    background-color: $base-color-bg;
 
     @include media-up($screen-lg) {
         padding-top: 40px;
@@ -161,18 +157,26 @@
 
 // ------------
 .service-panel {
-    padding: 0 30px 120px;
-    border-radius: 8px 0 0 8px;
+    padding-left: $serviceSpacing-sm;
+    padding-right: $serviceSpacing-sm;
+    padding-bottom: 120px;
     counter-reset: count-sub;
     background-color: $color-white;
-    width: calc(100% - #{$aside-width-md});
+    margin-left: -#{$aside-width-md};
+    width: 100%;
+    
+    @include media-up($screen-sm) {
+        margin-left: 0;
+        border-radius: 8px 0 0 8px;
+        width: calc(100% - #{$aside-width-md});
+    }
 
     @include media-up($screen-md) {
-        padding-left: 50px;
+        padding-left: $serviceSpacing-md;
+        padding-right: $serviceSpacing-md;
     }
     
     @include media-up($screen-lg) {
-        padding-right: 50px;
         width: calc(100% - #{$aside-width-lg});
     }
 
@@ -194,7 +198,6 @@
 }
 
 .service-hero {
-    margin-right: -30px;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -204,23 +207,19 @@
     @include media-up($screen-md) {
         padding-bottom: 80px;
     }
-
-    @include media-up($screen-lg) {
-        margin-right: -50px;
-    }
 }
 
 .service-hero-content {
-    padding: 30px 0;
+    padding: 30px 0 0;
     flex: 1 0;
     font-size: 18px;
 
     @include media-up($screen-md) {
-        padding: 40px 30px 170px 0;
+        padding: 40px 0 170px 0;
     }
 
     @include media-up($screen-lg) {
-        padding: 50px 50px 190px 0;
+        padding: 50px 0 190px 0;
     }
 
     h2 {
@@ -255,12 +254,14 @@
     border-radius: 0 0 0 8px;
     position: relative;
     overflow: hidden;
+    left: $serviceSpacing-sm;
     background-color: rgba($color-grey-low, 0.2);
 
     @include media-up($screen-md) {
         width: 340px;
         height: 460px;
         border-radius: 0;
+        left: $serviceSpacing-md;
     }
 
     @include media-up($screen-lg) {
@@ -510,25 +511,18 @@
 
 // -----------------------
 .service-hero-items {
-    padding-right: 10px;
     margin-top: 30px;
     flex: 1 100%;
-    gap: 0 16px;
+    gap: 0 24px;
     display: grid;
     grid-template-columns: repeat(3, calc((100%/3) - 16px));
     
     @include media-up($screen-md) {
-        gap: 0 24px;
         margin-top: -130px;
-        padding-right: 0;
-        grid-template-columns: repeat(3, calc((100%/4) - 24px));
+        grid-template-columns: repeat(3, calc((100%/4) - 16px));
     }
 
     @include media-up($screen-lg) {
-        grid-template-columns: repeat(3, calc((100%/3.7) - 24px));
-    }
-
-    @include media-up($screen-xl) {
         grid-template-columns: repeat(3, calc((100%/3.7) - 24px));
     }
 }
@@ -684,21 +678,25 @@
 
 // -------------------------
 .service-slide-header {
-    margin-right: -30px;
+    margin-right: -#{$serviceSpacing-sm};
     margin-bottom: 35px;
     cursor: pointer;
     position: relative;
     border-bottom: 2px solid $color-grey-low;
-
-    @include media-up($screen-lg) {
-        margin-right: -50px;
+    
+    @include media-up($screen-md) {
+        margin-right: -#{$serviceSpacing-md};
     }
 
     h2 {
-        max-width: 500px;
+        max-width: 580px;
         font-weight: normal;
         position: relative;
         display: inline-block;
+
+        @include media-up($screen-sm) {
+            max-width: 520px;
+        }
 
         @include media-up($screen-md) {
             max-width: 640px;

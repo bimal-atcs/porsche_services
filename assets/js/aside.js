@@ -19,12 +19,12 @@ function aside() {
     let serviceContentPadding = parseInt($('.service-content').css('padding-top'));
     let serviceBlockPadding = parseInt($('.service-block').css('padding-top'));
     let serviceViewPadding = parseInt($('.service-view').css('padding-top'));
-    let sum = headerH + serviceContentPadding + serviceBlockPadding + serviceViewPadding;
+    let sum = headerH + serviceBlockPadding + serviceViewPadding;
     
     if($('.service-steps').hasClass('service-steps-sticky')) {
         let stepsH = $('.service-steps').outerHeight();
 
-        $('.aside-nav').css('height', windowHeight - (sum + stepsH - serviceContentPadding));
+        $('.aside-nav').css('height', windowHeight - (sum + stepsH));
         $('.aside').css('top', headerH + stepsH);
     } else {
         $('.aside-nav').css('height', windowHeight - (headerH + serviceBlockPadding));

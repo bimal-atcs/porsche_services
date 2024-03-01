@@ -9,6 +9,24 @@
     counter-reset: count-sub;
     width: $aside-width-md;
     background-color: $base-color-bg;
+    transform: translate(-#{$aside-width-md}, 0);
+
+    &::before {
+        top: -30px;
+        height: 30px;
+        width: 100%;
+        background-color: $base-color-bg;
+        position: absolute;
+        content: '';
+    }
+
+    @include media-up($screen-sm) {
+        transform: none;
+
+        &::before {
+            display: none;
+        }
+    }
 
     @include media-up($screen-lg) {
         width: $aside-width-lg;

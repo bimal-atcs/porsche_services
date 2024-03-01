@@ -180,14 +180,14 @@
 
 .key-list-header {
     gap: 16px;
-    display: grid;
-    grid-template-columns: 1fr 180px 180px;
     color: $color-disabled;
-    text-transform: uppercase;
-    align-items: center;
     padding: 18px 8px;
     font-weight: 600;
     font-size: 14px;
+    display: grid;
+    align-items: center;
+    text-transform: uppercase;
+    grid-template-columns: 1fr 170px 170px;
 
     @include media-up($screen-md) {
         gap: 30px;
@@ -222,7 +222,7 @@
     font-weight: 600;
     font-size: 14px;
 
-    @include media-up($screen-sm) {
+    @include media-up($screen-xs) {
         display: none;
     }
 }

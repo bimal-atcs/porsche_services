@@ -20,7 +20,7 @@ function serviceNotifications() {
             $('.service-user-detail-view').removeClass('service-user-detail-view-show');
             $('.service-user-arrow').removeClass('service-user-arrow-show');
         } else {
-            $('.service-user-block').css('padding-right', '80px');
+            $('.service-user-block').css('padding-right', '70px');
             $('.service-user-detail').addClass('fixed');
             $('.service-user-detail-view').addClass('service-user-detail-view-show');
             $('.service-user-arrow').addClass('service-user-arrow-show');
