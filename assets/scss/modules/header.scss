@@ -483,7 +483,7 @@
 }
 
 .header-navbar-alert {
-    visibility: hidden;
+    display: none;
     
     @include media-up($screen-sm) {
         height: 200px;

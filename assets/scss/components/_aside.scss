@@ -2,6 +2,38 @@
 @use "../config" as *;
 
 
+// ---------------
+.aside-menu {
+    z-index: 99;
+    bottom: 30px;
+    left: 30px;
+    width: 54px;
+    height: 54px;
+    border-radius: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba($color-primary, 1);
+
+    img {
+        filter: invert(1);
+    }
+
+    @include media-up($screen-sm) {
+        display: none;
+    }
+}
+
+.aside-menu-active {
+    transform: translate(300px, 0);   
+    
+    img {
+        transform: rotate(45deg);
+    }
+}
+
+// -------------
 .aside {
     z-index: 1;
     position: sticky;
@@ -12,8 +44,8 @@
     transform: translate(-#{$aside-width-md}, 0);
 
     &::before {
-        top: -30px;
-        height: 30px;
+        top: -26px;
+        height: 50px;
         width: 100%;
         background-color: $base-color-bg;
         position: absolute;
@@ -35,6 +67,11 @@
     @include media-up($screen-xl) {
         width: $aside-width-xl;
     }
+}
+
+.aside-show {
+    z-index: 99;
+    transform: none;
 }
 
 .aside-nav {

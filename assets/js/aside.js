@@ -1,5 +1,6 @@
 //run when page first loads
 $(document).ready(function () {
+    asideTabMenu();
     aside();
     asideTab();
     asideLinkScroll();
@@ -7,10 +8,53 @@ $(document).ready(function () {
 
 //run on every window resize
 $(window).resize(function () {
+    asideTabMenu();
     aside();
     asideTab();
     asideLinkScroll();
 });
+
+// aside tab menu
+function asideTabMenu() {
+    let getWindowWidth = $(window).width();
+    let getAsideMenu = $('.aside-menu');
+    let getAside = $('.aside');
+    let getBackDrop = $('.backdrop');
+
+    if (getWindowWidth >= 1024) {
+        if(getAsideMenu.hasClass('aside-menu-active') && getAside.hasClass('aside-show')) {
+            $('html').removeAttr('style');
+            getBackDrop.removeClass('backdrop-show');
+            getBackDrop.addClass('backdrop-hide');
+            getAside.removeClass('aside-show');
+            getAsideMenu.removeClass('aside-menu-active');
+        }
+    } else {
+        getBackDrop.click(function() {
+            $('html').removeAttr('style');
+            getBackDrop.removeClass('backdrop-show');
+            getBackDrop.addClass('backdrop-hide');
+            getAside.removeClass('aside-show');
+            getAsideMenu.removeClass('aside-menu-active');
+        });
+
+        getAsideMenu.click(function() {
+            if(!getAside.hasClass('aside-show')) {
+                $('html').css('overflow', 'hidden');
+                getBackDrop.removeClass('backdrop-hide');
+                getBackDrop.addClass('backdrop-show');
+                getAside.addClass('aside-show');
+                $(this).addClass('aside-menu-active');
+            } else if(getAside.hasClass('aside-show')) {
+                $('html').removeAttr('style');
+                getBackDrop.removeClass('backdrop-show');
+                getBackDrop.addClass('backdrop-hide');
+                getAside.removeClass('aside-show');
+                $(this).removeClass('aside-menu-active');
+            }
+        });
+    }
+}
 
 // aside navbar
 function aside() {

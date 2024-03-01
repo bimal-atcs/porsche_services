@@ -29,6 +29,7 @@
 
 // ----------------------------
 .service-content {
+    background-color: rgba($base-color-bg, 1);
     padding-top: $header-navbar-height;
 
     .layout {
@@ -57,6 +58,13 @@
     @include media-up($screen-sm) {
         display: grid;
         grid-template-columns: repeat(7, calc(100%/7));
+    }
+}
+
+.service-steps ~ .service-view .aside {
+    
+    &::before {
+        display: none;
     }
 }
 
