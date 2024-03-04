@@ -324,11 +324,11 @@
     }
     
     img {
-        transform: rotate(50deg);
+        top: 32px;
+        left: 66px;
         max-width: 28px;
         position: absolute;
-        top: 30px;
-        left: 65px;
+        transform: rotate(50deg);
         transform-origin: 0 0;
     }
 }

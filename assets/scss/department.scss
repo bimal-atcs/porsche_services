@@ -69,13 +69,31 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
 
+    @include media-view(landscape) {
+        min-height: 300px;
+    }
+    
     @include media-up-view($screen-sm, landscape) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        min-height: 700px;
     }
 
     @include media-up-view($screen-md, landscape) {
         gap: 0 3vw;
+        min-height: 800px;
+    }
+
+    @include media-up-view($screen-sm, landscape) {
+        // min-height: 700px;
+    }
+
+    @include media-up-view($screen-md, landscape) {
+        // min-height: 800px;
+    }
+
+    @include media-up-view($screen-lg, landscape) {
+        min-height: 900px;
     }
 }
 
@@ -85,12 +103,7 @@
     height: 100%;
     position: relative;
 
-    @include media-view(landscape) {
-        min-height: 300px;
-    }
-
     @include media-up-view($screen-sm, landscape) {
-        min-height: 700px;
         mask-size: cover;
         mask-repeat: no-repeat;
 
@@ -103,14 +116,6 @@
             position: absolute;
             background-color: $color-black;
         }
-    }
-
-    @include media-up-view($screen-md, landscape) {
-        min-height: 800px;
-    }
-
-    @include media-up-view($screen-lg, landscape) {
-        min-height: 900px;
     }
 }
 
