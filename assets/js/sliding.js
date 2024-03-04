@@ -1,5 +1,6 @@
 //run when page first loads
 $(document).ready(function () {
+    slideGradient();
     slideCardHover();
     slidingItems();
 });
@@ -9,6 +10,43 @@ $(window).resize(function () {
     slideCardHover();
     slidingItems();
 });
+
+// gradient
+function slideGradient() {
+    let winHeight = $(window).height();
+    let getGradRight = $('.sliding-gradient-right');
+    let getGradLeft = $('.sliding-gradient-left');
+    let getGradBottom = $('.sliding-gradient-bottom');
+    let getSlideItems = $('.sliding-items');
+    let getSlideItem = $('.sliding-item');
+
+    // bottom gradient
+    if(getSlideItems.height() > winHeight) {
+        getGradBottom.css('display', 'block');
+    } else {
+        getGradBottom.css('display', 'none');
+    }
+    
+    // right gradient
+    if(getSlideItem.length > 7) {
+        getGradRight.css('display', 'block');
+    } else {
+        getGradRight.css('display', 'none');
+    }
+    
+    // on scoll gradients hide and show
+    getSlideItems.scroll(function() {
+        let slideScroll = getSlideItems.scrollLeft();
+    
+        if (slideScroll > 500) {
+            getGradLeft.css('display', 'block');
+            getGradRight.css('display', 'none');
+        } else {
+            getGradLeft.css('display', 'none');
+            getGradRight.css('display', 'block');
+        }
+    });
+}
 
 // slide info hover popup
 function slideCardHover() {

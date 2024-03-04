@@ -4,7 +4,7 @@
 
 // ---------------
 .aside-menu {
-    z-index: 10;
+    z-index: 8;
     bottom: 30px;
     left: 30px;
     width: 54px;
@@ -44,7 +44,7 @@
     transform: translate(-#{$aside-width-md}, 0);
 
     &::before {
-        top: -28px;
+        top: -27px;
         height: 50px;
         width: 100%;
         background-color: $base-color-bg;

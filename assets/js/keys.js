@@ -22,9 +22,9 @@ function keyTab() {
 
 // key accordion
 function keyAccordion() {
-    $('.key-accordion-link').click(function(e) {
+    $('.key-accordion-link-title, .key-accordion-link-button-arrow').click(function(e) {
         e.preventDefault();
-        $(this).toggleClass('key-accordion-link-active');
-        $(this).next('.key-accordion-content').slideToggle(350);
+        $(this).closest('.key-accordion-link').toggleClass('key-accordion-link-active');
+        $(this).closest('.key-accordion-link').next('.key-accordion-content').slideToggle(350);
     });
 }

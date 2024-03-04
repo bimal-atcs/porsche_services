@@ -20,7 +20,7 @@ function dropdownComp() {
         $(this).toggleClass('switch-active');
     });
 
-    // aside dropdown option
+    // sticky aside left dropdown option
     if ($('.aside-dropdown').hasClass('dropdown-option')) {
         $('.aside-dropdown .aside-button').click(function(e) {
             e.preventDefault();
@@ -39,19 +39,36 @@ function dropdownComp() {
     
     // select dropdown label
     if ($('.dropdown-select').hasClass('dropdown-option')) {
-        $('.dropdown-select .dropdown-label').click(function(e) {
+        $('.dropdown-option .dropdown-label').click(function(e) {
             e.preventDefault();
-            $(this).closest('.dropdown-select').toggleClass('dropdown-select-open');
+            $(this).closest('.dropdown-option').toggleClass('dropdown-select-open');
+            
             if ($('.dropdown-select').hasClass('dropdown-select-open')) {
+                $(this).closest('body').find('.backdrop').removeClass('backdrop-hide');
+                $(this).closest('body').find('.backdrop').addClass('backdrop-show');
                 $('.dropdown-select-clear').addClass('dropdown-select-clear-active');
             } else {
+                $(this).closest('body').find('.backdrop').removeClass('backdrop-show');
+                $(this).closest('body').find('.backdrop').addClass('backdrop-hide');
                 $('.dropdown-select-clear').removeClass('dropdown-select-clear-active');
+            }
+        });
+
+        // backdrop
+        $('.backdrop').click(function() {
+            if($('.backdrop').hasClass('backdrop-show')) {
+                $('.dropdown-select').removeClass('dropdown-select-open');
+                $('.dropdown-select-clear').removeClass('dropdown-select-clear-active');
+                $(this).removeClass('backdrop-show')
+                $(this).addClass('backdrop-hide');
             }
         });
 
         // dropdown select clear
         $('.dropdown-select-clear').click(function(e) {
             e.preventDefault();
+            $(this).closest('body').find('.backdrop').addClass('backdrop-hide');
+            $(this).closest('body').find('.backdrop').removeClass('backdrop-show');
             $('.dropdown-select').removeClass('dropdown-select-open');
             $('.dropdown-view-label').removeClass('dropdown-view-label-active');
             $('.switch').removeClass('switch-active');

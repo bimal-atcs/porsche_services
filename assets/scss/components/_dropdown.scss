@@ -76,6 +76,8 @@
 // --------------------
 .dropdown-group {
     display: flex;
+    position: relative;
+    z-index: 10;
 
     .dropdown-select {
         margin-right: -1px;
@@ -347,11 +349,11 @@
     }
     
     .dropdown-label {
-        z-index: 3;
+        z-index: 2;
     }
     
     .dropdown-view {
-        z-index: 2;
+        z-index: 0;
         opacity: 1;
         visibility: visible;
     }
