@@ -30,14 +30,6 @@ function asideTabMenu() {
             getAsideMenu.removeClass('aside-menu-active');
         }
     } else {
-        getBackDrop.click(function() {
-            $('html').removeAttr('style');
-            getBackDrop.removeClass('backdrop-show');
-            getBackDrop.addClass('backdrop-hide');
-            getAside.removeClass('aside-show');
-            getAsideMenu.removeClass('aside-menu-active');
-        });
-
         getAsideMenu.click(function() {
             if(!getAside.hasClass('aside-show')) {
                 $('html').css('overflow', 'hidden');
