@@ -7,9 +7,60 @@
       //call ajax to setup myscp filter on job roles dropdown clicks
       $('#myscp_jobrole_filter li a').on('click', function(e) {
         e.preventDefault();
-        var selectedValue = [$(this).data('value')];
-        var filterType = 'jobrole';
-        mySCPFilterAjaxCall(selectedValue, filterType);
+  
+        var selectedJobroles = [];
+        $('#myscp_jobrole_filter li a').each(function() {
+          if($(this).hasClass('dropdown-view-label-active')){
+            selectedJobroles.push($(this).data('value'));
+          }
+        });
+        var selectedComplemetary = [];
+        $('#myscp_complementary_filter li a').each(function() {
+          if($(this).hasClass('dropdown-view-label-active')){
+            selectedComplemetary.push($(this).data('value'));
+          }
+        });
+  
+        $('#filter_jobrole_counter').html(selectedJobroles.length);
+        $('#filter_jobrole_counter').addClass('badges-show');
+        $('.dropdown-select-clear').addClass('dropdown-select-clear-active');
+        mySCPFilterAjaxCall(selectedJobroles, selectedComplemetary);
+      });
+  
+      //call ajax to setup myscp filter on complementary dropdown clicks
+      $('#myscp_complementary_filter li a').on('click', function(e) {
+        e.preventDefault();
+  
+        var selectedJobroles = [];
+        $('#myscp_jobrole_filter li a').each(function() {
+          if($(this).hasClass('dropdown-view-label-active')){
+            selectedJobroles.push($(this).data('value'));
+          }
+        });
+        var selectedComplemetary = [];
+        $('#myscp_complementary_filter li a').each(function() {
+          if($(this).hasClass('dropdown-view-label-active')){
+            selectedComplemetary.push($(this).data('value'));
+          }
+        });
+        
+        $('#filter_complementary_counter').html(selectedComplemetary.length);
+        $('#filter_complementary_counter').addClass('badges-show');
+        $('.dropdown-select-clear').addClass('dropdown-select-clear-active');
+        mySCPFilterAjaxCall(selectedJobroles, selectedComplemetary);
+      });
+  
+      //call ajax to remove highlighted myscp process steps
+      $('.dropdown-select-clear').on('click', function(e) {
+        e.preventDefault();
+        var selectedJobroles = [];
+        var selectedComplemetary = [];
+        $('#filter_jobrole_counter').html(0);
+        $('#filter_complementary_counter').html(0);
+        $('#filter_jobrole_counter').removeClass('badges-show');
+        $('#filter_complementary_counter').removeClass('badges-show');
+        $(this).removeClass('dropdown-select-clear-active');
+        mySCPFilterAjaxCall(selectedJobroles, selectedComplemetary);
       });
   
       $('#print_myscp_steps_btn').click(function (e) {
@@ -27,11 +78,11 @@
   })(jQuery);
   
   //js ajax call to filter myscp process
-  function mySCPFilterAjaxCall(selectedValue,filterType) {
+  function mySCPFilterAjaxCall(selectedJobroles, selectedComplemetary) {
     const data = {
       'action': 'myscp_process_filter',
-      'selected_value': selectedValue,
-      'type': filterType,
+      'selected_jobroles': selectedJobroles,
+      'selected_complemetary': selectedComplemetary,
     };
   
     $.post(ajax_object.ajax_url, data, function (response) {

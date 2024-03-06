@@ -21,7 +21,7 @@
         content: attr(data-tooltip);
         bottom: 100%;
         padding: 12px 16px;
-        width: 260px;
+        min-width: 350px;
         margin-bottom: 12px;
         border-radius: 4px;
         font-size: 16px;

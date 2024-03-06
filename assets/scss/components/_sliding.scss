@@ -217,11 +217,10 @@
 }
 
 .sliding-card {
+    display: flex;
     position: relative;
     cursor: pointer;
     white-space: normal;
-    padding: 20px 16px;
-    min-height: 80px;
     background-color: $color-white;
     border: 1px solid $color-grey-low;
     margin-bottom: -1px;
@@ -258,6 +257,14 @@
     .sliding-card-body {
         color: $color-primary;
     }
+}
+
+// ----------------------------
+.sliding-card-link,
+.step-card-block {
+    padding: 20px 16px;
+    min-height: 80px;
+    width: 100%;
 }
 
 

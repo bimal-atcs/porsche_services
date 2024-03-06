@@ -27,6 +27,11 @@ function backDrop() {
                 $('.header-navbar-alert').addClass('header-navbar-alert-hide');
             }
 
+            // dropdown
+            if($('.dropdown').hasClass('dropdown-active')) {
+               $('.dropdown').removeClass('dropdown-active'); 
+            }
+            
             // dropdown scp
             $('.dropdown-group').removeAttr('style');
             $('.dropdown-option').removeClass('dropdown-select-open');

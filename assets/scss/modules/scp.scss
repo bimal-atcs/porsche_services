@@ -52,7 +52,11 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-right: 24px;
+    margin-right: 15px;
+
+    @include media-up($screen-sm) {
+        margin-right: 24px;
+    }
 }
 
 .scp-filter-icon {
