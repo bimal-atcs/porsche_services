@@ -39,11 +39,14 @@ function headerAlert() {
             // has class
             if($('.header-navbar-alert').hasClass('header-navbar-alert-hide')) {
                 $(this).closest('.header').css('z-index', 11);
-                $('.backdrop').css({
-                    'z-index': 10,
-                    'top': getHeaderHeight,
-                    'height': gerWinHeight - getHeaderHeight
-                });
+                
+                if($(window).width() >= 1024) {
+                    $('.backdrop').css({
+                        'z-index': 10,
+                        'top': getHeaderHeight,
+                        'height': gerWinHeight - getHeaderHeight
+                    });
+                }
                 
                 $('html').css('overflow', 'hidden');
                 $('.backdrop').removeClass('backdrop-hide');
@@ -69,11 +72,13 @@ function headerAlert() {
             $(this).closest('.header-navbar-alert').addClass('header-navbar-alert-hide');
             $(this).closest('.header-navbar-alert').removeAttr('style');
 
-            if($('.backdrop').hasClass('backdrop-show')) {
-                $('html').removeAttr('style');
-                $('.backdrop').removeAttr('style');
-                $('.backdrop').removeClass('backdrop-show')
-                $('.backdrop').addClass('backdrop-hide');
+            if($(window).width() >= 1024) {
+                if($('.backdrop').hasClass('backdrop-show')) {
+                    $('html').removeAttr('style');
+                    $('.backdrop').removeAttr('style');
+                    $('.backdrop').removeClass('backdrop-show')
+                    $('.backdrop').addClass('backdrop-hide');
+                }
             }
         });
     }
@@ -81,6 +86,11 @@ function headerAlert() {
 
 // header menu
 function headerMenu() {
+    let getWinWidth = $(window).width();
+    let getBackdrop = $('.backdrop');
+    let getHeaderNavDrawWidth = $('.header-navbar-drawer').outerWidth();
+    let getHeaderNavManWidth = $('.header-navbar-manage').outerWidth();
+
     if($('.page-body').hasClass('scrollbar-dynamic')) {
         $('.page-body').removeClass('page-scroll-off');
         $('.page-body').addClass('page-scroll-on');
@@ -102,6 +112,7 @@ function headerMenu() {
     else {
         // main menu drawer
         $(".header-navbar-menu").click(function() {
+            $('html').css('overflow', 'hidden');
             if($('.page-body').hasClass('scrollbar-dynamic')) {
                 $('.page-body').removeClass('page-scroll-on');
                 $('.page-body').addClass('page-scroll-off');
@@ -109,9 +120,19 @@ function headerMenu() {
             $(".header-navbar-drawer").addClass('header-navbar-drawer-active');
             $('.header-navbar-close').addClass('header-navbar-close-active');
             $('.header-navbar-manage').removeClass('header-navbar-manage-active');
+            
+            getBackdrop.css({
+                'left': getHeaderNavDrawWidth,
+                'width': getWinWidth - getHeaderNavDrawWidth
+            });
+            if(getBackdrop.hasClass('backdrop-hide')) {
+                getBackdrop.removeClass('backdrop-hide');
+                getBackdrop.addClass('backdrop-show');
+            }
         });
 
         $('.header-navbar-close-icon').click(function() {
+            $('html').removeAttr('style');
             if($('.page-body').hasClass('scrollbar-dynamic')) {
                 $('.page-body').removeClass('page-scroll-off');
                 $('.page-body').addClass('page-scroll-on');
@@ -120,6 +141,11 @@ function headerMenu() {
             $('.mega-block').removeClass('mega-block-active');
             $('.mega-back').removeClass('mega-back-active');
             $('.header-navbar-close').removeClass('header-navbar-close-active');
+
+            if(getBackdrop.hasClass('backdrop-show')) {
+                getBackdrop.removeClass('backdrop-show');
+                getBackdrop.addClass('backdrop-hide');
+            }
         });
 
         // child menu drawer
@@ -165,6 +191,15 @@ function headerMenu() {
             $(".header-navbar-close").removeClass('header-navbar-close-active');
             $('.mega-block').removeClass('mega-block-active');
             $('.mega-back').removeClass('mega-back-active');
+
+            getBackdrop.css({
+                'right': getHeaderNavManWidth,
+                'width': getWinWidth - getHeaderNavManWidth
+            });
+            if(getBackdrop.hasClass('backdrop-hide')) {
+                getBackdrop.removeClass('backdrop-hide');
+                getBackdrop.addClass('backdrop-show');
+            }
         });
 
         $('.header-navbar-manage-close').click(function() {
@@ -174,6 +209,11 @@ function headerMenu() {
                 $('.page-body').removeClass('page-scroll-off');
             }
             $('.header-navbar-manage').removeClass('header-navbar-manage-active');
+
+            if(getBackdrop.hasClass('backdrop-show')) {
+                getBackdrop.removeClass('backdrop-show');
+                getBackdrop.addClass('backdrop-hide');
+            }
         });
     }
 }

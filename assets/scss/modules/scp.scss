@@ -44,17 +44,23 @@
 
 .scp-group-filter {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
+    @include media-up($screen-sm) {
+        flex-direction: row;
+    }
 }
 
 .scp-filter {
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-bottom: 24px;
 
     @include media-up($screen-sm) {
+        margin-bottom: 0;
         margin-right: 24px;
     }
 }

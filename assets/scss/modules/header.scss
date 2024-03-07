@@ -493,13 +493,13 @@
     background-color: $color-white;
     
     @include media-down($screen-sm) {
-        height: 100% !important;
+        height: 100vh !important;
     }
     
     @include media-up($screen-sm) {
         top: auto;
         left: auto;
-        height: 200px;
+        height: 140px;
         z-index: 2;
         display: flex;
         width: 400px;

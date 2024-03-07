@@ -198,17 +198,12 @@
 
 .sliding-cards-light {
 
-    .sliding-card {
-        opacity: 0.7;
+    .sliding-counting::before {
+        color: rgba($color-grey-mid, 0.3);
+    }
 
-        @include media-up($screen-md) {
-            transition: $transition;
-            transition-property: opacity;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
+    .sliding-card-body {
+        color: rgba($color-grey-high, 0.5);
     }
 
     .sliding-card-active {
@@ -226,8 +221,6 @@
     margin-bottom: -1px;
     
     @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: background-color;
 
         &:hover {
             background-color: rgba($global-hover-bg-light, 1);
@@ -297,11 +290,6 @@
     @include circle(20px);
     flex-shrink: 0;
     display: none;
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: opacity, visibility;
-    }
 }
 
 .sliding-card-avatar-show {
@@ -319,11 +307,6 @@
     border-radius: 4px;
     border: 1px solid $color-notify;
     background-color: $color-notify-light;
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: opacity, visibility;
-    }
 
     img {
         max-width: 18px;
@@ -345,20 +328,10 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: opacity;
-    }
 }
 
 .sliding-card-body {
     color: $color-grey-high;
-
-    @include media-up($screen-md) {
-        transition: $transition;
-        transition-property: background-color;
-    }
 }
 
 // ----------------------------
@@ -391,8 +364,4 @@
     span {
         margin-top: 1px;
     }
-}
-
-.steps-card-top {
-    // margin-right: -2px;
 }

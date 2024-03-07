@@ -27,6 +27,31 @@ function backDrop() {
                 $('.header-navbar-alert').addClass('header-navbar-alert-hide');
             }
 
+            // header mega menu navbar drawer
+            if($('.header-navbar-drawer').hasClass('header-navbar-drawer-active')) {
+                $('.header-navbar-drawer').removeClass('header-navbar-drawer-active');
+
+                if($('.page-body').hasClass('scrollbar-dynamic')) {
+                    $('.page-body').removeClass('page-scroll-off');
+                    $('.page-body').addClass('page-scroll-on');
+                }
+            }
+
+            // header mega menu navbar drawer close
+            if($('.header-navbar-close').hasClass('header-navbar-close-active')) {
+                $('.header-navbar-close').removeClass('header-navbar-close-active');
+            }
+
+            // header user icon (iPad)
+            if($('.header-navbar-manage').hasClass('header-navbar-manage-active')) {
+                $('.header-navbar-manage').removeClass('header-navbar-manage-active');
+
+                if($('.page-body').hasClass('scrollbar-dynamic')) {
+                    $('.page-body').removeClass('page-scroll-off');
+                    $('.page-body').addClass('page-scroll-on');
+                }
+            }
+
             // dropdown
             if($('.dropdown').hasClass('dropdown-active')) {
                $('.dropdown').removeClass('dropdown-active'); 

@@ -28,7 +28,7 @@ function slideGradient() {
     }
     
     // right gradient
-    if(getSlideItem.length > 7) {
+    if(getSlideItem.length > 8) {
         getGradRight.css('display', 'block');
     } else {
         getGradRight.css('display', 'none');

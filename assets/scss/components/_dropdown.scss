@@ -120,22 +120,18 @@
 }
 
 .dropdown-option {
-    min-width: 250px;
+    // min-width: 290px;
 }
 
 .dropdown-label {
     z-index: 1;
     position: relative;
-    padding: 0 15px;
+    padding: 0 24px;
     height: 54px;
     display: flex;
     align-items: center;
     font-weight: 600;
     border-bottom: 1px solid transparent;
-
-    @include media-up($screen-sm) {
-        padding: 0 24px;
-    }
 }
 
 .dropdown-label-text {
