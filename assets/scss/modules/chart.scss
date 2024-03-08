@@ -1,0 +1,165 @@
+// thrid party plugins
+// !important tag will be removed once completed
+
+.site-main {
+	background-color: #eeeff2 !important;
+}
+
+.wpdevart_org_chart {
+	font-family: "Porsche Next" !important;
+	min-height: 100vh !important;
+	box-sizing: border-box !important;
+	background-color: #eeeff2 !important;
+}
+
+.wpdevart_org_chart * {
+	box-sizing: border-box !important;
+}
+
+div#wpdevart_org_chart_container_1 {
+	background-image: none !important;
+}
+
+/*buttons*/
+.wpdevart_org_chart .zoomable_buttons_container {
+	margin-right: 0 !important;
+    left: auto !important;
+    width: auto !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    position: fixed !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.zoomable_buttons_container button {
+	background-color: #fff !important;
+    padding: 0 !important;
+    min-width: 46px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #010205 !important;
+    font-weight: 600 !important;
+    border: 1px solid #D8D8DB !important;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    margin-right: -1px !important;
+    padding: 5px 12px !important;
+    position: relative !important;
+}
+
+.zoomable_buttons_container button:first-child {
+	border-radius: 4px 0 0 4px important;
+	border-left-color: #D8D8DB !important;
+}
+
+.zoomable_buttons_container button:last-child {
+	border-radius: 0 4px 4px 0 !important;
+	border-right-color: #D8D8DB !important;
+}
+
+.zoomable_buttons_container button.wpda_zoom_out,
+.zoomable_buttons_container button.wpda_zoom_in {
+	font-size: 0px !important;
+}
+
+.zoomable_buttons_container button.wpda_zoom_out::before,
+.zoomable_buttons_container button.wpda_zoom_in::before {
+	content: '';
+	width: 18px;
+	height: 1px;
+	background-color: #010205;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.zoomable_buttons_container button.wpda_zoom_in::after {
+	content: '';
+	width: 1px;
+	height: 18px;
+	background-color: #010205;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.zoomable_buttons_container button.wpda_zoom_reset {
+	border-left-color: #D8D8DB !important;
+}
+
+/*card profile */
+.wpdevart_org_chart_container li .wpda_tree_item_container > div {
+	border: 0 !important;
+}
+
+.wpdevart_org_chart_container li .wpda_tree_item_container > div {
+	gap: 0 10px;
+	display: inline-flex !important;
+	align-items: center !important;
+}
+
+.wpda_tree_item_title {
+	margin: 0 !important;
+	font-size: 16px !important;
+	text-align: left !important;
+	width: auto !important;
+}
+
+div.wpda_tree_item_node {
+	width: auto !important;
+}
+
+.wpda_tree_item_title, .wpda_tree_item_desc {
+	white-space: normal !important;
+}
+
+.wpdevart_org_chart_container .wpda_tree_item_img_cont {
+	flex-shrink: 0 !important;
+	width: 48px !important;
+	height: 48px !important;
+	border-radius: 50% !important;
+	overflow: hidden !important;
+	border: 1px solid rgba(1, 2, 5, 0.2) !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.wpdevart_org_chart_container li .wpda_tree_item_container img {
+	width: 100% !important;
+	height: 100% !important;
+	object-fit: cover !important;
+}
+
+#wpdevart_org_chart_container_1 .wpda_tree_item_container > div {
+	max-width: 100% !important;
+}
+
+#wpdevart_org_chart_container_1 li .wpda_tree_item_container > div {
+	padding: 5px 10px !important;
+	border: 0 !important;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	width: auto !important;
+	max-width: 100% !important;
+}
+
+.wpdevart_org_chart_container li:last-child::before {
+	border-radius: 0 5px 0 0 !important;
+}
+
+.wpdevart_org_chart_container li:first-child::after {
+	border-radius: 5px 0 0 0 !important;
+}
+
+li.has_child_level .charticon {
+	margin: 4px 0 !important;
+	border-radius: 50% !important;
+	background-color: #BB302C !important;
+}
