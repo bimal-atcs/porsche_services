@@ -935,19 +935,13 @@
 
 // ------------------
 // scp steps process
-#select-initiation {
+.service-block-1 {
 
-    .initiation {
+    .service-step:nth-child(1) {
         @include step-active;
     }
     
-    .aside-link-count {
-
-        &::before {
-            content: "1.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -956,19 +950,13 @@
     }
 }
 
-#select-preparation {
+.service-block-2 {
 
-    .preparation {
+    .service-step:nth-child(2) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "2.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -977,19 +965,13 @@
     }
 }
 
-#select-check-in {
+.service-block-3 {
 
-    .check-in {
+    .service-step:nth-child(3) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "3.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -998,19 +980,13 @@
     }
 }
 
-#select-operation {
+.service-block-4 {
 
-    .operation {
+    .service-step:nth-child(4) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "4.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -1019,19 +995,13 @@
     }
 }
 
-#select-quality-control {
+.service-block-5 {
 
-    .quality-control {
+    .service-step:nth-child(5) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "5.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -1040,19 +1010,13 @@
     }
 }
 
-#select-check-out {
+.service-block-6 {
 
-    .check-out {
+    .service-step:nth-child(6) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "6.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {
@@ -1061,19 +1025,13 @@
     }
 }
 
-#select-follow-up {
+.service-block-7 {
 
-    .follow-up {
+    .service-step:nth-child(7) {
         @include step-active;
     }
 
-    .aside-link-count {
-
-        &::before {
-            content: "7.";
-        }
-    }
-
+    .aside-link-count,
     .service-slide-header-count {
 
         &::before {

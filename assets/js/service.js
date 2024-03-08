@@ -52,6 +52,7 @@ function serviceNotifications() {
 // service accordion service page
 function serviceAccordion() {
     $('.accordion-link').removeClass('accordion-link-active');
+    
     $('.accordion-link').click(function(e) {
         e.preventDefault();
         $(this).toggleClass('accordion-link-active');

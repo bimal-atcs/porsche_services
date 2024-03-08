@@ -5,7 +5,7 @@ $(document).ready(function() {
 $(window).resize(function () {
 });
 
-// simple accordion (just and example, not used anywhere)
+// simple accordion (just an example, not used anywhere)
 function accordion() {
     $('.accordion-link').click(function(e) {
         e.preventDefault();

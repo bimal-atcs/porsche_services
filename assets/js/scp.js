@@ -63,11 +63,28 @@
         mySCPFilterAjaxCall(selectedJobroles, selectedComplemetary);
       });
   
+      $('.sub-steps-horizontal').click(function (e) {
+        e.preventDefault();
+        var child_class = $(this).data('value') +"-child-substep-box";
+        $('.' +child_class).toggle();
+      });
+  
+      $('.sub-steps-vertical').click(function (e) {
+        e.preventDefault();
+        var child_class = $(this).data('value') +"-child-step-box";
+        $('.' +child_class).toggle();
+      });
+  
+      $('#print_myscp_tasks_btn').click(function () {
+        $('body').addClass('for-print-myscp-tasks');
+        window.print();
+        $('body').removeClass('for-print-myscp-tasks');
+      });
+  
       $('#print_myscp_steps_btn').click(function (e) {
           e.preventDefault();
           printSubProcessStepsData();
       });
-  
   
   });
   
@@ -86,7 +103,7 @@
     };
   
     $.post(ajax_object.ajax_url, data, function (response) {
-      console.log(response);
+      //console.log(response);
       $("#myscp_process_body").html(response);
     });
   }
@@ -103,12 +120,10 @@
   
     stepToPrint += '<div class="page-footer">' +window.location.origin +'</div>';
   
-    //var htmlToPrint = '<style type="text/css">div.print-steps{display: flex;flex-flow: column;align-items: center;justify-content: center;width: 100%;height: 100%;margin:0mm;}div.print-steps h2{border-bottom:3px solid #efefef;padding:20px;}div.print-steps ul{margin-top:0px}div.print-steps ul li{padding:5px; font-size:18px; font-weight:bold;}</style>';
     var htmlToPrint = '<style type="text/css">@page{margin:10mm 10mm 20mm 10mm;}@media print {div.page-footer {position: fixed;bottom: 0;right:30px;page-break-after: always;}}div.print-steps h2{padding:20px;margin-bottom:0px;}div.print-steps h2 span{border-bottom:3px solid #efefef;}div.print-steps ul{margin-top:0px}div.print-steps ul li{padding:5px; font-size:18px; font-weight:bold;}</style>';
     htmlToPrint += stepToPrint;
   
     var newWin = window.open('');
-    //newWin.document.write("<h3 align='center'>Print Page</h3>");
     newWin.document.write(htmlToPrint);
     newWin.print();
     newWin.close();
