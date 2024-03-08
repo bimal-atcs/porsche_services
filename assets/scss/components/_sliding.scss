@@ -218,6 +218,7 @@
     white-space: normal;
     background-color: $color-white;
     border: 1px solid $color-grey-low;
+    margin-top: -1px;
     margin-bottom: -1px;
     
     @include media-up($screen-md) {
@@ -339,7 +340,7 @@
     z-index: 1;
     border-color: $color-error;
     box-shadow: inset 0 0 0 1px $color-error;
-    margin-bottom: -2px;
+    margin-bottom: -1px;
     margin-right: -1px;
 
     @include media-up($screen-md) {

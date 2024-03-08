@@ -54,13 +54,14 @@ function backDrop() {
 
             // dropdown
             if($('.dropdown').hasClass('dropdown-active')) {
-               $('.dropdown').removeClass('dropdown-active'); 
+                $('.dropdown').removeAttr('style');
+                $('.dropdown').removeClass('dropdown-active'); 
             }
             
             // dropdown scp
             $('.dropdown-group').removeAttr('style');
             $('.dropdown-option').removeClass('dropdown-select-open');
-            $('.dropdown-select-clear').removeClass('dropdown-select-clear-active');
+            // $('.dropdown-select-clear').removeClass('dropdown-select-clear-active');
             
             // aside
             $('.aside').css('z-index', '');

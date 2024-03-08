@@ -51,37 +51,24 @@ function slideGradient() {
 // slide info hover popup
 function slideCardHover() {
     let winWidth = $(window).width();
-    let winHeight = $(window).height();
 
-    $('body').mousemove(function(event) {
-        let xPos = event.clientX;
-        let yPos = event.screenY;
+    $('.sliding-card').mouseenter(function(e) {
+        e.preventDefault();
+        $(this).find(".info-block").addClass('info-block-show');
+        $(this).find(".info-block").addClass('info-block-top');
 
-        if(xPos > winWidth/2) {
-            $('.sliding-card').mouseenter(function() {
-                $(".info-block").removeClass('info-block-left');
-                $(this).find(".info-block").addClass('info-block-show');
-                $(this).find(".info-block").addClass('info-block-top');
-                $(this).find(".info-block").addClass('info-block-right');
-            }).mouseleave(function() {
-                $(".info-block").removeClass('info-block-top');
-                $(".info-block").removeClass('info-block-left');
-                $(".info-block").removeClass('info-block-right');
-                $(".info-block").removeClass('info-block-show');
-            });
+        let getPosLeft = $(this).offset().left;
+        if(getPosLeft < winWidth/2) {
+            $(this).find(".info-block").addClass('info-block-left');
         } else {
-            $('.sliding-card').mouseenter(function() {
-                $(".info-block").removeClass('info-block-right');
-                $(this).find(".info-block").addClass('info-block-show');
-                $(this).find(".info-block").addClass('info-block-top');
-                $(this).find(".info-block").addClass('info-block-left');
-            }).mouseleave(function() {
-                $(".info-block").removeClass('info-block-top');
-                $(".info-block").removeClass('info-block-left');
-                $(".info-block").removeClass('info-block-right');
-                $(".info-block").removeClass('info-block-show');
-            });
+            $(this).find(".info-block").addClass('info-block-right');
         }
+    }).mouseleave(function(e) {
+        e.preventDefault();
+        $(this).find(".info-block").removeClass('info-block-show');
+        $(this).find(".info-block").removeClass('info-block-top');
+        $(this).find(".info-block").removeClass('info-block-left');
+        $(this).find(".info-block").removeClass('info-block-right');
     });
 }
 
