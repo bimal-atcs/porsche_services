@@ -1,0 +1,42 @@
+// imported config
+@use "../config" as *;
+
+
+// print page
+@page {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// print page
+@media print {
+    .header,
+    .scp-header,
+    .sub-steps-horizontal,
+    .sub-steps-vertical
+    {
+        display: none;
+    }
+
+    .sliding-gradient-right,
+    .sliding-gradient-left,
+    .sliding-gradient-bottom {
+        display: none !important;
+    }
+
+    .scp-content {
+        padding: 0;
+    }
+
+    .sliding-items {
+        padding-top: 70px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    // modal steps
+    .process-heading-button,
+    .process-header-close {
+        display: none;
+    }
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/modules/header.css">
     <link rel="stylesheet" href="assets/css/modules/footer.css">
     <link rel="stylesheet" href="assets/css/modules/scp.css">
+    <link rel="stylesheet" href="assets/css/modules/print.css" media="print">
 </head>
 <body>
     <header class="page-header header">
@@ -585,7 +586,7 @@
                                         </div>
                                         <span class="dropdown-list-text">Download my Contract</span>
                                     </a>
-                                    <a class="dropdown-list-label" href="javascript:;">
+                                    <a id="print_myscp_tasks_btn" class="dropdown-list-label" href="javascript:;">
                                         <div class="dropdown-list-icon">
                                             <img src="assets/images/icons/icon-printer.svg" alt="">
                                         </div>
@@ -1034,7 +1035,7 @@
                         </div>
                     </div>
 
-                    <div class="sliding-item">
+                    <div class="sliding-item" style="display: none;">
                         <div class="sliding-cards sliding-cards-vertical-center">
                             <div class="sliding-card steps-card">
                                 <div class="step-card-block">
@@ -1087,7 +1088,7 @@
                         </div>
                     </div>
                     
-                    <div class="sliding-item">
+                    <div class="sliding-item" style="display: none;">
                         <div class="sliding-cards sliding-cards-vertical-center">
                             <div class="sliding-card steps-card">
                                 <div class="step-card-block">
@@ -1128,7 +1129,7 @@
                         </div>
                     </div>
 
-                    <div class="sliding-item">
+                    <div class="sliding-item" style="display: none;">
                         <div class="sliding-cards sliding-cards-vertical-center">
                             <div class="sliding-card steps-card">
                                 <div class="step-card-block">
@@ -1408,6 +1409,6 @@
     <script src="assets/js/dropdown.js"></script>
     <script src="assets/js/dropdownComp.js"></script>
     <script src="assets/js/scp.js"></script>
-    <script src="assets/js/scp-process-section.js"></script>
+    <!-- <script src="assets/js/scp-process-section.js"></script> -->
 </body>
 </html>
