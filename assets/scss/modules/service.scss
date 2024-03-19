@@ -294,6 +294,66 @@
     }
 }
 
+.service-hero-figure-graphic-left,
+.service-hero-figure-graphic-right,
+.service-hero-figure-graphic-bottom {
+    width: 300px;
+    height: 470px;
+    position: absolute;
+    border: 2px solid rgba($color-white, 0.2);
+}
+
+.service-hero-figure-graphic-left {
+    top: 0;
+    left: 0;
+    border: 0;
+    border-radius: 0 0 60px 0;
+    backdrop-filter: blur(20px);
+    background-color: rgba($color-white, 0.25);
+    transform: scale(1.8) rotate(-20deg) translate(-40%, -50%);
+
+    @include media-up($screen-md) {
+        transform: scale(1.8) rotate(-20deg) translate(-35%, -45%);
+    }
+    
+    @include media-up($screen-lg) {
+        transform: scale(1.8) rotate(-20deg) translate(-30%, -35%);
+    }
+}
+
+.service-hero-figure-graphic-right {
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 60px;
+    backdrop-filter: blur(20px);
+    background-color: rgba($color-white, 0.25);
+    transform: scale(1.8) rotate(-20deg) translate(76%, -46%);
+
+    @include media-up($screen-md) {
+        transform: scale(1.8) rotate(-20deg) translate(70%, -40%);
+    }
+    
+    @include media-up($screen-lg) {
+        transform: scale(1.8) rotate(-20deg) translate(70%, -35%);
+    }
+}
+
+.service-hero-figure-graphic-bottom {
+    bottom: 0;
+    right: 0;
+    border-radius: 60px;
+    transform: scale(1.8) rotate(-25deg) translate(-30%, 68%);
+
+    @include media-up($screen-md) {
+        transform: scale(1.8) rotate(-25deg) translate(-30%, 60%);
+    }
+    
+    @include media-up($screen-lg) {
+        transform: scale(1.8) rotate(-25deg) translate(-29%, 62%);
+    }
+}
+
+// ----------------
 .service-hero-figure-polygon {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -334,6 +394,7 @@
 }
 
 .service-hero-figure-comp {
+    z-index: 1;
     cursor: pointer;
     position: absolute;
     top: 60px;
@@ -488,6 +549,7 @@
 }
 
 .service-user-detail-view {
+    cursor: pointer;
     padding-left: 10px;
     flex-shrink: 0;
     color: $color-grey-mid;

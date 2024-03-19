@@ -12,10 +12,11 @@ $(window).resize(function () {
 // user notifications page
 function serviceNotifications() {
     if($('.service-hero-content').hasClass('service-user')) {
-        let userDetailHeight = $('.service-user-detail').outerHeight();
+        // let userDetailHeight = $('.service-user-detail').outerHeight();
+        let userDetailLinkHeight = $('.service-user-detail-lists a').outerHeight();
         let userDetailListHeight = $('.service-user-detail-lists').outerHeight();
 
-        if(userDetailHeight >= userDetailListHeight) {
+        if(userDetailLinkHeight >= userDetailListHeight) {
             $('.service-user-detail').removeClass('fixed');
             $('.service-user-detail-view').removeClass('service-user-detail-view-show');
             $('.service-user-arrow').removeClass('service-user-arrow-show');
@@ -34,15 +35,21 @@ function serviceNotifications() {
                     getClass.css('max-height', '100%');
                     getClass.removeClass('fixed');
 
-                    if($('.service-user-detail-view').hasClass('service-user-detail-view-show')) {
-                        $('.service-user-detail-view').removeClass('service-user-detail-view-show');
-                    }
+                    $('.service-user-detail-view').removeClass('service-user-detail-view-show');
                 } else if (!getClass.hasClass('fixed')) {
                     getClass.addClass('fixed');
                     getClass.removeAttr('style');
-                    if(!$('.service-user-detail-view').hasClass('service-user-detail-view-show')) {
-                        $('.service-user-detail-view').addClass('service-user-detail-view-show');
-                    }
+                    $('.service-user-detail-view').addClass('service-user-detail-view-show');
+                }
+            });
+
+            // click on view more
+            $('.service-user-detail-view').click(function() {
+                if($('.service-user-detail-view').hasClass('service-user-detail-view-show')) {
+                    $('.service-user-arrow').addClass('service-user-arrow-active');
+                    $('.service-user-detail').css('max-height', '100%');
+                    $('.service-user-detail').removeClass('fixed');
+                    $(this).removeClass('service-user-detail-view-show');
                 }
             });
         }
