@@ -332,6 +332,7 @@
 }
 
 .sliding-card-body {
+    font-weight: 400;
     color: $color-grey-high;
 }
 
@@ -348,6 +349,10 @@
         &:hover {
             background-color: $color-white;
         }
+    }
+
+    .steps-card-body {
+        color: $color-primary;
     }
 }
 

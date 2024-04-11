@@ -52,7 +52,7 @@
 }
 
 .wpdevart_org_chart {
-    font-family: "Porsche Next" !important;
+    font-family: "Porsche Next TT" !important;
     min-height: 100vh !important;
     box-sizing: border-box !important;
     background-color: #eeeff2 !important
@@ -142,7 +142,7 @@ div#wpdevart_org_chart_container_1 {
 }
 
 #wpdevart_org_chart_container_1 #wpda_item_container_1 .wpda_tree_item_title {
-    font-family: "Porsche Next" !important
+    font-family: "Porsche Next TT" !important
 }
 
 [id^=wpdevart_org_chart_container] li [id^=wpda_item_container]>div {
@@ -194,13 +194,12 @@ div.wpda_tree_item_node {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    position: absolute !important
+    position: absolute !important;
+    background-color: rgba(1,2,5,.2) !important;
 }
 
 .wpdevart_org_chart_container li .wpda_tree_item_container img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important
+    aspect-ratio: 1 / 1 !important;
 }
 
 [id^=wpdevart_org_chart_container] [id^=wpda_item_container] .wpda_tree_item_title {
@@ -210,7 +209,11 @@ div.wpda_tree_item_node {
     font-size: 16px !important;
     text-align: left !important;
     width: auto !important;
-    font-family: "Porsche Next" !important
+    font-family: "Porsche Next TT" !important
+}
+
+.wpda_tree_item_users p {
+	font-family: "Porsche Next TT" !important;
 }
 
 #wpdevart_org_chart_container_1 .wpda_tree_item_container>div {

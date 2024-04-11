@@ -581,20 +581,29 @@
 
 // -----------------------
 .service-hero-items {
-    margin-top: 30px;
     flex: 1 100%;
-    gap: 0 24px;
-    display: grid;
-    grid-template-columns: repeat(3, calc((100%/3) - 16px));
+    gap: 16px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     
     @include media-up($screen-md) {
         margin-top: -130px;
-        grid-template-columns: repeat(3, calc((100%/4) - 16px));
     }
 
     @include media-up($screen-lg) {
-        grid-template-columns: repeat(3, calc((100%/3.7) - 24px));
+        max-width: 75%;
     }
+
+    @include media-up($screen-xxl) {
+        gap: 24px;
+        max-width: 80%;
+    }
+}
+
+.service-hero-items-left {
+    justify-content: flex-start;
 }
 
 .service-hero-item {
@@ -603,7 +612,8 @@
     height: 240px;
     border-radius: 4px;
     position: relative;
-    display: none;
+    display: flex;
+    width: calc(33.33% - 11px);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
@@ -611,17 +621,12 @@
     backdrop-filter: blur(50px);
     background-color: rgba($color-white, 0.4);
 
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3) {
-        display: flex;
-    }
-
     h4 {
         font-weight: normal;
     }
 
     @include media-up($screen-md) {
+
         &:hover {
             background-color: rgba($global-hover-bg, 0.2);
 
@@ -641,6 +646,10 @@
 
     @include media-up($screen-lg) {
         padding: 30px;
+    }
+
+    @include media-up($screen-xxl) {
+        width: calc(33.33% - 16px);
     }
 }
 
@@ -804,6 +813,8 @@
 }
 
 .service-slide-header-link {
+    padding: 0;
+    margin: 0;
     right: 100%;
     padding-right: 5px;
     bottom: 5px;
@@ -816,6 +827,11 @@
     @include media-up($screen-md) {
         transition: $transition;
         transition-property: opacity, visibility;
+
+        &:hover {
+            color: inherit;
+            background-color: transparent;
+        }
     }
 }
 
