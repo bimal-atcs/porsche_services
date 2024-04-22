@@ -157,6 +157,7 @@
         color: $color-grey-mid;
         margin-bottom: 8px;
         margin-top: 16px;
+        font-weight: 600;
 
         &:first-of-type {
             margin-top: 0;
@@ -177,7 +178,22 @@
 }
 
 .accordion-content-lists {
-    // some stuff
+
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.accordion-content-lists-icon {
+    margin-top: -2px;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // ---------------------

@@ -331,6 +331,32 @@
     opacity: 0;
 }
 
+.sliding-card-icon-role {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: none;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.sliding-card-icon-role-principal {
+    border-color: $color-label-border;
+    background-color: $color-label;
+}
+
+.sliding-card-icon-role-supportive {
+    border-color: $color-grey-mid;
+    background-color: $color-grey-low;
+}
+
+.sliding-card-icon-role-show {
+    display: flex;
+}
+
 .sliding-card-body {
     font-weight: 400;
     color: $color-grey-high;

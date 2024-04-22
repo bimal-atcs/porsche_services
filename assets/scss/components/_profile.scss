@@ -35,6 +35,19 @@
 
 .profile-header-title {
     text-transform: capitalize;
+
+    h5 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    span {
+        font-size: 16px;
+        font-weight: 400;
+        color: $color-grey-mid;
+    }
 }
 
 // ----------------
