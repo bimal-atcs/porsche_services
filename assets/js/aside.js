@@ -92,7 +92,7 @@ function asideLinkScroll() {
     if($('.aside-links').hasClass('aside-links-scroll')) {
         let headerHeight = $('.header').outerHeight();
         let stepsHeight = $('.service-steps').outerHeight();
-        let sumHeadStepHeight = headerHeight + stepsHeight;
+        let sumHeadStepHeight = (headerHeight + stepsHeight)/2;
         
         // scroll page
         let getSlide = $('.service-slide');
@@ -123,7 +123,7 @@ function asideLinkScroll() {
             let scrollTo = getSection.offset().top - sumHeadStepHeight;
             $('html, body').animate({
                 scrollTop: scrollTo
-            }, 700);
+            }, 500);
         });
     }
 }

@@ -12,6 +12,14 @@ $(window).resize(function () {
     $('.scrollbar-dynamic').scrollbar();
 });
 
+// dropdown remove aside nav
+$(document).on("click", function(event){
+    var $trigger = $(".aside-dropdown");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        $(".aside-dropdown").removeClass('dropdown-option-active');
+    }            
+});
+
 // backdrop
 function backDrop() {
     $('.backdrop').click(function() {
