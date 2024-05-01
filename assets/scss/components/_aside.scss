@@ -184,7 +184,7 @@
 }
 
 .aside-link {
-    padding: 12px 45px 12px 8px;
+    padding: 12px 75px 12px 8px;
     color: $color-grey-high;
     font-weight: 600;
     position: relative;
@@ -239,11 +239,19 @@
     align-items: center;
 }
 
+.aside-link-badge,
 .aside-link-arrow {
     top: 50%;
-    right: 8px;
     transform: translate(0, -50%);
     position: absolute;
+}
+
+.aside-link-badge {
+    right: 42px;
+}
+
+.aside-link-arrow {
+    right: 8px;
     filter: grayscale(1);
 }
 
