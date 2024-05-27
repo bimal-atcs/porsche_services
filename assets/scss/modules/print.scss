@@ -2,6 +2,14 @@
 @use "../config" as *;
 
 
+.no-print {
+    display:none;
+}
+
+.key-accordion-link::before {
+    content: none !important;
+}
+
 // print page
 @page {
 	margin: 0;

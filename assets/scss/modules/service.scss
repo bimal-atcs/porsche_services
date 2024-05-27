@@ -187,10 +187,6 @@
     @include media-up($screen-lg) {
         width: calc(100% - #{$aside-width-lg});
     }
-
-    @include media-up($screen-xl) {
-        width: calc(100% - #{$aside-width-xl});
-    }
 }
 
 .service-slide {
@@ -208,7 +204,9 @@
 .service-hero {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
     gap: 0 30px;
     padding-bottom: 30px;
     
@@ -218,16 +216,22 @@
 }
 
 .service-hero-content {
-    padding: 30px 0 0;
-    flex: 1 0;
+    padding: 30px 0;
     font-size: 18px;
+    max-width: calc(100% - #{$service-hero-figure});
 
     @include media-up($screen-md) {
-        padding: 40px 0 170px 0;
+        padding: 40px 0;
+        max-width: calc(100% - #{$service-hero-figure-md});
     }
 
     @include media-up($screen-lg) {
-        padding: 50px 0 190px 0;
+        padding: 50px 50px 50px 0;
+        max-width: calc(100% - #{$service-hero-figure-lg});
+    }
+
+    @include media-up($screen-xl) {
+        font-size: 24px;
     }
 
     h2 {
@@ -257,24 +261,24 @@
 }
 
 .service-hero-figure {
-    width: 260px;
     height: 360px;
     border-radius: 0 0 0 8px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
-    left: $serviceSpacing-sm;
+    width: $service-hero-figure;
+    right: -$serviceSpacing-sm;
     background-color: rgba($color-grey-low, 0.2);
 
     @include media-up($screen-md) {
-        width: 340px;
         height: 460px;
         border-radius: 0;
-        left: $serviceSpacing-md;
+        width: $service-hero-figure-md;
+        right: -$serviceSpacing-md;
     }
 
     @include media-up($screen-lg) {
-        width: 400px;
         height: 545px;
+        width: $service-hero-figure-lg;
     }
 
     > img {
@@ -581,29 +585,36 @@
 
 // -----------------------
 .service-hero-items {
-    flex: 1 100%;
+    width: 100%;
     gap: 16px;
-    margin-top: 30px;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+
+    @include media-up($screen-sm) {
+        margin-top: 30px;
+    }
     
-    @include media-up($screen-md) {
-        margin-top: -130px;
+    @include media-up($screen-lg) {
+        margin-top: 30px;
+        width: 90%;
     }
 
     @include media-up($screen-lg) {
-        max-width: 75%;
+        width: 80%;
     }
 
     @include media-up($screen-xxl) {
-        gap: 24px;
-        max-width: 80%;
+        width: 100%;
     }
 }
 
 .service-hero-items-left {
     justify-content: flex-start;
+}
+
+.service-hero-items-center {
+    justify-content: center;
 }
 
 .service-hero-item {
@@ -613,7 +624,7 @@
     border-radius: 4px;
     position: relative;
     display: flex;
-    width: calc(33.33% - 11px);
+    width: calc(34% - 16px);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
@@ -626,6 +637,7 @@
     }
 
     @include media-up($screen-md) {
+        width: calc(28% - 16px);
 
         &:hover {
             background-color: rgba($global-hover-bg, 0.2);
@@ -645,11 +657,13 @@
     }
 
     @include media-up($screen-lg) {
-        padding: 30px;
+        padding: 25px;
+        width: calc(30% - 16px);
     }
-
+    
     @include media-up($screen-xxl) {
-        width: calc(33.33% - 16px);
+        padding: 30px;
+        width: calc(22% - 16px);
     }
 }
 
@@ -918,6 +932,10 @@
             font-size: 120px;
         }
     }
+}
+
+.service-slide-subheader {
+    margin: -20px 0 20px;
 }
 
 .service-slide-message {

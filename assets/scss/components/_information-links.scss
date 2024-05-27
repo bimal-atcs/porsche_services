@@ -1,0 +1,60 @@
+// imported config
+@use "../config" as *;
+
+
+// information-links
+.information-links {
+    margin-bottom: 30px;
+    row-gap: 5px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.information-link {
+    padding: 10px 40px 10px 0;
+    gap: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $color-grey-low;
+
+    &:hover {
+
+        .information-links-content {
+            opacity: 0.75;
+        }
+        
+        .information-link-arrow {
+            right: -3px;
+        }
+    }
+}
+
+.information-links-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information-links-content {
+    flex-grow: 1;
+    margin-top: 2px;
+    transition-property: opactiy;
+    transition: $transition;
+}
+
+.information-link-arrow {
+    position: absolute;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: right;
+    transition: $transition;
+}

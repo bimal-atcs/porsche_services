@@ -1,0 +1,49 @@
+// imported config
+@use "../config" as *;
+
+/* for pdf printing */
+@media print {
+    @page {
+        size: auto;
+        margin: 0;
+        padding: 0;
+        display: block;
+        page-break-inside: avoid;
+    }
+
+    .page-header,
+    .page-body,
+    .page-footer,
+    .window-blur,
+    .window-header,
+    .key-header,
+    .key-list-data-list-header {
+        display: none;
+    }
+
+    .window {
+        margin-top: -3.5cm;
+        position: relative;
+    }
+    
+    .window-dialog {
+        margin: 0;
+        height: auto;
+    }
+
+    .window-dialog-height-full {
+        align-items: flex-start;
+    }
+
+    .window-scroll {
+        padding: 0;
+        max-height: 100% !important;
+    }
+
+    // labels
+    .label {
+        -webkit-print-color-adjust: exact;
+        -moz-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

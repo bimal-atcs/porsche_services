@@ -63,10 +63,6 @@
     @include media-up($screen-lg) {
         width: $aside-width-lg;
     }
-    
-    @include media-up($screen-xl) {
-        width: $aside-width-xl;
-    }
 }
 
 .aside-show {
@@ -145,11 +141,7 @@
     flex-direction: column;
 
     @include media-up($screen-lg) {
-        padding: 0 30px;
-    }
-
-    @include media-up($screen-xl) {
-        padding: 0 44px;
+        padding: $aside-padding;
     }
 
     li {
@@ -165,11 +157,7 @@
     padding: 0 25px;
 
     @include media-up($screen-lg) {
-        padding: 0 30px;
-    }
-
-    @include media-up($screen-xl) {
-        padding: 0 44px;
+        padding: $aside-padding;
     }
     
     h6 {
@@ -284,10 +272,6 @@
 
     @include media-up($screen-lg) {
         width: $aside-width-lg;
-    }
-
-    @include media-up($screen-xl) {
-        width: $aside-width-xl;
     }
 }
 

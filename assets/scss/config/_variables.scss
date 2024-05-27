@@ -104,9 +104,14 @@ $header-navbar-height: 80px;
 
 // aside nav
 $aside-width-md: 320px;
-$aside-width-lg: 380px;
-$aside-width-xl: 440px;
+$aside-width-lg: 448px;
+$aside-padding: 0 40px;
 
 // service panel
 $serviceSpacing-sm: 30px;
-$serviceSpacing-md: 50px;
+$serviceSpacing-md: 48px;
+
+// service hero image
+$service-hero-figure: 260px;
+$service-hero-figure-md: 340px;
+$service-hero-figure-lg: 400px;
