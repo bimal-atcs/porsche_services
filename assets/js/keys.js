@@ -1,6 +1,7 @@
 //run when page first loads
 $(document).ready(function () {
     keyTab();
+    keyInnerTab();
 	keyAccordion();
 });
 
@@ -17,7 +18,19 @@ function keyTab() {
 
 		$(this).addClass('key-tab-active');
 		$("#"+tab_id).addClass('key-content-active');
-	})
+	});
+}
+
+// key tabbing
+function keyInnerTab() {
+    $('.key-inner-tab').click(function(){
+		let tab_inner_id = $(this).attr('data-tab');
+		$('.key-inner-tab').removeClass('key-inner-tab-active');
+		$('.key-inner-content').removeClass('key-inner-content-active');
+
+		$(this).addClass('key-inner-tab-active');
+		$("#"+tab_inner_id).addClass('key-inner-content-active');
+	});
 }
 
 // key accordion

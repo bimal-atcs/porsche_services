@@ -587,7 +587,7 @@
 .service-hero-items {
     width: 100%;
     gap: 16px;
-    margin-top: 80px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
 
@@ -596,7 +596,6 @@
     }
     
     @include media-up($screen-lg) {
-        margin-top: 30px;
         width: 90%;
     }
 
@@ -624,7 +623,7 @@
     border-radius: 4px;
     position: relative;
     display: flex;
-    width: calc(34% - 16px);
+    width: calc(33% - 16px);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;

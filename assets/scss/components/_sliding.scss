@@ -232,6 +232,10 @@
                     color: rgba($color-grey-mid, 1);
                 }
             }
+
+            .sliding-card-header {
+                padding-right: 30px;
+            }
             
             .sliding-card-arrow {
                 opacity: 1;
@@ -264,11 +268,9 @@
 
 // ----------------------------
 .sliding-card-header {
-    padding-right: 30px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: $spacing-xs-mid;
     margin-bottom: $spacing-xs;
 }
@@ -295,6 +297,19 @@
 
 .sliding-card-avatar-show {
     display: flex;
+}
+
+.sliding-card-icons {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sliding-card-icons-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
 }
 
 .sliding-card-icon {

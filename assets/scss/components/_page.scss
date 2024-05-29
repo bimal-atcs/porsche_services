@@ -3,6 +3,16 @@
 
 // page structure
 .page-body {
+
+    // home page
+    &.home {
+
+        // hide scrollbar
+        .scroll-element.scroll-x.scroll-scrollx_visible,
+        .scroll-element.scroll-y.scroll-scrolly_visible {
+            display: none;
+        }
+    }
     
     // page scroll on
     &.page-scroll-on {

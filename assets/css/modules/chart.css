@@ -1,1 +1,388 @@
-.page-organization-chart .footer,.page-organization-chart .header{display:none}.wpdevart_org_chart_top{padding:30px 30px 10px;display:flex;gap:0 30px;align-items:flex-start;position:relative;z-index:2}.wpdevart_org_chart_top h2{font-size:32px;line-height:1.4}.btn-print-chart,.org_chart_back_icon{cursor:pointer;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:4px;position:relative}.btn-print-chart{background-color:#010205;border:1px solid #010205}.org_chart_back_icon{top:-20px;right:-10px;margin-left:auto}.org_chart_back_icon:hover{background-color:#e3e4e6}.header-bottom-container{display:none !important}.site-main{background-color:#eeeff2 !important}.wpdevart_org_chart{font-family:"Porsche Next TT" !important;min-height:100vh !important;box-sizing:border-box !important;background-color:#eeeff2 !important}.wpdevart_org_chart *{box-sizing:border-box !important}div#wpdevart_org_chart_container_1{background-image:none !important;min-height:100vh !important}#wpdevart_org_chart_container_1 li::before,#wpdevart_org_chart_container_1 li::after{border-color:#6b6d70 !important}.wpdevart_org_chart .zoomable_buttons_container{margin-right:0 !important;left:auto !important;width:auto !important;bottom:30px !important;right:30px !important;position:fixed !important;padding:0 !important;display:flex !important;align-items:center !important;box-shadow:0 2px 4px 0 rgba(0,0,0,.05) !important;background:rgba(0,0,0,0) !important}.zoomable_buttons_container button{background-color:#fff !important;padding:0 !important;min-width:46px !important;height:40px !important;display:flex !important;align-items:center !important;justify-content:center !important;color:#010205 !important;font-weight:600 !important;border:1px solid #d8d8db !important;border-right-color:rgba(0,0,0,0) !important;border-left-color:rgba(0,0,0,0) !important;margin-right:-1px !important;padding:5px 20px !important;position:relative !important}.zoomable_buttons_container button:first-child{border-radius:4px 0 0 4px !important;border-left-color:#d8d8db !important}.zoomable_buttons_container button:last-child{border-radius:0 4px 4px 0 !important;border-right-color:#d8d8db !important}.zoomable_buttons_container button.wpda_zoom_out,.zoomable_buttons_container button.wpda_zoom_in{font-size:0px !important;padding:0 !important}.zoomable_buttons_container button.wpda_zoom_out::before,.zoomable_buttons_container button.wpda_zoom_in::before,.zoomable_buttons_container button.wpda_zoom_in::after{content:"";background-color:#010205;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)}.zoomable_buttons_container button.wpda_zoom_out::before,.zoomable_buttons_container button.wpda_zoom_in::before{width:18px;height:1px}.zoomable_buttons_container button.wpda_zoom_in::after{width:1px;height:18px}.zoomable_buttons_container button.wpda_zoom_reset{border-left-color:#d8d8db !important}#wpdevart_org_chart_container_1 #wpda_item_container_1 .wpda_tree_item_title{font-family:"Porsche Next TT" !important}[id^=wpdevart_org_chart_container] li [id^=wpda_item_container]>div{border:0 !important}[id^=wpdevart_org_chart_container] li [id^=wpda_item_container]>div{gap:0 10px;height:auto !important;display:inline-flex !important;flex-wrap:wrap !important;align-items:flex-start !important;flex-direction:column}.wpda_tree_item_users{flex:1 100% !important;padding-left:58px !important}.wpda_tree_item_users p{margin:0 0 5px !important;background:rgba(0,0,0,0) !important;border:none !important;color:#6b6d70 !important;padding:0 !important;text-align:left !important}div.wpda_tree_item_node{width:auto !important}#wpdevart_org_chart_container_parent_1{padding-top:0 !important}.wpda_tree_item_title,.wpda_tree_item_desc{white-space:normal !important}.wpdevart_org_chart_container .wpda_tree_item_img_cont{flex-shrink:0 !important;width:48px !important;height:48px !important;border-radius:50% !important;overflow:hidden !important;border:1px solid rgba(1,2,5,.2) !important;display:flex !important;align-items:center !important;justify-content:center !important;position:absolute !important;background-color:rgba(1,2,5,.2) !important}.wpdevart_org_chart_container li .wpda_tree_item_container img{aspect-ratio:1/1 !important}[id^=wpdevart_org_chart_container] [id^=wpda_item_container] .wpda_tree_item_title{flex:1 100% !important;margin:0 0 5px !important;padding-left:58px !important;font-size:16px !important;text-align:left !important;width:auto !important;font-family:"Porsche Next TT" !important}.wpda_tree_item_users p{font-family:"Porsche Next TT" !important}#wpdevart_org_chart_container_1 .wpda_tree_item_container>div{max-width:100% !important}#wpdevart_org_chart_container_1 li .wpda_tree_item_container>div{padding:10px !important;border-color:#d8d8db !important;box-shadow:0 2px 4px rgba(0,0,0,.05) !important;width:auto !important;max-width:100% !important;position:relative !important;min-height:65px !important;margin:4px 0 !important}#wpdevart_org_chart_container_1 .wpda_tree_item_container .wpda_tree_item_desc{margin:0 0 5px !important;padding-left:58px !important;max-width:300px !important;text-align:left !important}.wpdevart_org_chart_container li:last-child::before{border-radius:0 5px 0 0 !important}.wpdevart_org_chart_container li:first-child::after{border-radius:5px 0 0 0 !important}li.has_child_level .charticon{width:20px !important;height:20px !important;margin:4px 0 !important;border-radius:20px !important;background-color:#bb302c !important;display:inline-block}li.has_child_level .charticon img{margin-top:2px}li.has_child_level .charticon.icon-less img{margin-top:0;filter:invert(1)}#wpdaOrgChartPopupWindow{border-radius:8px !important}#wpdaOrgChartCloseSection{background-color:rgba(0,0,0,0) !important;border-bottom:0 !important;padding:0 !important;position:absolute;top:16px;right:16px;z-index:2;width:40px;height:40px;cursor:pointer;border-radius:4px}#wpdaOrgChartCloseSection::before,#wpdaOrgChartCloseSection::after{content:"";position:absolute;width:20px;height:1px;background-color:#010205;left:50%;top:50%;border-radius:4px}#wpdaOrgChartCloseSection:hover{background-color:#efefef !important}#wpdaOrgChartCloseSection::before{transform:translate(-50%, -50%) rotate(45deg)}#wpdaOrgChartCloseSection::after{transform:translate(-50%, -50%) rotate(-45deg)}#wpdaOrgChartCloseSection>span,#wpdaOrgChartPopupWindow>span{position:absolute;inset:0;font-size:0 !important}.wpda_popup_innerhtml{max-height:520px !important;display:flex !important;padding:20px !important;position:relative;z-index:0;flex-direction:column}#wpdaOrgChartPopupWindow div.organization-chart-row img{top:16px !important;right:auto !important;left:16px !important;width:80px !important;height:80px !important;border-radius:50% !important;border:1px solid rgba(1,2,5,.2) !important;object-fit:cover}.organization-chart-row{padding-left:115px !important;box-sizing:border-box !important;width:100% !important;margin:0 !important;position:relative !important}.organization-chart-row span{color:inherit !important}.organization-chart-row span.label.primary{color:#fff !important}.organization-chart-row .name,.organization-chart-row .email{padding-right:55px;display:block}.organization-chart-row .name{font-size:28px;line-height:1.4}.organization-chart-row .email{color:#6b6d70}.organization-chart-row .profile-role{margin-bottom:0}@page{margin:0;padding:0;box-sizing:border-box}@media print{.wpdevart_org_chart_top,.zoomable_buttons_container,.zoomable_buttons_container button{display:none !important}body.for-print-chart{page-break-inside:avoid;-webkit-transform:rotate(-90deg) scale(1.35, 1.45) translate(0, 30%) !important;-moz-transform:rotate(-90deg) scale(1.35, 1.45) translate(0, 30%) !important;-webkit-transform-origin:center center !important;-moz-transform-origin:center center !important;transform-origin:center center !important;zoom:100% !important}}
+.page-organization-chart .footer,
+.page-organization-chart .header {
+  display: none;
+}
+
+.wpdevart_org_chart_top {
+  padding: 30px 30px 10px;
+  display: flex;
+  gap: 0 30px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.wpdevart_org_chart_top h2 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.btn-print-chart, .org_chart_back_icon {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: relative;
+}
+
+.btn-print-chart {
+  background-color: #010205;
+  border: 1px solid #010205;
+}
+
+.org_chart_back_icon {
+  top: -20px;
+  right: -10px;
+  margin-left: auto;
+}
+
+.org_chart_back_icon:hover {
+  background-color: #e3e4e6;
+}
+
+.header-bottom-container {
+  display: none !important;
+}
+
+.site-main {
+  background-color: #eeeff2 !important;
+}
+
+.wpdevart_org_chart {
+  font-family: "Porsche Next TT" !important;
+  min-height: 100vh !important;
+  box-sizing: border-box !important;
+  background-color: #eeeff2 !important;
+}
+
+.wpdevart_org_chart * {
+  box-sizing: border-box !important;
+}
+
+div#wpdevart_org_chart_container_1 {
+  background-image: none !important;
+  min-height: 100vh !important;
+}
+
+#wpdevart_org_chart_container_1 li::before, #wpdevart_org_chart_container_1 li::after {
+  border-color: #6b6d70 !important;
+}
+
+.wpdevart_org_chart .zoomable_buttons_container {
+  margin-right: 0 !important;
+  left: auto !important;
+  width: auto !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  position: fixed !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important;
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.zoomable_buttons_container button {
+  background-color: #fff !important;
+  padding: 0 !important;
+  min-width: 46px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #010205 !important;
+  font-weight: 600 !important;
+  border: 1px solid #d8d8db !important;
+  border-right-color: rgba(0, 0, 0, 0) !important;
+  border-left-color: rgba(0, 0, 0, 0) !important;
+  margin-right: -1px !important;
+  padding: 5px 20px !important;
+  position: relative !important;
+}
+
+.zoomable_buttons_container button:first-child {
+  border-radius: 4px 0 0 4px !important;
+  border-left-color: #d8d8db !important;
+}
+
+.zoomable_buttons_container button:last-child {
+  border-radius: 0 4px 4px 0 !important;
+  border-right-color: #d8d8db !important;
+}
+
+.zoomable_buttons_container button.wpda_zoom_out, .zoomable_buttons_container button.wpda_zoom_in {
+  font-size: 0px !important;
+  padding: 0 !important;
+}
+
+.zoomable_buttons_container button.wpda_zoom_out::before, .zoomable_buttons_container button.wpda_zoom_in::before, .zoomable_buttons_container button.wpda_zoom_in::after {
+  content: "";
+  background-color: #010205;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.zoomable_buttons_container button.wpda_zoom_out::before, .zoomable_buttons_container button.wpda_zoom_in::before {
+  width: 18px;
+  height: 1px;
+}
+
+.zoomable_buttons_container button.wpda_zoom_in::after {
+  width: 1px;
+  height: 18px;
+}
+
+.zoomable_buttons_container button.wpda_zoom_reset {
+  border-left-color: #d8d8db !important;
+}
+
+#wpdevart_org_chart_container_1 #wpda_item_container_1 .wpda_tree_item_title {
+  font-family: "Porsche Next TT" !important;
+}
+
+[id^=wpdevart_org_chart_container] li [id^=wpda_item_container] > div {
+  border: 0 !important;
+}
+
+[id^=wpdevart_org_chart_container] li [id^=wpda_item_container] > div {
+  gap: 0 10px;
+  height: auto !important;
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  flex-direction: column;
+}
+
+.wpda_tree_item_users {
+  flex: 1 100% !important;
+  padding-left: 58px !important;
+}
+
+.wpda_tree_item_users p {
+  margin: 0 0 5px !important;
+  background: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  color: #6b6d70 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+div.wpda_tree_item_node {
+  width: auto !important;
+}
+
+#wpdevart_org_chart_container_parent_1 {
+  padding-top: 0 !important;
+}
+
+.wpda_tree_item_title, .wpda_tree_item_desc {
+  white-space: normal !important;
+}
+
+.wpdevart_org_chart_container .wpda_tree_item_img_cont {
+  flex-shrink: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(1, 2, 5, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  background-color: rgba(1, 2, 5, 0.2) !important;
+}
+
+.wpdevart_org_chart_container li .wpda_tree_item_container img {
+  aspect-ratio: 1/1 !important;
+}
+
+[id^=wpdevart_org_chart_container] [id^=wpda_item_container] .wpda_tree_item_title {
+  flex: 1 100% !important;
+  margin: 0 0 5px !important;
+  padding-left: 58px !important;
+  font-size: 16px !important;
+  text-align: left !important;
+  width: auto !important;
+  font-family: "Porsche Next TT" !important;
+}
+
+.wpda_tree_item_users p {
+  font-family: "Porsche Next TT" !important;
+}
+
+#wpdevart_org_chart_container_1 .wpda_tree_item_container > div {
+  max-width: 100% !important;
+}
+
+#wpdevart_org_chart_container_1 li .wpda_tree_item_container > div {
+  padding: 10px !important;
+  border-color: #D8D8DB !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  width: auto !important;
+  max-width: 100% !important;
+  position: relative !important;
+  min-height: 65px !important;
+  margin: 4px 0 !important;
+}
+
+#wpdevart_org_chart_container_1 .wpda_tree_item_container .wpda_tree_item_desc {
+  margin: 0 0 5px !important;
+  padding-left: 58px !important;
+  max-width: 300px !important;
+  text-align: left !important;
+}
+
+.wpdevart_org_chart_container li:last-child::before {
+  border-radius: 0 5px 0 0 !important;
+}
+
+.wpdevart_org_chart_container li:first-child::after {
+  border-radius: 5px 0 0 0 !important;
+}
+
+li.has_child_level .charticon {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 4px 0 !important;
+  border-radius: 20px !important;
+  background-color: #bb302c !important;
+  display: inline-block;
+}
+
+li.has_child_level .charticon img {
+  margin-top: 2px;
+}
+
+li.has_child_level .charticon.icon-less img {
+  margin-top: 0;
+  filter: invert(1);
+}
+
+#wpdaOrgChartPopupWindow {
+  border-radius: 8px !important;
+}
+
+#wpdaOrgChartCloseSection {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-bottom: 0 !important;
+  padding: 0 !important;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#wpdaOrgChartCloseSection::before, #wpdaOrgChartCloseSection::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #010205;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+}
+
+#wpdaOrgChartCloseSection:hover {
+  background-color: #efefef !important;
+}
+
+#wpdaOrgChartCloseSection::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#wpdaOrgChartCloseSection::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#wpdaOrgChartCloseSection > span, #wpdaOrgChartPopupWindow > span {
+  position: absolute;
+  inset: 0;
+  font-size: 0 !important;
+}
+
+.wpda_popup_innerhtml {
+  max-height: 520px !important;
+  display: flex !important;
+  padding: 20px !important;
+  position: relative;
+  z-index: 0;
+  flex-direction: column;
+}
+
+#wpdaOrgChartPopupWindow div.organization-chart-row img {
+  top: 16px !important;
+  right: auto !important;
+  left: 16px !important;
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(1, 2, 5, 0.2) !important;
+  object-fit: cover;
+}
+
+.organization-chart-row {
+  padding-left: 115px !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  margin: 0 !important;
+  position: relative !important;
+}
+
+.organization-chart-row span {
+  color: inherit !important;
+}
+
+.organization-chart-row span.label.primary {
+  color: #fff !important;
+}
+
+.organization-chart-row .name, .organization-chart-row .email {
+  padding-right: 55px;
+  display: block;
+}
+
+.organization-chart-row .name {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.organization-chart-row .email {
+  color: #6b6d70;
+}
+
+.organization-chart-row .profile-role {
+  margin-bottom: 0;
+}
+
+@page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media print {
+  .wpdevart_org_chart_top,
+  .zoomable_buttons_container,
+  .zoomable_buttons_container button {
+    display: none !important;
+  }
+  body.for-print-chart {
+    page-break-inside: avoid;
+    -webkit-transform: rotate(-90deg) scale(1.35, 1.45) translate(0, 30%) !important;
+    -moz-transform: rotate(-90deg) scale(1.35, 1.45) translate(0, 30%) !important;
+    -webkit-transform-origin: center center !important;
+    -moz-transform-origin: center center !important;
+    transform-origin: center center !important;
+    zoom: 100% !important;
+  }
+}

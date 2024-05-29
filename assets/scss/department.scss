@@ -84,14 +84,6 @@
         min-height: 800px;
     }
 
-    @include media-up-view($screen-sm, landscape) {
-        // min-height: 700px;
-    }
-
-    @include media-up-view($screen-md, landscape) {
-        // min-height: 800px;
-    }
-
     @include media-up-view($screen-lg, landscape) {
         min-height: 900px;
     }

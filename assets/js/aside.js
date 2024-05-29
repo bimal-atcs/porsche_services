@@ -87,13 +87,15 @@ function asideTab() {
 	})
 }
 
-// aside link scroll
+// aside link active on scroll
 function asideLinkScroll() {
     if($('.aside-links').hasClass('aside-links-scroll')) {
         let headerHeight = $('.header').outerHeight();
         let stepsHeight = $('.service-steps').outerHeight();
-        let sumHeadStepHeight = (headerHeight + stepsHeight)/2;
-        
+        let slideHeaderHeight = $('.service-slide-header').outerHeight();
+        let slideHeaderMargin = parseInt($('.service-slide-header').css('margin-bottom'));
+        let sumHeadStepHeight = ((headerHeight + stepsHeight)/2) + (slideHeaderHeight + slideHeaderMargin);
+
         // scroll page
         let getSlide = $('.service-slide');
         let getSlidePadding = parseInt(getSlide.css('padding-top'));

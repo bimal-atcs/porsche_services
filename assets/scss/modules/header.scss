@@ -129,7 +129,9 @@
     transition: $transition;
     transition-property: left;
 
-    > .scroll-x {
+    // hide scrollbar
+    .scroll-element.scroll-x.scroll-scrollx_visible,
+    .scroll-element.scroll-y.scroll-scrolly_visible {
         display: none !important;
     }
 
