@@ -204,7 +204,6 @@
 .service-hero {
     display: flex;
     align-items: flex-start;
-    // flex-wrap: wrap;
     flex-direction: column;
     position: relative;
     gap: 0 30px;
@@ -212,51 +211,6 @@
     
     @include media-up($screen-md) {
         padding-bottom: 80px;
-    }
-}
-
-.service-hero-content {
-    padding: 30px 0;
-    font-size: 18px;
-    max-width: calc(100% - #{$service-hero-figure});
-
-    @include media-up($screen-md) {
-        padding: 40px 0;
-        max-width: calc(100% - #{$service-hero-figure-md});
-    }
-
-    @include media-up($screen-lg) {
-        padding: 50px 50px 50px 0;
-        max-width: calc(100% - #{$service-hero-figure-lg});
-    }
-
-    @include media-up($screen-xl) {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-weight: normal;
-        margin-bottom: 16px;
-
-        + h4 {
-            margin-top: -16px;
-        }
-    }
-
-    h4 {
-        font-weight: normal;
-        color: $color-grey-mid;
-
-        + p {
-            margin-top: 18px;
-        }
-
-        @include media-up($screen-md) {
-
-            + p {
-                margin-top: 40px;
-            }
-        }
     }
 }
 
@@ -440,6 +394,82 @@
     }
 }
 
+.service-hero-figure {
+
+    ~ {
+        .service-hero-content {
+            max-width: calc(100% - #{$service-hero-figure});
+
+            @include media-up($screen-md) {
+                max-width: calc(100% - #{$service-hero-figure-md});
+            }
+
+            @include media-up($screen-lg) {
+                max-width: calc(100% - #{$service-hero-figure-lg});
+            }
+        }
+
+
+        .service-hero-items {
+
+            @include media-up($screen-sm) {
+                margin-top: 30px;
+            }
+        
+            @include media-up($screen-xl) {
+                margin-top: 0;
+            }
+        
+            @include media-up($screen-xxl) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.service-hero-content {
+    padding: 30px 0;
+    font-size: 18px;
+
+    @include media-up($screen-md) {
+        padding: 40px 0;
+    }
+
+    @include media-up($screen-lg) {
+        padding: 50px 50px 50px 0;
+    }
+
+    @include media-up($screen-xl) {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-weight: normal;
+        margin-bottom: 16px;
+
+        + h4 {
+            margin-top: -16px;
+        }
+    }
+
+    h4 {
+        font-weight: normal;
+        color: $color-grey-mid;
+
+        + p {
+            margin-top: 18px;
+        }
+
+        @include media-up($screen-md) {
+
+            + p {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
 // -----------------------------
 .service-users {
     padding-bottom: 50px;
@@ -586,36 +616,60 @@
 // -----------------------
 .service-hero-items {
     width: 100%;
-    gap: 16px;
-    margin-top: 10px;
+    gap: $service-item-gap;
     display: flex;
     flex-wrap: wrap;
-
-    @include media-up($screen-sm) {
-        margin-top: 30px;
-    }
+    justify-content: flex-start;
     
-    @include media-up($screen-lg) {
-        width: 90%;
+    @include media-up($screen-md) {
+        width: 80%;
     }
 
     @include media-up($screen-lg) {
+        width: 74%;
+    }
+
+    @include media-up($screen-xl) {
         width: 80%;
     }
 
     @include media-up($screen-xxl) {
-        width: 100%;
+        width: 90%;
     }
 }
 
-.service-hero-items-left {
-    justify-content: flex-start;
-}
-
+// for 5th item
 .service-hero-items-center {
-    justify-content: center;
+
+    .service-hero-item {
+
+        &:nth-child(4) {
+            margin-left: calc((#{$service-item-width}/2) + (#{$service-item-gap}/2));
+
+            @include media-up($screen-sm) {
+                margin-left: calc((#{$service-item-width-sm}/2) + (#{$service-item-gap}/2));
+            }
+            
+            @include media-up($screen-md) {
+                margin-left: calc((#{$service-item-width-md}/2) + (#{$service-item-gap}/2));
+            }
+
+            @include media-up($screen-lg) {
+                margin-left: calc((#{$service-item-width-lg}/2) + (#{$service-item-gap}/2));
+            }
+
+            @include media-up($screen-xl) {
+                margin-left: calc((#{$service-item-width-xl}/2) + (#{$service-item-gap}/2));
+            }
+
+            @include media-up($screen-xxl) {
+                margin-left: calc((#{$service-item-width-xxl}/2) + (#{$service-item-gap}/2));
+            }
+        }
+    }
 }
 
+// NOTES: item width for only fixed 5 boxes
 .service-hero-item {
     cursor: pointer;
     padding: 20px;
@@ -623,7 +677,7 @@
     border-radius: 4px;
     position: relative;
     display: flex;
-    width: calc(33% - 16px);
+    width: $service-item-width;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
@@ -635,8 +689,12 @@
         font-weight: normal;
     }
 
+    @include media-up($screen-sm) {
+        width: $service-item-width-sm;
+    }
+
     @include media-up($screen-md) {
-        width: calc(28% - 16px);
+        width: $service-item-width-md;
 
         &:hover {
             background-color: rgba($global-hover-bg, 0.2);
@@ -657,12 +715,17 @@
 
     @include media-up($screen-lg) {
         padding: 25px;
-        width: calc(30% - 16px);
+        width: $service-item-width-lg;
     }
     
+    @include media-up($screen-xl) {
+        padding: 30px;
+        width: $service-item-width-xl;
+    }
+
     @include media-up($screen-xxl) {
         padding: 30px;
-        width: calc(22% - 16px);
+        width: $service-item-width-xxl;
     }
 }
 

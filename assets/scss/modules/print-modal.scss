@@ -17,22 +17,23 @@
     .window-blur,
     .window-header,
     .key-header,
-    .key-list-data-list-header {
+    .key-list-data-list-header,
+    .window {
         display: none;
     }
 
-    .window {
-        margin-top: -3.5cm;
+    html, body {
+        overflow: auto !important;
+    }
+
+    #key-results.window {
         position: relative;
+        height: auto;
+        display: block;
     }
     
     .window-dialog {
         margin: 0;
-        height: auto;
-    }
-
-    .window-dialog-height-full {
-        align-items: flex-start;
     }
 
     .window-scroll {
