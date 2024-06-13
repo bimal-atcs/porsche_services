@@ -26,10 +26,10 @@
         overflow: auto !important;
     }
 
-    #key-results.window {
-        position: relative;
-        height: auto;
+    .window.window-open {
         display: block;
+        height: auto;
+        position: relative;
     }
     
     .window-dialog {
@@ -42,6 +42,7 @@
     }
 
     // labels
+    .key-list-result-icon,
     .label {
         -webkit-print-color-adjust: exact;
         -moz-print-color-adjust: exact;

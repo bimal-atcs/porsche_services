@@ -1,0 +1,44 @@
+// imported config
+@use "../config" as *;
+
+//
+.blank-page {
+	
+	.service-view {
+		padding-top: 0;
+	}
+	
+	.service-links {
+		display: none;
+	}
+	
+	.service-panel {
+		width: 100%;
+		border-radius: 0;
+		margin: 0;
+		min-height: 100vh;
+		padding-bottom: 0;
+	}
+	
+	.service-hero-content {
+		
+		img {
+			display: inline-block;
+			max-height: 100%;
+			margin-bottom: 30px;
+		}
+	}
+	
+	// for center content
+	&.blank-page-center {
+		
+		.service-hero {
+			text-align: center;
+			align-items: center;
+		}
+		
+		.service-hero-content {
+			padding-right: 0;
+		}
+	}
+}

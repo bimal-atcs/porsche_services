@@ -20,10 +20,10 @@
   html, body {
     overflow: auto !important;
   }
-  #key-results.window {
-    position: relative;
-    height: auto;
+  .window.window-open {
     display: block;
+    height: auto;
+    position: relative;
   }
   .window-dialog {
     margin: 0;
@@ -32,6 +32,7 @@
     padding: 0;
     max-height: 100% !important;
   }
+  .key-list-result-icon,
   .label {
     -webkit-print-color-adjust: exact;
     -moz-print-color-adjust: exact;
