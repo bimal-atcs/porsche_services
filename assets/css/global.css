@@ -77,25 +77,6 @@ ul, ol {
   outline: 0;
 }
 
-.page.login {
-  padding-top: 80px;
-}
-.page.login .header-navbar-brand {
-  justify-content: center;
-}
-.page.login .page-body {
-  padding: 30px;
-}
-@media screen and (min-width: 1440px) {
-  .page.login .service-content h2 {
-    font-size: 40px;
-  }
-}
-.page.login #login {
-  padding: 0;
-  margin-top: 40px;
-}
-
 .page-body.depart .scroll-element.scroll-x.scroll-scrollx_visible,
 .page-body.depart .scroll-element.scroll-y.scroll-scrolly_visible, .page-body.home .scroll-element.scroll-x.scroll-scrollx_visible,
 .page-body.home .scroll-element.scroll-y.scroll-scrolly_visible {

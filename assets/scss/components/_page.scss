@@ -2,36 +2,6 @@
 @use "../config" as *;
 
 
-.page {
-
-    &.login {
-        padding-top: 80px;
-
-        .header-navbar-brand {
-            justify-content: center;
-        }
-
-        .page-body {
-            padding: 30px;
-        }
-
-        .service-content {
-
-            h2 {
-
-                @include media-up($screen-lg) {
-                    font-size: 40px;
-                }
-            }
-        }
-
-        #login {
-            padding: 0;
-            margin-top: 40px;
-        }
-    }
-}
-
 // page structure
 .page-body {
 

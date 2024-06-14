@@ -631,9 +631,18 @@
 
 .service-user-detail {
     display: flex;
-    max-height: 27px;
+    max-height: 28px;
     overflow: hidden;
+
+    @include media-up($screen-lg) {
+        max-height: 30px;
+    }
+    
+    @include media-up($screen-xl) {
+        max-height: 38px;
+    }
 }
+
 
 .service-user-detail-lists {
     display: flex;
@@ -649,6 +658,10 @@
         img {
             width: 24px;
             margin-left: 5px;
+
+            @include media-up($screen-xl) {
+                margin-top: 5px;
+            }
         }
     }
 }

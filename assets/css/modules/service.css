@@ -570,8 +570,18 @@
 
 .service-user-detail {
   display: flex;
-  max-height: 27px;
+  max-height: 28px;
   overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  .service-user-detail {
+    max-height: 30px;
+  }
+}
+@media screen and (min-width: 1560px) {
+  .service-user-detail {
+    max-height: 38px;
+  }
 }
 
 .service-user-detail-lists {
@@ -588,6 +598,11 @@
 .service-user-detail-lists a img {
   width: 24px;
   margin-left: 5px;
+}
+@media screen and (min-width: 1560px) {
+  .service-user-detail-lists a img {
+    margin-top: 5px;
+  }
 }
 
 .service-user-detail-view {
